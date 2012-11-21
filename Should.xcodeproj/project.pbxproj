@@ -10,9 +10,18 @@
 		94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B05165D2EBA00282ABE /* Should.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94D97B04165D2EBA00282ABE /* Should.h */; };
 		94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
-		94D97B11165D2EBA00282ABE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B10165D2EBA00282ABE /* UIKit.framework */; };
 		94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B15165D2EBA00282ABE /* libShould.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFC165D2EBA00282ABE /* libShould.a */; };
+		94D97B3F165D2FC200282ABE /* BHVEqualityMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B34165D2FC200282ABE /* BHVEqualityMatcher.m */; };
+		94D97B40165D2FC200282ABE /* BHVExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B36165D2FC200282ABE /* BHVExpectation.m */; };
+		94D97B41165D2FC200282ABE /* BHVMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B38165D2FC200282ABE /* BHVMatcher.m */; };
+		94D97B42165D2FC200282ABE /* BHVMatcherRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B3A165D2FC200282ABE /* BHVMatcherRegistry.m */; };
+		94D97B43165D2FC200282ABE /* NSObject+BHVHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B3C165D2FC200282ABE /* NSObject+BHVHierarchy.m */; };
+		94D97B44165D2FC200282ABE /* NSObject+BHVShould.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B3E165D2FC200282ABE /* NSObject+BHVShould.m */; };
+		94D97B49165D2FD500282ABE /* BHVEqualityMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B45165D2FD500282ABE /* BHVEqualityMatcherTests.m */; };
+		94D97B4A165D2FD500282ABE /* BHVExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B46165D2FD500282ABE /* BHVExpectationTests.m */; };
+		94D97B4B165D2FD500282ABE /* BHVMatcherRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B47165D2FD500282ABE /* BHVMatcherRegistryTests.m */; };
+		94D97B4C165D2FD500282ABE /* BHVShouldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B48165D2FD500282ABE /* BHVShouldTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +52,26 @@
 		94D97AFF165D2EBA00282ABE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D97B03165D2EBA00282ABE /* Should-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Should-Prefix.pch"; sourceTree = "<group>"; };
 		94D97B04165D2EBA00282ABE /* Should.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Should.h; sourceTree = "<group>"; };
-		94D97B0D165D2EBA00282ABE /* ShouldTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ShouldTests.octest; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D97B0D165D2EBA00282ABE /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		94D97B10165D2EBA00282ABE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		94D97B2B165D2EF400282ABE /* Unit Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		94D97B33165D2FC200282ABE /* BHVEqualityMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHVEqualityMatcher.h; sourceTree = "<group>"; };
+		94D97B34165D2FC200282ABE /* BHVEqualityMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVEqualityMatcher.m; sourceTree = "<group>"; };
+		94D97B35165D2FC200282ABE /* BHVExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHVExpectation.h; sourceTree = "<group>"; };
+		94D97B36165D2FC200282ABE /* BHVExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVExpectation.m; sourceTree = "<group>"; };
+		94D97B37165D2FC200282ABE /* BHVMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHVMatcher.h; sourceTree = "<group>"; };
+		94D97B38165D2FC200282ABE /* BHVMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVMatcher.m; sourceTree = "<group>"; };
+		94D97B39165D2FC200282ABE /* BHVMatcherRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHVMatcherRegistry.h; sourceTree = "<group>"; };
+		94D97B3A165D2FC200282ABE /* BHVMatcherRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVMatcherRegistry.m; sourceTree = "<group>"; };
+		94D97B3B165D2FC200282ABE /* NSObject+BHVHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BHVHierarchy.h"; sourceTree = "<group>"; };
+		94D97B3C165D2FC200282ABE /* NSObject+BHVHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BHVHierarchy.m"; sourceTree = "<group>"; };
+		94D97B3D165D2FC200282ABE /* NSObject+BHVShould.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BHVShould.h"; sourceTree = "<group>"; };
+		94D97B3E165D2FC200282ABE /* NSObject+BHVShould.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BHVShould.m"; sourceTree = "<group>"; };
+		94D97B45165D2FD500282ABE /* BHVEqualityMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVEqualityMatcherTests.m; sourceTree = "<group>"; };
+		94D97B46165D2FD500282ABE /* BHVExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVExpectationTests.m; sourceTree = "<group>"; };
+		94D97B47165D2FD500282ABE /* BHVMatcherRegistryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVMatcherRegistryTests.m; sourceTree = "<group>"; };
+		94D97B48165D2FD500282ABE /* BHVShouldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHVShouldTests.m; sourceTree = "<group>"; };
+		94D97B4D165D30BF00282ABE /* Unit Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unit Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +88,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */,
-				94D97B11165D2EBA00282ABE /* UIKit.framework in Frameworks */,
 				94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */,
 				94D97B15165D2EBA00282ABE /* libShould.a in Frameworks */,
 			);
@@ -86,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				94D97AFC165D2EBA00282ABE /* libShould.a */,
-				94D97B0D165D2EBA00282ABE /* ShouldTests.octest */,
+				94D97B0D165D2EBA00282ABE /* Unit Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +120,6 @@
 			children = (
 				94D97AFF165D2EBA00282ABE /* Foundation.framework */,
 				94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */,
-				94D97B10165D2EBA00282ABE /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,6 +128,18 @@
 			isa = PBXGroup;
 			children = (
 				94D97B04165D2EBA00282ABE /* Should.h */,
+				94D97B3B165D2FC200282ABE /* NSObject+BHVHierarchy.h */,
+				94D97B3C165D2FC200282ABE /* NSObject+BHVHierarchy.m */,
+				94D97B3D165D2FC200282ABE /* NSObject+BHVShould.h */,
+				94D97B3E165D2FC200282ABE /* NSObject+BHVShould.m */,
+				94D97B33165D2FC200282ABE /* BHVEqualityMatcher.h */,
+				94D97B34165D2FC200282ABE /* BHVEqualityMatcher.m */,
+				94D97B35165D2FC200282ABE /* BHVExpectation.h */,
+				94D97B36165D2FC200282ABE /* BHVExpectation.m */,
+				94D97B37165D2FC200282ABE /* BHVMatcher.h */,
+				94D97B38165D2FC200282ABE /* BHVMatcher.m */,
+				94D97B39165D2FC200282ABE /* BHVMatcherRegistry.h */,
+				94D97B3A165D2FC200282ABE /* BHVMatcherRegistry.m */,
 				94D97B02165D2EBA00282ABE /* Supporting Files */,
 			);
 			path = Should;
@@ -121,6 +156,10 @@
 		94D97B2A165D2EF400282ABE /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				94D97B48165D2FD500282ABE /* BHVShouldTests.m */,
+				94D97B45165D2FD500282ABE /* BHVEqualityMatcherTests.m */,
+				94D97B46165D2FD500282ABE /* BHVExpectationTests.m */,
+				94D97B47165D2FD500282ABE /* BHVMatcherRegistryTests.m */,
 				94D97B2E165D2EF700282ABE /* Supporting Files */,
 			);
 			path = "Unit Tests";
@@ -130,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				94D97B2B165D2EF400282ABE /* Unit Tests-Info.plist */,
+				94D97B4D165D30BF00282ABE /* Unit Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,7 +210,7 @@
 			);
 			name = "Unit Tests";
 			productName = ShouldTests;
-			productReference = 94D97B0D165D2EBA00282ABE /* ShouldTests.octest */;
+			productReference = 94D97B0D165D2EBA00282ABE /* Unit Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -231,6 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D97B3F165D2FC200282ABE /* BHVEqualityMatcher.m in Sources */,
+				94D97B40165D2FC200282ABE /* BHVExpectation.m in Sources */,
+				94D97B41165D2FC200282ABE /* BHVMatcher.m in Sources */,
+				94D97B42165D2FC200282ABE /* BHVMatcherRegistry.m in Sources */,
+				94D97B43165D2FC200282ABE /* NSObject+BHVHierarchy.m in Sources */,
+				94D97B44165D2FC200282ABE /* NSObject+BHVShould.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D97B49165D2FD500282ABE /* BHVEqualityMatcherTests.m in Sources */,
+				94D97B4A165D2FD500282ABE /* BHVExpectationTests.m in Sources */,
+				94D97B4B165D2FD500282ABE /* BHVMatcherRegistryTests.m in Sources */,
+				94D97B4C165D2FD500282ABE /* BHVShouldTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,8 +381,9 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Should/Should-Prefix.pch";
-				INFOPLIST_FILE = "ShouldTests/ShouldTests-Info.plist";
+				GCC_PREFIX_HEADER = "Unit Tests/Unit Tests-Prefix.pch";
+				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -346,8 +397,9 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Should/Should-Prefix.pch";
-				INFOPLIST_FILE = "ShouldTests/ShouldTests-Info.plist";
+				GCC_PREFIX_HEADER = "Unit Tests/Unit Tests-Prefix.pch";
+				INFOPLIST_FILE = "Unit Tests/Unit Tests-Info.plist";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
