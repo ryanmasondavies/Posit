@@ -13,7 +13,7 @@ Expectations
 Matchers
 --------
 
-Beehive provides matchers in the format of [[subject should] ...], allowing for more readable examples. The default matchers provided by Beehive are as follows:
+Should provides matchers in the format of [[subject should] ...], allowing for more readable examples. The default matchers provided are as follows:
 
     // Existence:
     [object shouldBeNil];
@@ -62,7 +62,7 @@ In order to negate a matcher, either of the following is valid:
     
 Use whichever you prefer.
 
-Some of the matchers listed above work based on the dynamic behaviour of Beehive - if no matcher exists with the provided selector, Beehive will attempt to realize the behaviour that you intended, based on convention. If the matcher provided begins with 'be', Beehive will swap 'be' out for 'is' and attempt to call a method with the generated selector on the subject. For example, 'beEqualTo:' calls 'isEqualTo:' has no matcher – instead, Beehive calls 'beEqualTo:' on the subject, providing the expected behaviour.
+Some of the matchers listed above work based on the dynamic behaviour of Should - if no matcher exists with the provided selector, the library will attempt to realize the behaviour that you intended, based on convention. If the matcher provided begins with 'be', 'be' will be swapped out for 'is' and attempt to call a method with the generated selector on the subject. For example, 'beEqualTo:' calls 'isEqualTo:' has no matcher – instead, Should calls 'beEqualTo:' on the subject, providing the expected behaviour.
 
 If you have a method such as -isGreen on your object, you don't need to write a matcher in order for the following to be valid:
 
