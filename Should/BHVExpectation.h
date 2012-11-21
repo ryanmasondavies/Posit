@@ -10,11 +10,9 @@
 
 @interface BHVExpectation : NSObject
 @property (nonatomic, strong) id subject;
-@property (nonatomic, strong) NSInvocation *invocation;
 @property (nonatomic, strong) BHVMatcher *matcher;
 @property (nonatomic, getter=isNegated) BOOL negated;
 
 - (id)initWithSubject:(id)subject;
-- (void)verify;
 
 @end

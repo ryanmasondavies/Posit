@@ -6,4 +6,5 @@
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NSObject+BHVShould.h"
+#import "BHVEqualityMatcher.h"

@@ -44,15 +44,13 @@
 - (void)testThrowsExceptionIfMatcherFails
 {
     BHVExpectation *expectation = [[BHVExpectation alloc] init];
-    [(id)expectation beMediocre];
-    STAssertThrows([expectation verify], @"Expectation did not throw an exception but should have.");
+    STAssertThrows([(id)expectation beMediocre], @"Expectation did not throw an exception but should have.");
 }
 
 - (void)testDoesNotThrowExceptionIfMatcherSucceeds
 {
     BHVExpectation *expectation = [[BHVExpectation alloc] init];
-    [(id)expectation beAwesome];
-    STAssertNoThrow([expectation verify], @"Expectation did throw an exception but should not have.");
+    STAssertNoThrow([(id)expectation beAwesome], @"Expectation did throw an exception but should not have.");
 }
 
 - (void)testThrowsExceptionIfNoMatcherImplementsSelector

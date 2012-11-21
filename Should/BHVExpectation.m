@@ -21,19 +21,14 @@
     return self;
 }
 
-- (void)verify
+- (void)forwardInvocation:(NSInvocation *)invocation
 {
     BOOL result = NO;
     
-    [[self invocation] invokeWithTarget:[self matcher]];
-    [[self invocation] getReturnValue:&result];
+    [invocation invokeWithTarget:[self matcher]];
+    [invocation getReturnValue:&result];
     
     if (result == NO) [NSException raise:NSInvalidArgumentException format:@"Expectation failed."];
-}
-
-- (void)forwardInvocation:(NSInvocation *)invocation
-{
-    [self setInvocation:invocation];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
