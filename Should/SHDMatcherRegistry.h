@@ -1,5 +1,5 @@
 //
-//  BHVMatcherRegistry.h
+//  SHDMatcherRegistry.h
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BHVMatcherRegistry : NSObject
+@interface SHDMatcherRegistry : NSObject
 @property (nonatomic, strong) NSArray *registeredClasses;
 
 + (id)sharedRegistry;

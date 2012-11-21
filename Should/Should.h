@@ -6,5 +6,5 @@
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+BHVShould.h"
-#import "BHVEqualityMatcher.h"
+#import "NSObject+SHDShould.h"
+#import "SHDEqualityMatcher.h"

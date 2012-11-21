@@ -1,23 +1,23 @@
 //
-//  BHVShould.h
+//  SHDShouldTests.h
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+BHVShould.h"
-#import "BHVExpectation.h"
+#import "NSObject+SHDShould.h"
+#import "SHDExpectation.h"
 
-@interface BHVShouldTests : SenTestCase
+@interface SHDShouldTests : SenTestCase
 @end
 
-@implementation BHVShouldTests
+@implementation SHDShouldTests
 
 - (void)testShouldCreatesExpectation
 {
     id object = [NSObject new];
-    BHVExpectation *expectation = [object should];
+    SHDExpectation *expectation = [object should];
     STAssertEqualObjects([expectation subject], object, @"Expectation subject was not the object that -should was called on.");
 }
 

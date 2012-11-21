@@ -1,5 +1,5 @@
 //
-//  BHVMatcher.h
+//  NSObject+SHDHierarchy.h
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BHVMatcher : NSObject
-@property (nonatomic, strong) id subject;
+@interface NSObject (SHDHierarchy)
 
-- (id)initWithSubject:(id)subject;
++ (NSArray *)subclasses;
 
 @end

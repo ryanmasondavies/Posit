@@ -1,21 +1,21 @@
 //
-//  BHVMatcherRegistry.m
+//  SHDMatcherRegistry.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "BHVMatcherRegistry.h"
-#import "BHVMatcher.h"
-#import "NSObject+BHVHierarchy.h"
+#import "SHDMatcherRegistry.h"
+#import "SHDMatcher.h"
+#import "NSObject+SHDHierarchy.h"
 
-@implementation BHVMatcherRegistry
+@implementation SHDMatcherRegistry
 
 + (id)sharedRegistry
 {
     static dispatch_once_t pred;
-    static BHVMatcherRegistry *registry = nil;
+    static SHDMatcherRegistry *registry = nil;
     dispatch_once(&pred, ^{ registry = [[self alloc] init]; });
     return registry;
 }
@@ -23,7 +23,7 @@
 - (id)init
 {
     if (self = [super init]) {
-        self.registeredClasses = [BHVMatcher subclasses];
+        self.registeredClasses = [SHDMatcher subclasses];
     }
     
     return self;

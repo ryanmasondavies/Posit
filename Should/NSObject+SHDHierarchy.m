@@ -1,15 +1,15 @@
 //
-//  NSObject+BHVHierarchy.m
+//  NSObject+SHDHierarchy.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+BHVHierarchy.h"
+#import "NSObject+SHDHierarchy.h"
 #import <objc/objc-runtime.h>
 
-@implementation NSObject (BHVHierarchy)
+@implementation NSObject (SHDHierarchy)
 
 + (NSArray *)subclasses
 {

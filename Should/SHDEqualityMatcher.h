@@ -1,15 +1,13 @@
 //
-//  NSObject+BHVShould.h
+//  SHDEqualityMatcher.h
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "SHDMatcher.h"
 
-@interface NSObject (BHVShould)
-
-- (id)should;
-
+@interface SHDEqualityMatcher : SHDMatcher
+- (BOOL)beEqualTo:(id)object;
 @end

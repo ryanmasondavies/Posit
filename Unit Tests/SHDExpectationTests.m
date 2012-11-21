@@ -1,20 +1,20 @@
 //
-//  BHVExpectationTests.m
+//  SHDExpectationTests.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "BHVExpectation.h"
-#import "BHVMatcher.h"
-#import "BHVMatcherRegistry.h"
+#import "SHDExpectation.h"
+#import "SHDMatcher.h"
+#import "SHDMatcherRegistry.h"
 
-@interface BHVSuccessfulMatcher : BHVMatcher
+@interface SHDSuccessfulMatcher : SHDMatcher
 - (BOOL)beAwesome;
 @end
 
-@implementation BHVSuccessfulMatcher
+@implementation SHDSuccessfulMatcher
 
 - (BOOL)beAwesome
 {
@@ -23,11 +23,11 @@
 
 @end
 
-@interface BHVFailingMatcher : BHVMatcher
+@interface SHDFailingMatcher : SHDMatcher
 - (BOOL)beMediocre;
 @end
 
-@implementation BHVFailingMatcher
+@implementation SHDFailingMatcher
 
 - (BOOL)beMediocre
 {
@@ -36,26 +36,26 @@
 
 @end
 
-@interface BHVExpectationTests : SenTestCase
+@interface SHDExpectationTests : SenTestCase
 @end
 
-@implementation BHVExpectationTests
+@implementation SHDExpectationTests
 
 - (void)testThrowsExceptionIfMatcherFails
 {
-    BHVExpectation *expectation = [[BHVExpectation alloc] init];
+    SHDExpectation *expectation = [[SHDExpectation alloc] init];
     STAssertThrows([(id)expectation beMediocre], @"Expectation did not throw an exception but should have.");
 }
 
 - (void)testDoesNotThrowExceptionIfMatcherSucceeds
 {
-    BHVExpectation *expectation = [[BHVExpectation alloc] init];
+    SHDExpectation *expectation = [[SHDExpectation alloc] init];
     STAssertNoThrow([(id)expectation beAwesome], @"Expectation did throw an exception but should not have.");
 }
 
 - (void)testThrowsExceptionIfNoMatcherImplementsSelector
 {
-    BHVExpectation *expectation = [[BHVExpectation alloc] init];
+    SHDExpectation *expectation = [[SHDExpectation alloc] init];
     STAssertThrows([expectation performSelector:@selector(someNonexistentSelector)], @"Expectation did not throw an exception but should have.");
 }
 

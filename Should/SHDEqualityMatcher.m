@@ -1,15 +1,15 @@
 //
-//  BHVEqualityMatcher.m
+//  SHDEqualityMatcher.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "BHVEqualityMatcher.h"
-#import "BHVMatcherRegistry.h"
+#import "SHDEqualityMatcher.h"
+#import "SHDMatcherRegistry.h"
 
-@implementation BHVEqualityMatcher
+@implementation SHDEqualityMatcher
 
 - (BOOL)beEqualTo:(id)object
 {
