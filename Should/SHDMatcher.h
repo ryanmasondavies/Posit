@@ -13,4 +13,7 @@
 
 - (id)initWithSubject:(id)subject;
 
+- (NSString *)failureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments;
+- (NSString *)negativeFailureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments;
+
 @end

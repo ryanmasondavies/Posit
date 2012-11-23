@@ -8,30 +8,27 @@
 
 #import "SHDExpectation.h"
 #import "SHDMatcher.h"
-#import "SHDMatcherRegistry.h"
 
-@interface SHDSuccessfulMatcher : SHDMatcher
-- (BOOL)beAwesome;
+@interface SHDTestMatcher : SHDMatcher
+
+- (BOOL)successfulMethod;
+- (BOOL)failureMethod;
+
 @end
 
-@implementation SHDSuccessfulMatcher
+@implementation SHDTestMatcher
 
-- (BOOL)beAwesome
+- (BOOL)successfulMethod { return YES; }
+- (BOOL)failureMethod    { return NO;  }
+
+- (NSString *)failureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
 {
-    return YES;
+    return [NSString stringWithFormat:@"%@ failed.", [self subject]];
 }
 
-@end
-
-@interface SHDFailingMatcher : SHDMatcher
-- (BOOL)beMediocre;
-@end
-
-@implementation SHDFailingMatcher
-
-- (BOOL)beMediocre
+- (NSString *)negativeFailureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
 {
-    return NO;
+    return [NSString stringWithFormat:@"%@ succeeded.", [self subject]];
 }
 
 @end
@@ -44,33 +41,58 @@
 - (void)testThrowsExceptionIfMatcherFails
 {
     SHDExpectation *expectation = [[SHDExpectation alloc] init];
-    STAssertThrows([(id)expectation beMediocre], @"Expectation did not throw an exception but should have.");
+    STAssertThrows([(id)expectation failureMethod], @"Expectation did not throw an exception but should have.");
 }
 
 - (void)testDoesNotThrowExceptionIfMatcherSucceeds
 {
     SHDExpectation *expectation = [[SHDExpectation alloc] init];
-    STAssertNoThrow([(id)expectation beAwesome], @"Expectation did throw an exception but should not have.");
+    STAssertNoThrow([(id)expectation successfulMethod], @"Expectation did throw an exception but should not have.");
 }
 
 - (void)testNegative_ThrowsExceptionIfMatcherSucceeds
 {
     SHDExpectation *expectation = [[SHDExpectation alloc] init];
     [expectation setNegative:YES];
-    STAssertThrows([(id)expectation beAwesome], @"Expectation did not throw an exception but should have.");
+    STAssertThrows([(id)expectation successfulMethod], @"Expectation did not throw an exception but should have.");
 }
 
 - (void)testNegative_DoesNotThrowExceptionIfMatcherFails
 {
     SHDExpectation *expectation = [[SHDExpectation alloc] init];
     [expectation setNegative:YES];
-    STAssertNoThrow([(id)expectation beMediocre], @"Expectation did throw an exception but should not have.");
+    STAssertNoThrow([(id)expectation failureMethod], @"Expectation did throw an exception but should not have.");
 }
 
 - (void)testThrowsExceptionIfNoMatcherImplementsSelector
 {
     SHDExpectation *expectation = [[SHDExpectation alloc] init];
     STAssertThrows([expectation performSelector:@selector(someNonexistentSelector)], @"Expectation did not throw an exception but should have.");
+}
+
+#pragma mark - Exception messages
+
+- (void)testFailureMessage
+{
+    @try {
+        SHDExpectation *expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        [(id)expectation failureMethod];
+    }
+    @catch(NSException *exception) {
+        STAssertEqualObjects([exception reason], @"Hello World failed.", @"Exception reason did not match the matcher's failure message.");
+    }
+}
+
+- (void)testNegativeFailureMessage
+{
+    @try {
+        SHDExpectation *expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        [expectation setNegative:YES];
+        [(id)expectation successfulMethod];
+    }
+    @catch(NSException *exception) {
+        STAssertEqualObjects([exception reason], @"Hello World succeeded.", @"Exception reason did not match the matcher's negative failure message.");
+    }
 }
 
 @end

@@ -20,7 +20,12 @@
 
 - (void)testFailsIfInequal
 {
-    STAssertThrows([[@"foo" should] beEqualTo:@"bar"], @"should throw an exception");
+    NSException *exception = nil;
+    @try { [[@"foo" should] beEqualTo:@"bar"]; }
+    @catch(NSException *e) { exception = e; }
+    
+    STAssertNotNil(exception, @"Should throw an exception");
+    STAssertEqualObjects([exception reason], @"foo should have been equal to bar.", @"Should have had the correct failure message");
 }
 
 - (void)testNegative_SucceedsIfInequal
@@ -30,7 +35,12 @@
 
 - (void)testNegative_FailsIfEqual
 {
-    STAssertThrows([[@"foo" shouldNot] beEqualTo:@"foo"], @"Should throw an exception");
+    NSException *exception = nil;
+    @try { [[@"foo" shouldNot] beEqualTo:@"foo"]; }
+    @catch(NSException *e) { exception = e; }
+    
+    STAssertNotNil(exception, @"Should throw an exception");
+    STAssertEqualObjects([exception reason], @"foo should not have been equal to bar.", @"Should have had the correct failure message");
 }
 
 @end

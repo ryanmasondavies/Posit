@@ -16,4 +16,14 @@
     return [[self subject] isEqual:object];
 }
 
+- (NSString *)failureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
+{
+    return [NSString stringWithFormat:@"%@ should have been equal to %@.", [self subject], arguments[0]];
+}
+
+- (NSString *)negativeFailureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
+{
+    return [NSString stringWithFormat:@"%@ should not have been equal to %@.", [self subject], arguments[0]];
+}
+
 @end

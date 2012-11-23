@@ -28,7 +28,17 @@
     [invocation invokeWithTarget:[self matcher]];
     [invocation getReturnValue:&result];
     
-    if (result == [self isNegative]) [NSException raise:NSInvalidArgumentException format:@"Expectation failed."];
+    if (result == [self isNegative]) {
+        NSString *reason;
+        if ([self isNegative] == NO) {
+            reason = [[self matcher] failureMessageForSelector:[invocation selector] arguments:@[]];
+        } else {
+            reason = [[self matcher] negativeFailureMessageForSelector:[invocation selector] arguments:@[]];
+        }
+        
+        NSException *exception = [[NSException alloc] initWithName:@"SHDMatcherException" reason:reason userInfo:nil];
+        [exception raise];
+    }
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector

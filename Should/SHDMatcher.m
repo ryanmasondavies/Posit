@@ -19,4 +19,14 @@
     return self;
 }
 
+- (NSString *)failureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
+{
+    return nil;
+}
+
+- (NSString *)negativeFailureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
+{
+    return nil;
+}
+
 @end
