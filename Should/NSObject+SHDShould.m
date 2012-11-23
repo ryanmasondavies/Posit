@@ -16,4 +16,11 @@
     return [[SHDExpectation alloc] initWithSubject:self];
 }
 
+- (id)shouldNot
+{
+    SHDExpectation *expectation = [[SHDExpectation alloc] initWithSubject:self];
+    [expectation setNegative:YES];
+    return expectation;
+}
+
 @end

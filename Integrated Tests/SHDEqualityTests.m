@@ -23,12 +23,12 @@
     STAssertThrows([[@"foo" should] beEqualTo:@"bar"], @"should throw an exception");
 }
 
-- (void)testNegated_SucceedsIfInequal
+- (void)testNegative_SucceedsIfInequal
 {
     STAssertNoThrow([[@"foo" shouldNot] beEqualTo:@"bar"], @"Should not throw an exception.");
 }
 
-- (void)testNegated_FailsIfEqual
+- (void)testNegative_FailsIfEqual
 {
     STAssertThrows([[@"foo" shouldNot] beEqualTo:@"foo"], @"Should throw an exception");
 }

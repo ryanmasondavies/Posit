@@ -28,7 +28,7 @@
     [invocation invokeWithTarget:[self matcher]];
     [invocation getReturnValue:&result];
     
-    if (result == NO) [NSException raise:NSInvalidArgumentException format:@"Expectation failed."];
+    if (result == [self isNegative]) [NSException raise:NSInvalidArgumentException format:@"Expectation failed."];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector

@@ -53,6 +53,20 @@
     STAssertNoThrow([(id)expectation beAwesome], @"Expectation did throw an exception but should not have.");
 }
 
+- (void)testNegative_ThrowsExceptionIfMatcherSucceeds
+{
+    SHDExpectation *expectation = [[SHDExpectation alloc] init];
+    [expectation setNegative:YES];
+    STAssertThrows([(id)expectation beAwesome], @"Expectation did not throw an exception but should have.");
+}
+
+- (void)testNegative_DoesNotThrowExceptionIfMatcherFails
+{
+    SHDExpectation *expectation = [[SHDExpectation alloc] init];
+    [expectation setNegative:YES];
+    STAssertNoThrow([(id)expectation beMediocre], @"Expectation did throw an exception but should not have.");
+}
+
 - (void)testThrowsExceptionIfNoMatcherImplementsSelector
 {
     SHDExpectation *expectation = [[SHDExpectation alloc] init];

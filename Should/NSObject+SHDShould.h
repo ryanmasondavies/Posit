@@ -11,5 +11,6 @@
 @interface NSObject (SHDShould)
 
 - (id)should;
+- (id)shouldNot;
 
 @end

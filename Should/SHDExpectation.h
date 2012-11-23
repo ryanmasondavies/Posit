@@ -11,7 +11,7 @@
 @interface SHDExpectation : NSObject
 @property (nonatomic, strong) id subject;
 @property (nonatomic, strong) SHDMatcher *matcher;
-@property (nonatomic, getter=isNegated) BOOL negated;
+@property (nonatomic, getter=isNegative) BOOL negative;
 
 - (id)initWithSubject:(id)subject;
 
