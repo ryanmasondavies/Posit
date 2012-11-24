@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		949F47A9165FF12D00CC46A8 /* SHDTestMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F47A8165FF12D00CC46A8 /* SHDTestMatcher.m */; };
 		94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B05165D2EBA00282ABE /* Should.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94D97B04165D2EBA00282ABE /* Should.h */; };
 		94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
@@ -66,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		949F47A7165FF12D00CC46A8 /* SHDTestMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDTestMatcher.h; sourceTree = "<group>"; };
+		949F47A8165FF12D00CC46A8 /* SHDTestMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDTestMatcher.m; sourceTree = "<group>"; };
 		94D97AFC165D2EBA00282ABE /* libShould.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShould.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97AFF165D2EBA00282ABE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D97B03165D2EBA00282ABE /* Should-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Should-Prefix.pch"; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 		94D97B2E165D2EF700282ABE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				949F47A7165FF12D00CC46A8 /* SHDTestMatcher.h */,
+				949F47A8165FF12D00CC46A8 /* SHDTestMatcher.m */,
 				94D97B2B165D2EF400282ABE /* Unit Tests-Info.plist */,
 				94D97B4D165D30BF00282ABE /* Unit Tests-Prefix.pch */,
 			);
@@ -382,6 +387,7 @@
 				94D97B4A165D2FD500282ABE /* SHDExpectationTests.m in Sources */,
 				94D97B4B165D2FD500282ABE /* SHDMatcherRegistryTests.m in Sources */,
 				94D97B4C165D2FD500282ABE /* SHDShouldTests.m in Sources */,
+				949F47A9165FF12D00CC46A8 /* SHDTestMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +592,7 @@
 				94D97B64165D339600282ABE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
