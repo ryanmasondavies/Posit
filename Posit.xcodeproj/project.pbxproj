@@ -7,26 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		949F47A9165FF12D00CC46A8 /* SHDTestMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F47A8165FF12D00CC46A8 /* SHDTestMatcher.m */; };
+		949F47A9165FF12D00CC46A8 /* PSTTestMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */; };
+		94C3B129166119DF003B3F43 /* NSObject+PSTHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */; };
+		94C3B12A166119DF003B3F43 /* NSObject+PSTShould.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */; };
+		94C3B12B166119DF003B3F43 /* PSTEqualityMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B121166119DF003B3F43 /* PSTEqualityMatcher.m */; };
+		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
+		94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B125166119DF003B3F43 /* PSTMatcher.m */; };
+		94C3B12E166119DF003B3F43 /* PSTMatcherRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B127166119DF003B3F43 /* PSTMatcherRegistry.m */; };
 		94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
-		94D97B05165D2EBA00282ABE /* Should.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94D97B04165D2EBA00282ABE /* Should.h */; };
 		94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
 		94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
-		94D97B15165D2EBA00282ABE /* libShould.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFC165D2EBA00282ABE /* libShould.a */; };
-		94D97B3F165D2FC200282ABE /* SHDEqualityMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B34165D2FC200282ABE /* SHDEqualityMatcher.m */; };
-		94D97B40165D2FC200282ABE /* SHDExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B36165D2FC200282ABE /* SHDExpectation.m */; };
-		94D97B41165D2FC200282ABE /* SHDMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B38165D2FC200282ABE /* SHDMatcher.m */; };
-		94D97B42165D2FC200282ABE /* SHDMatcherRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B3A165D2FC200282ABE /* SHDMatcherRegistry.m */; };
-		94D97B43165D2FC200282ABE /* NSObject+SHDHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B3C165D2FC200282ABE /* NSObject+SHDHierarchy.m */; };
-		94D97B44165D2FC200282ABE /* NSObject+SHDShould.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B3E165D2FC200282ABE /* NSObject+SHDShould.m */; };
-		94D97B49165D2FD500282ABE /* SHDEqualityMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B45165D2FD500282ABE /* SHDEqualityMatcherTests.m */; };
-		94D97B4A165D2FD500282ABE /* SHDExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B46165D2FD500282ABE /* SHDExpectationTests.m */; };
-		94D97B4B165D2FD500282ABE /* SHDMatcherRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B47165D2FD500282ABE /* SHDMatcherRegistryTests.m */; };
-		94D97B4C165D2FD500282ABE /* SHDShouldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B48165D2FD500282ABE /* SHDShouldTests.m */; };
+		94D97B15165D2EBA00282ABE /* libPosit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFC165D2EBA00282ABE /* libPosit.a */; };
+		94D97B49165D2FD500282ABE /* PSTEqualityMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B45165D2FD500282ABE /* PSTEqualityMatcherTests.m */; };
+		94D97B4A165D2FD500282ABE /* PSTExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B46165D2FD500282ABE /* PSTExpectationTests.m */; };
+		94D97B4B165D2FD500282ABE /* PSTMatcherRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B47165D2FD500282ABE /* PSTMatcherRegistryTests.m */; };
+		94D97B4C165D2FD500282ABE /* PSTShouldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B48165D2FD500282ABE /* PSTShouldTests.m */; };
 		94D97B54165D339600282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
 		94D97B57165D339600282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
-		94D97B69165D33C500282ABE /* libShould.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFC165D2EBA00282ABE /* libShould.a */; };
-		94D97B6C165D34F200282ABE /* SHDEqualityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B6B165D34F200282ABE /* SHDEqualityTests.m */; };
+		94D97B69165D33C500282ABE /* libPosit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFC165D2EBA00282ABE /* libPosit.a */; };
+		94D97B6C165D34F200282ABE /* PSTEqualityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D97B6B165D34F200282ABE /* PSTEqualityTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,43 +59,42 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				94D97B05165D2EBA00282ABE /* Should.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		949F47A7165FF12D00CC46A8 /* SHDTestMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDTestMatcher.h; sourceTree = "<group>"; };
-		949F47A8165FF12D00CC46A8 /* SHDTestMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDTestMatcher.m; sourceTree = "<group>"; };
-		94D97AFC165D2EBA00282ABE /* libShould.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShould.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		949F47A7165FF12D00CC46A8 /* PSTTestMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTTestMatcher.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTTestMatcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94C3B11B166119DF003B3F43 /* NSObject+PSTHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+PSTHierarchy.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+PSTHierarchy.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94C3B11D166119DF003B3F43 /* NSObject+PSTShould.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+PSTShould.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+PSTShould.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94C3B11F166119DF003B3F43 /* Posit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "Posit-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94C3B120166119DF003B3F43 /* PSTEqualityMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTEqualityMatcher.h; sourceTree = "<group>"; };
+		94C3B121166119DF003B3F43 /* PSTEqualityMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityMatcher.m; sourceTree = "<group>"; };
+		94C3B122166119DF003B3F43 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTExpectation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		94C3B123166119DF003B3F43 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTExpectation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94C3B124166119DF003B3F43 /* PSTMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
+		94C3B125166119DF003B3F43 /* PSTMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcher.m; sourceTree = "<group>"; };
+		94C3B126166119DF003B3F43 /* PSTMatcherRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcherRegistry.h; sourceTree = "<group>"; };
+		94C3B127166119DF003B3F43 /* PSTMatcherRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherRegistry.m; sourceTree = "<group>"; };
+		94C3B128166119DF003B3F43 /* Posit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Posit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		94D97AFC165D2EBA00282ABE /* libPosit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPosit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97AFF165D2EBA00282ABE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		94D97B03165D2EBA00282ABE /* Should-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Should-Prefix.pch"; sourceTree = "<group>"; };
-		94D97B04165D2EBA00282ABE /* Should.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Should.h; sourceTree = "<group>"; };
 		94D97B0D165D2EBA00282ABE /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		94D97B2B165D2EF400282ABE /* Unit Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
-		94D97B33165D2FC200282ABE /* SHDEqualityMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDEqualityMatcher.h; sourceTree = "<group>"; };
-		94D97B34165D2FC200282ABE /* SHDEqualityMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDEqualityMatcher.m; sourceTree = "<group>"; };
-		94D97B35165D2FC200282ABE /* SHDExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDExpectation.h; sourceTree = "<group>"; };
-		94D97B36165D2FC200282ABE /* SHDExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDExpectation.m; sourceTree = "<group>"; };
-		94D97B37165D2FC200282ABE /* SHDMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDMatcher.h; sourceTree = "<group>"; };
-		94D97B38165D2FC200282ABE /* SHDMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDMatcher.m; sourceTree = "<group>"; };
-		94D97B3A165D2FC200282ABE /* SHDMatcherRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDMatcherRegistry.m; sourceTree = "<group>"; };
-		94D97B3B165D2FC200282ABE /* NSObject+SHDHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SHDHierarchy.h"; sourceTree = "<group>"; };
-		94D97B3C165D2FC200282ABE /* NSObject+SHDHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SHDHierarchy.m"; sourceTree = "<group>"; };
-		94D97B3D165D2FC200282ABE /* NSObject+SHDShould.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SHDShould.h"; sourceTree = "<group>"; };
-		94D97B3E165D2FC200282ABE /* NSObject+SHDShould.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SHDShould.m"; sourceTree = "<group>"; };
-		94D97B45165D2FD500282ABE /* SHDEqualityMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDEqualityMatcherTests.m; sourceTree = "<group>"; };
-		94D97B46165D2FD500282ABE /* SHDExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDExpectationTests.m; sourceTree = "<group>"; };
-		94D97B47165D2FD500282ABE /* SHDMatcherRegistryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDMatcherRegistryTests.m; sourceTree = "<group>"; };
-		94D97B48165D2FD500282ABE /* SHDShouldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDShouldTests.m; sourceTree = "<group>"; };
+		94D97B45165D2FD500282ABE /* PSTEqualityMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTEqualityMatcherTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94D97B46165D2FD500282ABE /* PSTExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTExpectationTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94D97B47165D2FD500282ABE /* PSTMatcherRegistryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherRegistryTests.m; sourceTree = "<group>"; };
+		94D97B48165D2FD500282ABE /* PSTShouldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTShouldTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94D97B4D165D30BF00282ABE /* Unit Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unit Tests-Prefix.pch"; sourceTree = "<group>"; };
 		94D97B53165D339600282ABE /* Integrated Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Integrated Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97B5A165D339600282ABE /* Integrated Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Integrated Tests-Info.plist"; sourceTree = "<group>"; };
 		94D97B61165D339600282ABE /* Integrated Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Integrated Tests-Prefix.pch"; sourceTree = "<group>"; };
-		94D97B6B165D34F200282ABE /* SHDEqualityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDEqualityTests.m; sourceTree = "<group>"; };
-		94D97B6D165D38DA00282ABE /* SHDMatcherRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDMatcherRegistry.h; sourceTree = "<group>"; };
+		94D97B6B165D34F200282ABE /* PSTEqualityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTEqualityTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,7 @@
 			files = (
 				94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */,
 				94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */,
-				94D97B15165D2EBA00282ABE /* libShould.a in Frameworks */,
+				94D97B15165D2EBA00282ABE /* libPosit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,17 +122,46 @@
 			files = (
 				94D97B57165D339600282ABE /* Foundation.framework in Frameworks */,
 				94D97B54165D339600282ABE /* SenTestingKit.framework in Frameworks */,
-				94D97B69165D33C500282ABE /* libShould.a in Frameworks */,
+				94D97B69165D33C500282ABE /* libPosit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94C3B11A166119DF003B3F43 /* Posit */ = {
+			isa = PBXGroup;
+			children = (
+				94C3B128166119DF003B3F43 /* Posit.h */,
+				94C3B11B166119DF003B3F43 /* NSObject+PSTHierarchy.h */,
+				94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */,
+				94C3B11D166119DF003B3F43 /* NSObject+PSTShould.h */,
+				94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */,
+				94C3B120166119DF003B3F43 /* PSTEqualityMatcher.h */,
+				94C3B121166119DF003B3F43 /* PSTEqualityMatcher.m */,
+				94C3B122166119DF003B3F43 /* PSTExpectation.h */,
+				94C3B123166119DF003B3F43 /* PSTExpectation.m */,
+				94C3B124166119DF003B3F43 /* PSTMatcher.h */,
+				94C3B125166119DF003B3F43 /* PSTMatcher.m */,
+				94C3B126166119DF003B3F43 /* PSTMatcherRegistry.h */,
+				94C3B127166119DF003B3F43 /* PSTMatcherRegistry.m */,
+				94C3B12F166119EA003B3F43 /* Supporting Files */,
+			);
+			path = Posit;
+			sourceTree = "<group>";
+		};
+		94C3B12F166119EA003B3F43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94C3B11F166119DF003B3F43 /* Posit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		94D97AF1165D2EBA00282ABE = {
 			isa = PBXGroup;
 			children = (
-				94D97B01165D2EBA00282ABE /* Should */,
+				94C3B11A166119DF003B3F43 /* Posit */,
 				94D97B2A165D2EF400282ABE /* Unit Tests */,
 				94D97B58165D339600282ABE /* Integrated Tests */,
 				94D97AFE165D2EBA00282ABE /* Frameworks */,
@@ -145,7 +172,7 @@
 		94D97AFD165D2EBA00282ABE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94D97AFC165D2EBA00282ABE /* libShould.a */,
+				94D97AFC165D2EBA00282ABE /* libPosit.a */,
 				94D97B0D165D2EBA00282ABE /* Unit Tests.octest */,
 				94D97B53165D339600282ABE /* Integrated Tests.octest */,
 			);
@@ -161,42 +188,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		94D97B01165D2EBA00282ABE /* Should */ = {
-			isa = PBXGroup;
-			children = (
-				94D97B04165D2EBA00282ABE /* Should.h */,
-				94D97B3B165D2FC200282ABE /* NSObject+SHDHierarchy.h */,
-				94D97B3C165D2FC200282ABE /* NSObject+SHDHierarchy.m */,
-				94D97B3D165D2FC200282ABE /* NSObject+SHDShould.h */,
-				94D97B3E165D2FC200282ABE /* NSObject+SHDShould.m */,
-				94D97B33165D2FC200282ABE /* SHDEqualityMatcher.h */,
-				94D97B34165D2FC200282ABE /* SHDEqualityMatcher.m */,
-				94D97B35165D2FC200282ABE /* SHDExpectation.h */,
-				94D97B36165D2FC200282ABE /* SHDExpectation.m */,
-				94D97B37165D2FC200282ABE /* SHDMatcher.h */,
-				94D97B38165D2FC200282ABE /* SHDMatcher.m */,
-				94D97B6D165D38DA00282ABE /* SHDMatcherRegistry.h */,
-				94D97B3A165D2FC200282ABE /* SHDMatcherRegistry.m */,
-				94D97B02165D2EBA00282ABE /* Supporting Files */,
-			);
-			path = Should;
-			sourceTree = "<group>";
-		};
-		94D97B02165D2EBA00282ABE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				94D97B03165D2EBA00282ABE /* Should-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		94D97B2A165D2EF400282ABE /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				94D97B48165D2FD500282ABE /* SHDShouldTests.m */,
-				94D97B45165D2FD500282ABE /* SHDEqualityMatcherTests.m */,
-				94D97B46165D2FD500282ABE /* SHDExpectationTests.m */,
-				94D97B47165D2FD500282ABE /* SHDMatcherRegistryTests.m */,
+				94D97B48165D2FD500282ABE /* PSTShouldTests.m */,
+				94D97B45165D2FD500282ABE /* PSTEqualityMatcherTests.m */,
+				94D97B46165D2FD500282ABE /* PSTExpectationTests.m */,
+				94D97B47165D2FD500282ABE /* PSTMatcherRegistryTests.m */,
 				94D97B2E165D2EF700282ABE /* Supporting Files */,
 			);
 			path = "Unit Tests";
@@ -205,8 +203,8 @@
 		94D97B2E165D2EF700282ABE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				949F47A7165FF12D00CC46A8 /* SHDTestMatcher.h */,
-				949F47A8165FF12D00CC46A8 /* SHDTestMatcher.m */,
+				949F47A7165FF12D00CC46A8 /* PSTTestMatcher.h */,
+				949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */,
 				94D97B2B165D2EF400282ABE /* Unit Tests-Info.plist */,
 				94D97B4D165D30BF00282ABE /* Unit Tests-Prefix.pch */,
 			);
@@ -216,7 +214,7 @@
 		94D97B58165D339600282ABE /* Integrated Tests */ = {
 			isa = PBXGroup;
 			children = (
-				94D97B6B165D34F200282ABE /* SHDEqualityTests.m */,
+				94D97B6B165D34F200282ABE /* PSTEqualityTests.m */,
 				94D97B59165D339600282ABE /* Supporting Files */,
 			);
 			path = "Integrated Tests";
@@ -234,9 +232,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		94D97AFB165D2EBA00282ABE /* Should */ = {
+		94D97AFB165D2EBA00282ABE /* Posit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94D97B21165D2EBA00282ABE /* Build configuration list for PBXNativeTarget "Should" */;
+			buildConfigurationList = 94D97B21165D2EBA00282ABE /* Build configuration list for PBXNativeTarget "Posit" */;
 			buildPhases = (
 				94D97AF8165D2EBA00282ABE /* Sources */,
 				94D97AF9165D2EBA00282ABE /* Frameworks */,
@@ -246,9 +244,9 @@
 			);
 			dependencies = (
 			);
-			name = Should;
+			name = Posit;
 			productName = Should;
-			productReference = 94D97AFC165D2EBA00282ABE /* libShould.a */;
+			productReference = 94D97AFC165D2EBA00282ABE /* libPosit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		94D97B0C165D2EBA00282ABE /* Unit Tests */ = {
@@ -296,11 +294,11 @@
 		94D97AF3165D2EBA00282ABE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = SHD;
+				CLASSPREFIX = PST;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ryan Davies";
 			};
-			buildConfigurationList = 94D97AF6165D2EBA00282ABE /* Build configuration list for PBXProject "Should" */;
+			buildConfigurationList = 94D97AF6165D2EBA00282ABE /* Build configuration list for PBXProject "Posit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -312,7 +310,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94D97AFB165D2EBA00282ABE /* Should */,
+				94D97AFB165D2EBA00282ABE /* Posit */,
 				94D97B0C165D2EBA00282ABE /* Unit Tests */,
 				94D97B52165D339600282ABE /* Integrated Tests */,
 			);
@@ -370,12 +368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D97B3F165D2FC200282ABE /* SHDEqualityMatcher.m in Sources */,
-				94D97B40165D2FC200282ABE /* SHDExpectation.m in Sources */,
-				94D97B41165D2FC200282ABE /* SHDMatcher.m in Sources */,
-				94D97B42165D2FC200282ABE /* SHDMatcherRegistry.m in Sources */,
-				94D97B43165D2FC200282ABE /* NSObject+SHDHierarchy.m in Sources */,
-				94D97B44165D2FC200282ABE /* NSObject+SHDShould.m in Sources */,
+				94C3B129166119DF003B3F43 /* NSObject+PSTHierarchy.m in Sources */,
+				94C3B12A166119DF003B3F43 /* NSObject+PSTShould.m in Sources */,
+				94C3B12B166119DF003B3F43 /* PSTEqualityMatcher.m in Sources */,
+				94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */,
+				94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */,
+				94C3B12E166119DF003B3F43 /* PSTMatcherRegistry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,11 +381,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D97B49165D2FD500282ABE /* SHDEqualityMatcherTests.m in Sources */,
-				94D97B4A165D2FD500282ABE /* SHDExpectationTests.m in Sources */,
-				94D97B4B165D2FD500282ABE /* SHDMatcherRegistryTests.m in Sources */,
-				94D97B4C165D2FD500282ABE /* SHDShouldTests.m in Sources */,
-				949F47A9165FF12D00CC46A8 /* SHDTestMatcher.m in Sources */,
+				94D97B49165D2FD500282ABE /* PSTEqualityMatcherTests.m in Sources */,
+				94D97B4A165D2FD500282ABE /* PSTExpectationTests.m in Sources */,
+				94D97B4B165D2FD500282ABE /* PSTMatcherRegistryTests.m in Sources */,
+				94D97B4C165D2FD500282ABE /* PSTShouldTests.m in Sources */,
+				949F47A9165FF12D00CC46A8 /* PSTTestMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D97B6C165D34F200282ABE /* SHDEqualityTests.m in Sources */,
+				94D97B6C165D34F200282ABE /* PSTEqualityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,12 +402,12 @@
 /* Begin PBXTargetDependency section */
 		94D97B14165D2EBA00282ABE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 94D97AFB165D2EBA00282ABE /* Should */;
+			target = 94D97AFB165D2EBA00282ABE /* Posit */;
 			targetProxy = 94D97B13165D2EBA00282ABE /* PBXContainerItemProxy */;
 		};
 		94D97B66165D33BA00282ABE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 94D97AFB165D2EBA00282ABE /* Should */;
+			target = 94D97AFB165D2EBA00282ABE /* Posit */;
 			targetProxy = 94D97B65165D33BA00282ABE /* PBXContainerItemProxy */;
 		};
 		94D97B68165D33BB00282ABE /* PBXTargetDependency */ = {
@@ -470,11 +468,11 @@
 		94D97B22165D2EBA00282ABE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/Should.dst;
+				DSTROOT = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Should/Should-Prefix.pch";
+				GCC_PREFIX_HEADER = "Posit/Posit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Posit;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -482,11 +480,11 @@
 		94D97B23165D2EBA00282ABE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DSTROOT = /tmp/Should.dst;
+				DSTROOT = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Should/Should-Prefix.pch";
+				GCC_PREFIX_HEADER = "Posit/Posit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Posit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -558,7 +556,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94D97AF6165D2EBA00282ABE /* Build configuration list for PBXProject "Should" */ = {
+		94D97AF6165D2EBA00282ABE /* Build configuration list for PBXProject "Posit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94D97B1F165D2EBA00282ABE /* Debug */,
@@ -567,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94D97B21165D2EBA00282ABE /* Build configuration list for PBXNativeTarget "Should" */ = {
+		94D97B21165D2EBA00282ABE /* Build configuration list for PBXNativeTarget "Posit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94D97B22165D2EBA00282ABE /* Debug */,

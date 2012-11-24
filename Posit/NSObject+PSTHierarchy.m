@@ -1,15 +1,15 @@
 //
-//  NSObject+SHDHierarchy.m
+//  NSObject+PSTHierarchy.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+SHDHierarchy.h"
+#import "NSObject+PSTHierarchy.h"
 #import <objc/objc-runtime.h>
 
-@implementation NSObject (SHDHierarchy)
+@implementation NSObject (PSTHierarchy)
 
 + (NSArray *)subclasses
 {

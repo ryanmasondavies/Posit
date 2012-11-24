@@ -1,16 +1,16 @@
 //
-//  SHDExpectation.m
+//  PSTExpectation.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "SHDExpectation.h"
-#import "SHDMatcher.h"
-#import "SHDMatcherRegistry.h"
+#import "PSTExpectation.h"
+#import "PSTMatcher.h"
+#import "PSTMatcherRegistry.h"
 
-@implementation SHDExpectation
+@implementation PSTExpectation
 
 - (id)initWithSubject:(id)subject
 {
@@ -81,13 +81,13 @@
         else
             reason = [[self matcher] negativeFailureMessageForSelector:[invocation selector] arguments:arguments];
         
-        [NSException raise:@"SHDMatcherException" format:reason, nil];
+        [NSException raise:@"PSTMatcherException" format:reason, nil];
     }
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-    Class klass = [[SHDMatcherRegistry sharedRegistry] classWhoseInstancesRespondToSelector:selector];
+    Class klass = [[PSTMatcherRegistry sharedRegistry] classWhoseInstancesRespondToSelector:selector];
     self.matcher = [[klass alloc] initWithSubject:[self subject]];
     return [[self matcher] methodSignatureForSelector:selector];
 }

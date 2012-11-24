@@ -1,48 +1,48 @@
 //
-//  SHDExpectationTests.m
+//  PSTExpectationTests.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "SHDExpectation.h"
-#import "SHDTestMatcher.h"
+#import "PSTExpectation.h"
+#import "PSTTestMatcher.h"
 
-@interface SHDExpectationTests : SenTestCase
+@interface PSTExpectationTests : SenTestCase
 @end
 
-@implementation SHDExpectationTests
+@implementation PSTExpectationTests
 
 - (void)testThrowsExceptionIfMatcherFails
 {
-    SHDExpectation *expectation = [[SHDExpectation alloc] init];
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
     STAssertThrows([(id)expectation failureMethod], @"Expectation did not throw an exception but should have.");
 }
 
 - (void)testDoesNotThrowExceptionIfMatcherSucceeds
 {
-    SHDExpectation *expectation = [[SHDExpectation alloc] init];
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
     STAssertNoThrow([(id)expectation successfulMethod], @"Expectation did throw an exception but should not have.");
 }
 
 - (void)testNegative_ThrowsExceptionIfMatcherSucceeds
 {
-    SHDExpectation *expectation = [[SHDExpectation alloc] init];
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
     [expectation setNegative:YES];
     STAssertThrows([(id)expectation successfulMethod], @"Expectation did not throw an exception but should have.");
 }
 
 - (void)testNegative_DoesNotThrowExceptionIfMatcherFails
 {
-    SHDExpectation *expectation = [[SHDExpectation alloc] init];
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
     [expectation setNegative:YES];
     STAssertNoThrow([(id)expectation failureMethod], @"Expectation did throw an exception but should not have.");
 }
 
 - (void)testThrowsExceptionIfNoMatcherImplementsSelector
 {
-    SHDExpectation *expectation = [[SHDExpectation alloc] init];
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
     STAssertThrows([expectation performSelector:@selector(someNonexistentSelector)], @"Expectation did not throw an exception but should have.");
 }
 
@@ -51,7 +51,7 @@
 - (void)testFailureMessageWithNoArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethod];
     }
     @catch(NSException *exception) {
@@ -62,7 +62,7 @@
 - (void)testFailureMessageWithNullArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithNull:nil andNull:NULL];
     }
     @catch(NSException *exception) {
@@ -73,7 +73,7 @@
 - (void)testFailureMessageWithObjectArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithObject:@"Foo" andObject:@"Bar"];
     }
     @catch(NSException *exception) {
@@ -84,7 +84,7 @@
 - (void)testFailureMessageWithClassArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithClass:[NSObject class] andClass:[NSString class]];
     }
     @catch(NSException *exception) {
@@ -96,7 +96,7 @@
 - (void)testFailureMessageWithSelectorArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithSelector:@selector(one) andSelector:@selector(two)];
     }
     @catch(NSException *exception) {
@@ -108,7 +108,7 @@
 - (void)testFailureMessageWithBooleanArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithBoolean:true andBoolean:false];
     }
     @catch(NSException *exception) {
@@ -119,7 +119,7 @@
 - (void)testFailureMessageWithCharArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithChar:CHAR_MIN andChar:CHAR_MAX];
     }
     @catch(NSException *exception) {
@@ -131,7 +131,7 @@
 - (void)testFailureMessageWithDoubleArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithDouble:DBL_MIN andDouble:DBL_MAX];
     }
     @catch(NSException *exception) {
@@ -143,7 +143,7 @@
 - (void)testFailureMessageWithFloatArgument
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithFloat:FLT_MIN andFloat:FLT_MAX];
     }
     @catch(NSException *exception) {
@@ -155,7 +155,7 @@
 - (void)testFailureMessageWithIntArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithInt:INT_MIN andInt:INT_MAX];
     }
     @catch(NSException *exception) {
@@ -167,7 +167,7 @@
 - (void)testFailureMessageWithLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithLong:LONG_MIN andLong:LONG_MAX];
     }
     @catch(NSException *exception) {
@@ -179,7 +179,7 @@
 - (void)testFailureMessageWithLongLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithLongLong:LLONG_MIN andLongLong:LLONG_MAX];
     }
     @catch(NSException *exception) {
@@ -191,7 +191,7 @@
 - (void)testFailureMessageWithShortArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithShort:SHRT_MIN andShort:SHRT_MAX];
     }
     @catch(NSException *exception) {
@@ -203,7 +203,7 @@
 - (void)testFailureMessageWithUnsignedCharArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithUnsignedChar:0 andUnsignedChar:UCHAR_MAX];
     }
     @catch(NSException *exception) {
@@ -215,7 +215,7 @@
 - (void)testFailureMessageWithUnsignedIntArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithUnsignedInt:0 andUnsignedInt:UINT_MAX];
     }
     @catch(NSException *exception) {
@@ -227,7 +227,7 @@
 - (void)testFailureMessageWithUnsignedLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithUnsignedLong:0 andUnsignedLong:ULONG_MAX];
     }
     @catch(NSException *exception) {
@@ -239,7 +239,7 @@
 - (void)testFailureMessageWithUnsignedLongLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithUnsignedLongLong:0 andUnsignedLongLong:ULLONG_MAX];
     }
     @catch(NSException *exception) {
@@ -251,7 +251,7 @@
 - (void)testFailureMessageWithUnsignedShortArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation failureMethodWithUnsignedShort:0 andUnsignedShort:USHRT_MAX];
     }
     @catch(NSException *exception) {
@@ -265,7 +265,7 @@
 - (void)testNegativeFailureMessageWithNoArguments
 {
     @try {
-        SHDExpectation *expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        PSTExpectation *expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [(id)expectation successfulMethod];
     }
@@ -278,7 +278,7 @@
 - (void)testNegativeFailureMessageWithNullArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithNull:nil andNull:NULL];
     }
@@ -290,7 +290,7 @@
 - (void)testNegativeFailureMessageWithObjectArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithObject:@"Foo" andObject:@"Bar"];
     }
@@ -302,7 +302,7 @@
 - (void)testNegativeFailureMessageWithClassArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithClass:[NSObject class] andClass:[NSString class]];
     }
@@ -315,7 +315,7 @@
 - (void)testNegativeFailureMessageWithSelectorArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithSelector:@selector(one) andSelector:@selector(two)];
     }
@@ -328,7 +328,7 @@
 - (void)testNegativeFailureMessageWithBooleanArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithBoolean:true andBoolean:false];
     }
@@ -340,7 +340,7 @@
 - (void)testNegativeFailureMessageWithCharArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithChar:CHAR_MIN andChar:CHAR_MAX];
     }
@@ -353,7 +353,7 @@
 - (void)testNegativeFailureMessageWithDoubleArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithDouble:DBL_MIN andDouble:DBL_MAX];
     }
@@ -366,7 +366,7 @@
 - (void)testNegativeFailureMessageWithFloatArgument
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithFloat:FLT_MIN andFloat:FLT_MAX];
     }
@@ -379,7 +379,7 @@
 - (void)testNegativeFailureMessageWithIntArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithInt:INT_MIN andInt:INT_MAX];
     }
@@ -392,7 +392,7 @@
 - (void)testNegativeFailureMessageWithLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithLong:LONG_MIN andLong:LONG_MAX];
     }
@@ -405,7 +405,7 @@
 - (void)testNegativeFailureMessageWithLongLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithLongLong:LLONG_MIN andLongLong:LLONG_MAX];
     }
@@ -418,7 +418,7 @@
 - (void)testNegativeFailureMessageWithShortArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithShort:SHRT_MIN andShort:SHRT_MAX];
     }
@@ -431,7 +431,7 @@
 - (void)testNegativeFailureMessageWithUnsignedCharArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithUnsignedChar:0 andUnsignedChar:UCHAR_MAX];
     }
@@ -444,7 +444,7 @@
 - (void)testNegativeFailureMessageWithUnsignedIntArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithUnsignedInt:0 andUnsignedInt:UINT_MAX];
     }
@@ -457,7 +457,7 @@
 - (void)testNegativeFailureMessageWithUnsignedLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation successfulMethodWithUnsignedLong:0 andUnsignedLong:ULONG_MAX];
     }
     @catch(NSException *exception) {
@@ -469,7 +469,7 @@
 - (void)testNegativeFailureMessageWithUnsignedLongLongArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithUnsignedLongLong:0 andUnsignedLongLong:ULLONG_MAX];
     }
@@ -482,7 +482,7 @@
 - (void)testNegativeFailureMessageWithUnsignedShortArguments
 {
     @try {
-        id expectation = [[SHDExpectation alloc] initWithSubject:@"Hello World"];
+        id expectation = [[PSTExpectation alloc] initWithSubject:@"Hello World"];
         [expectation setNegative:YES];
         [expectation successfulMethodWithUnsignedShort:0 andUnsignedShort:USHRT_MAX];
     }

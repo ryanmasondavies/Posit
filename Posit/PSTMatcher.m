@@ -1,15 +1,15 @@
 //
-//  SHDMatcher.m
+//  PSTMatcher.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "SHDMatcher.h"
-#import "SHDMatcherRegistry.h"
+#import "PSTMatcher.h"
+#import "PSTMatcherRegistry.h"
 
-@implementation SHDMatcher
+@implementation PSTMatcher
 
 - (id)initWithSubject:(id)subject
 {

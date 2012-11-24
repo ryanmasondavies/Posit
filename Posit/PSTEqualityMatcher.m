@@ -1,15 +1,15 @@
 //
-//  SHDEqualityMatcher.m
+//  PSTEqualityMatcher.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "SHDEqualityMatcher.h"
-#import "SHDMatcherRegistry.h"
+#import "PSTEqualityMatcher.h"
+#import "PSTMatcherRegistry.h"
 
-@implementation SHDEqualityMatcher
+@implementation PSTEqualityMatcher
 
 - (BOOL)beEqualTo:(id)object
 {

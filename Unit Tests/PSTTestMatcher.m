@@ -1,14 +1,14 @@
 //
-//  SHDTestMatcher.m
-//  Should
+//  PSTTestMatcher.m
+//  Posit
 //
 //  Created by Ryan Davies on 23/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "SHDTestMatcher.h"
+#import "PSTTestMatcher.h"
 
-@implementation SHDTestMatcher
+@implementation PSTTestMatcher
 
 - (BOOL)successfulMethod { return YES; }
 - (BOOL)successfulMethodWithNull:(id)null1 andNull:(id)null2 { return YES; }

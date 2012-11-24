@@ -1,5 +1,5 @@
 //
-//  SHDMatcherRegistry.h
+//  PSTMatcherRegistry.h
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SHDMatcherRegistry : NSObject
+@interface PSTMatcherRegistry : NSObject
 @property (nonatomic, strong) NSArray *registeredClasses;
 
 + (id)sharedRegistry;

@@ -1,5 +1,5 @@
 //
-//  NSObject+SHDHierarchy.h
+//  NSObject+PSTShould.h
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (SHDHierarchy)
+@interface NSObject (PSTShould)
 
-+ (NSArray *)subclasses;
+- (id)should;
+- (id)shouldNot;
 
 @end

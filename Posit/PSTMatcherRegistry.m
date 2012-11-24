@@ -1,21 +1,21 @@
 //
-//  SHDMatcherRegistry.m
+//  PSTMatcherRegistry.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "SHDMatcherRegistry.h"
-#import "SHDMatcher.h"
-#import "NSObject+SHDHierarchy.h"
+#import "PSTMatcherRegistry.h"
+#import "PSTMatcher.h"
+#import "NSObject+PSTHierarchy.h"
 
-@implementation SHDMatcherRegistry
+@implementation PSTMatcherRegistry
 
 + (id)sharedRegistry
 {
     static dispatch_once_t pred;
-    static SHDMatcherRegistry *registry = nil;
+    static PSTMatcherRegistry *registry = nil;
     dispatch_once(&pred, ^{ registry = [[self alloc] init]; });
     return registry;
 }
@@ -23,7 +23,7 @@
 - (id)init
 {
     if (self = [super init]) {
-        self.registeredClasses = [SHDMatcher subclasses];
+        self.registeredClasses = [PSTMatcher subclasses];
     }
     
     return self;
