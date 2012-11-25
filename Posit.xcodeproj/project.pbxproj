@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		949F47A9165FF12D00CC46A8 /* PSTTestMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */; };
+		94C2CCE11662C85B002F5AD7 /* PSTObjectEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */; };
+		94C2CCE51662CA0C002F5AD7 /* NSObject+PSTEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2CCE41662CA0C002F5AD7 /* NSObject+PSTEquality.m */; };
 		94C3B129166119DF003B3F43 /* NSObject+PSTHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */; };
 		94C3B12A166119DF003B3F43 /* NSObject+PSTShould.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */; };
 		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
@@ -67,6 +69,9 @@
 /* Begin PBXFileReference section */
 		949F47A7165FF12D00CC46A8 /* PSTTestMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTTestMatcher.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTTestMatcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectEquality.m; sourceTree = "<group>"; };
+		94C2CCE31662CA0C002F5AD7 /* NSObject+PSTEquality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PSTEquality.h"; sourceTree = "<group>"; };
+		94C2CCE41662CA0C002F5AD7 /* NSObject+PSTEquality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PSTEquality.m"; sourceTree = "<group>"; };
 		94C3B11B166119DF003B3F43 /* NSObject+PSTHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+PSTHierarchy.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+PSTHierarchy.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B11D166119DF003B3F43 /* NSObject+PSTShould.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+PSTShould.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -137,6 +142,8 @@
 				94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */,
 				94C3B11D166119DF003B3F43 /* NSObject+PSTShould.h */,
 				94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */,
+				94C2CCE31662CA0C002F5AD7 /* NSObject+PSTEquality.h */,
+				94C2CCE41662CA0C002F5AD7 /* NSObject+PSTEquality.m */,
 				94C3B122166119DF003B3F43 /* PSTExpectation.h */,
 				94C3B123166119DF003B3F43 /* PSTExpectation.m */,
 				94C3B124166119DF003B3F43 /* PSTMatcher.h */,
@@ -192,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				94D97B48165D2FD500282ABE /* PSTShouldTests.m */,
+				94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */,
 				94D97B46165D2FD500282ABE /* PSTExpectationTests.m */,
 				94F554BA1662B63B00B21102 /* PSTBeMatcherTests.m */,
 				94D97B47165D2FD500282ABE /* PSTMatcherRegistryTests.m */,
@@ -374,6 +382,7 @@
 				94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */,
 				94C3B12E166119DF003B3F43 /* PSTMatcherRegistry.m in Sources */,
 				94F554BE1662B7CE00B21102 /* PSTBeMatcher.m in Sources */,
+				94C2CCE51662CA0C002F5AD7 /* NSObject+PSTEquality.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +395,7 @@
 				94D97B4C165D2FD500282ABE /* PSTShouldTests.m in Sources */,
 				949F47A9165FF12D00CC46A8 /* PSTTestMatcher.m in Sources */,
 				94F554BB1662B63B00B21102 /* PSTBeMatcherTests.m in Sources */,
+				94C2CCE11662C85B002F5AD7 /* PSTObjectEquality.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
