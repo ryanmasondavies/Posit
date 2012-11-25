@@ -87,7 +87,7 @@
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-    Class klass = [[PSTMatcherRegistry sharedRegistry] classWhoseInstancesRespondToSelector:selector];
+    Class klass = [PSTMatcherRegistry classWhoseInstancesRespondToSelector:selector];
     self.matcher = [[klass alloc] initWithSubject:[self subject]];
     return [[self matcher] methodSignatureForSelector:selector];
 }

@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface PSTMatcherRegistry : NSObject
-@property (nonatomic, strong) NSArray *registeredClasses;
 
-+ (id)sharedRegistry;
-
-- (Class)classWhoseInstancesRespondToSelector:(SEL)selector;
++ (Class)classWhoseInstancesRespondToSelector:(SEL)selector;
 
 @end

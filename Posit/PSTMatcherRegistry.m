@@ -45,31 +45,16 @@
 
 @implementation PSTMatcherRegistry
 
-+ (id)sharedRegistry
++ (Class)classWhoseInstancesRespondToSelector:(SEL)selector
 {
-    static dispatch_once_t pred;
-    static PSTMatcherRegistry *registry = nil;
-    dispatch_once(&pred, ^{ registry = [[self alloc] init]; });
-    return registry;
-}
-
-- (id)init
-{
-    if (self = [super init]) {
-        self.registeredClasses = [PSTMatcher subclasses];
-    }
+    NSArray *subclasses = [PSTMatcher subclasses];
     
-    return self;
-}
-
-- (Class)classWhoseInstancesRespondToSelector:(SEL)selector
-{
-    NSUInteger indexOfClass = [[self registeredClasses] indexOfObjectPassingTest:^BOOL(Class klass, NSUInteger idx, BOOL *stop) {
+    NSUInteger indexOfClass = [subclasses indexOfObjectPassingTest:^BOOL(Class klass, NSUInteger idx, BOOL *stop) {
         return [klass instancesRespondToSelector:selector];
     }];
     
     if (indexOfClass == NSNotFound) return nil;
-    return [[self registeredClasses] objectAtIndex:indexOfClass];
+    return [subclasses objectAtIndex:indexOfClass];
 }
 
 @end

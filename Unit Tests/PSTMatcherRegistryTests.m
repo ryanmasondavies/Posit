@@ -22,20 +22,9 @@
 
 @implementation PSTMatcherRegistryTests
 
-- (void)testSharedRegistryReturnsSameInstance
-{
-    id sharedRegistry[2];
-    sharedRegistry[0] = [PSTMatcherRegistry sharedRegistry];
-    sharedRegistry[1] = [PSTMatcherRegistry sharedRegistry];
-    STAssertTrue([sharedRegistry[0] isKindOfClass:[PSTMatcherRegistry class]], @"sharedRegistry did not return a matcher registry.");
-    STAssertTrue([sharedRegistry[1] isKindOfClass:[PSTMatcherRegistry class]], @"sharedRegistry did not return a matcher registry.");
-    STAssertEqualObjects(sharedRegistry[0], sharedRegistry[1], @"sharedRegistry did not return the same instance both times.");
-}
-
 - (void)testRegistersMatcherSubclasses
 {
-    PSTMatcherRegistry *registry = [[PSTMatcherRegistry alloc] init];
-    STAssertTrue([registry classWhoseInstancesRespondToSelector:@selector(someMethod)] == [PSTSampleMatcher class], @"PSTSampleMatcher was not registered as a matcher class.");
+    STAssertTrue([PSTMatcherRegistry classWhoseInstancesRespondToSelector:@selector(someMethod)] == [PSTSampleMatcher class], @"PSTSampleMatcher was not registered as a matcher class.");
 }
 
 @end
