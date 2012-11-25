@@ -67,13 +67,15 @@
         }
     }
     
-    return [NSString stringWithFormat:@"Expected %@ not to %@.", [self subject], message];
+    return [NSString stringWithFormat:@"Expected %@ to %@.", [self subject], message];
 }
 
 - (NSString *)negativeFailureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
 {
     NSString *failureMessage = [self failureMessageForSelector:selector arguments:arguments];
-    return [failureMessage stringByReplacingOccurrencesOfString:@" not to " withString:@" to "];
+    NSString *needle = [NSString stringWithFormat:@"Expected %@ to", [self subject]];
+    NSString *replacement = [NSString stringWithFormat:@"Expected %@ not to", [self subject]];
+    return [failureMessage stringByReplacingOccurrencesOfString:needle withString:replacement];
 }
 
 @end

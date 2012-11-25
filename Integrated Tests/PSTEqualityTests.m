@@ -25,7 +25,7 @@
     @catch(NSException *e) { exception = e; }
     
     STAssertNotNil(exception, @"Should throw an exception");
-    STAssertEqualObjects([exception reason], @"foo should have been equal to bar.", @"Should have had the correct failure message");
+    STAssertEqualObjects([exception reason], @"Expected foo to be equal to bar.", @"Expected the correct failure message.");
 }
 
 - (void)testNegative_SucceedsIfInequal
@@ -40,7 +40,7 @@
     @catch(NSException *e) { exception = e; }
     
     STAssertNotNil(exception, @"Should throw an exception");
-    STAssertEqualObjects([exception reason], @"foo should not have been equal to foo.", @"Should have had the correct failure message");
+    STAssertEqualObjects([exception reason], @"Expected foo not to be equal to foo.", @"Expected the correct failure message.");
 }
 
 @end

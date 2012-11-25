@@ -51,29 +51,37 @@
 - (void)testGeneratesFailureMessagesWithASingleWord
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject not to be valid.";
+    NSString *expected = @"Expected test subject to be valid.";
     STAssertEqualObjects([matcher failureMessageForSelector:@selector(beValid) arguments:@[]], expected, @"Failure message was not as expected.");
 }
 
 - (void)testGeneratesFailureMessagesWithMultipleWords
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject not to be valid and wordy.";
+    NSString *expected = @"Expected test subject to be valid and wordy.";
     STAssertEqualObjects([matcher failureMessageForSelector:@selector(beValidAndWordy) arguments:@[]], expected, @"Failure message was not as expected.");
 }
 
 - (void)testGeneratesFailureMessagesWithASingleArgument
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject not to be valid with this thing.";
+    NSString *expected = @"Expected test subject to be valid with this thing.";
     STAssertEqualObjects([matcher failureMessageForSelector:@selector(beValidWith:) arguments:@[@"this thing"]], expected, @"Failure message was not as expected.");
 }
 
 - (void)testGeneratesFailureMessagesWithMultipleArguments
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject not to be valid with this thing, and wordy against another thing.";
+    NSString *expected = @"Expected test subject to be valid with this thing, and wordy against another thing.";
     NSString *actual = [matcher failureMessageForSelector:@selector(beValidWith:wordyAgainst:) arguments:@[@"this thing", @"another thing"]];
+    STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
+}
+
+- (void)testGeneratesFailureMessagesWhenSelectorContainsMultipleOccurrencesOf_To_
+{
+    PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
+    NSString *expected = @"Expected test subject to be equal to this thing.";
+    NSString *actual = [matcher failureMessageForSelector:@selector(beEqualTo:) arguments:@[@"this thing"]];
     STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
 }
 
@@ -82,29 +90,37 @@
 - (void)testGeneratesNegativeFailureMessagesWithASingleWord
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject to be valid.";
+    NSString *expected = @"Expected test subject not to be valid.";
     STAssertEqualObjects([matcher negativeFailureMessageForSelector:@selector(beValid) arguments:@[]], expected, @"Failure message was not as expected.");
 }
 
 - (void)testGeneratesNegativeFailureMessagesWithMultipleWords
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject to be valid and wordy.";
+    NSString *expected = @"Expected test subject not to be valid and wordy.";
     STAssertEqualObjects([matcher negativeFailureMessageForSelector:@selector(beValidAndWordy) arguments:@[]], expected, @"Failure message was not as expected.");
 }
 
 - (void)testGeneratesNegativeFailureMessagesWithASingleArgument
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject to be valid with this thing.";
+    NSString *expected = @"Expected test subject not to be valid with this thing.";
     STAssertEqualObjects([matcher negativeFailureMessageForSelector:@selector(beValidWith:) arguments:@[@"this thing"]], expected, @"Failure message was not as expected.");
 }
 
 - (void)testGeneratesNegativeFailureMessagesWithMultipleArguments
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject to be valid with this thing, and wordy against another thing.";
+    NSString *expected = @"Expected test subject not to be valid with this thing, and wordy against another thing.";
     NSString *actual = [matcher negativeFailureMessageForSelector:@selector(beValidWith:wordyAgainst:) arguments:@[@"this thing", @"another thing"]];
+    STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
+}
+
+- (void)testGeneratesNegativeFailureMessagesWhenSelectorContainsMultipleOccurrencesOf_To_
+{
+    PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
+    NSString *expected = @"Expected test subject not to be equal to this thing.";
+    NSString *actual = [matcher negativeFailureMessageForSelector:@selector(beEqualTo:) arguments:@[@"this thing"]];
     STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
 }
 

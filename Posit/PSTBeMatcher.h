@@ -9,5 +9,10 @@
 #import "PSTMatcher.h"
 
 @interface PSTBeMatcher : PSTMatcher
+@end
+
+@interface PSTBeMatcher (PSTEquality)
+
+- (BOOL)beEqualTo:(id)other;
 
 @end

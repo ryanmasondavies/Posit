@@ -7,4 +7,5 @@
 //
 
 #import "NSObject+PSTShould.h"
-#import "PSTEqualityMatcher.h"
+#import "NSObject+PSTEquality.h"
+#import "PSTBeMatcher.h"
