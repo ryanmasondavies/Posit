@@ -24,13 +24,13 @@
     @try { [[@"foo" should] beEqualTo:@"bar"]; }
     @catch(NSException *e) { exception = e; }
     
-    STAssertNotNil(exception, @"Posit throw an exception");
-    STAssertEqualObjects([exception reason], @"foo should have been equal to bar.", @"Posit have had the correct failure message");
+    STAssertNotNil(exception, @"Should throw an exception");
+    STAssertEqualObjects([exception reason], @"foo should have been equal to bar.", @"Should have had the correct failure message");
 }
 
 - (void)testNegative_SucceedsIfInequal
 {
-    STAssertNoThrow([[@"foo" shouldNot] beEqualTo:@"bar"], @"Posit not throw an exception.");
+    STAssertNoThrow([[@"foo" shouldNot] beEqualTo:@"bar"], @"Should not throw an exception.");
 }
 
 - (void)testNegative_FailsIfEqual
@@ -39,8 +39,8 @@
     @try { [[@"foo" shouldNot] beEqualTo:@"foo"]; }
     @catch(NSException *e) { exception = e; }
     
-    STAssertNotNil(exception, @"Posit throw an exception");
-    STAssertEqualObjects([exception reason], @"foo should not have been equal to foo.", @"Posit have had the correct failure message");
+    STAssertNotNil(exception, @"Should throw an exception");
+    STAssertEqualObjects([exception reason], @"foo should not have been equal to foo.", @"Should have had the correct failure message");
 }
 
 @end
