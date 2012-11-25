@@ -8,7 +8,6 @@
 
 #import "PSTExpectation.h"
 #import "PSTMatcher.h"
-#import "PSTMatcherRegistry.h"
 
 @implementation PSTExpectation
 
@@ -87,7 +86,7 @@
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-    Class klass = [PSTMatcherRegistry classWhoseInstancesRespondToSelector:selector];
+    Class klass = [PSTMatcher subclassWhoseInstancesRespondToSelector:selector];
     self.matcher = [[klass alloc] initWithSubject:[self subject]];
     return [[self matcher] methodSignatureForSelector:selector];
 }

@@ -11,6 +11,8 @@
 @interface PSTMatcher : NSObject
 @property (nonatomic, strong) id subject;
 
++ (Class)subclassWhoseInstancesRespondToSelector:(SEL)selector;
+
 - (id)initWithSubject:(id)subject;
 
 - (NSString *)failureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments;
