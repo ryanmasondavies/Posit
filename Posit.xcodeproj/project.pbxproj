@@ -10,7 +10,6 @@
 		949F47A9165FF12D00CC46A8 /* PSTTestMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */; };
 		94C2CCE11662C85B002F5AD7 /* PSTObjectEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */; };
 		94C2CCE51662CA0C002F5AD7 /* NSObject+PSTEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2CCE41662CA0C002F5AD7 /* NSObject+PSTEquality.m */; };
-		94C3B129166119DF003B3F43 /* NSObject+PSTHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */; };
 		94C3B12A166119DF003B3F43 /* NSObject+PSTShould.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */; };
 		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
 		94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B125166119DF003B3F43 /* PSTMatcher.m */; };
@@ -72,8 +71,6 @@
 		94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectEquality.m; sourceTree = "<group>"; };
 		94C2CCE31662CA0C002F5AD7 /* NSObject+PSTEquality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PSTEquality.h"; sourceTree = "<group>"; };
 		94C2CCE41662CA0C002F5AD7 /* NSObject+PSTEquality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PSTEquality.m"; sourceTree = "<group>"; };
-		94C3B11B166119DF003B3F43 /* NSObject+PSTHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+PSTHierarchy.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+PSTHierarchy.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B11D166119DF003B3F43 /* NSObject+PSTShould.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSObject+PSTShould.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "NSObject+PSTShould.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B11F166119DF003B3F43 /* Posit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "Posit-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -138,8 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				94C3B128166119DF003B3F43 /* Posit.h */,
-				94C3B11B166119DF003B3F43 /* NSObject+PSTHierarchy.h */,
-				94C3B11C166119DF003B3F43 /* NSObject+PSTHierarchy.m */,
 				94C3B11D166119DF003B3F43 /* NSObject+PSTShould.h */,
 				94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */,
 				94C2CCE31662CA0C002F5AD7 /* NSObject+PSTEquality.h */,
@@ -376,7 +371,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94C3B129166119DF003B3F43 /* NSObject+PSTHierarchy.m in Sources */,
 				94C3B12A166119DF003B3F43 /* NSObject+PSTShould.m in Sources */,
 				94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */,
 				94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */,

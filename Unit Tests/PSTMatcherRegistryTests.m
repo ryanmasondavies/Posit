@@ -10,9 +10,11 @@
 #import "PSTMatcher.h"
 
 @interface PSTSampleMatcher : PSTMatcher
+- (BOOL)someMethod;
 @end
 
 @implementation PSTSampleMatcher
+- (BOOL)someMethod { return NO; }
 @end
 
 @interface PSTMatcherRegistryTests : SenTestCase
@@ -30,10 +32,10 @@
     STAssertEqualObjects(sharedRegistry[0], sharedRegistry[1], @"sharedRegistry did not return the same instance both times.");
 }
 
-- (void)testRegistersSubclassesOfPSTMatcherOnInitialization
+- (void)testRegistersMatcherSubclasses
 {
     PSTMatcherRegistry *registry = [[PSTMatcherRegistry alloc] init];
-    STAssertTrue([[registry registeredClasses] containsObject:[PSTSampleMatcher class]], @"PSTSampleMatcher was not registered as a matcher class.");
+    STAssertTrue([registry classWhoseInstancesRespondToSelector:@selector(someMethod)] == [PSTSampleMatcher class], @"PSTSampleMatcher was not registered as a matcher class.");
 }
 
 @end
