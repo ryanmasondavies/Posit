@@ -14,5 +14,6 @@
 @interface PSTBeMatcher (PSTEquality)
 
 - (BOOL)beEqualTo:(id)other;
+- (BOOL)beIdenticalTo:(id)other;
 
 @end
