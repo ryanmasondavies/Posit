@@ -14,11 +14,15 @@
 
 @implementation PSTBeMatcher
 
++ (BOOL)instancesRespondToSelector:(SEL)selector
+{
+    NSString *methodName = NSStringFromSelector(selector);
+    return [methodName hasPrefix:@"be"] && [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[methodName characterAtIndex:2]];
+}
+
 - (SEL)selectorByReplacing:(NSString *)string1 with:(NSString *)string2 inSelector:(SEL)selector
 {
-    NSMutableString *methodName = [NSMutableString stringWithString:NSStringFromSelector(selector)];
-    [methodName replaceOccurrencesOfString:@"be" withString:@"is" options:0 range:NSMakeRange(0, [methodName length])];
-    return NSSelectorFromString(methodName);
+    return NSSelectorFromString([NSStringFromSelector(selector) stringByReplacingOccurrencesOfString:string1 withString:string2]);
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation
@@ -33,10 +37,43 @@
     return [[self subject] methodSignatureForSelector:processedSelector];
 }
 
-+ (BOOL)instancesRespondToSelector:(SEL)selector
+- (NSString *)failureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
 {
+    // Skip past 'be', then replace capital letters with their lowercase counterparts and prefix them with a space:
     NSString *methodName = NSStringFromSelector(selector);
-    return [methodName hasPrefix:@"be"] && [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[methodName characterAtIndex:2]];
+    NSMutableString *message = [NSMutableString string];
+    for (NSUInteger i = 0; i < [methodName length]; i ++) {
+        unichar character = [methodName characterAtIndex:i];
+        if ([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:character]) {
+            [message appendString:@" "];
+            character = [[[NSString stringWithFormat:@"%C", character] lowercaseString] characterAtIndex:0];
+        }
+        [message appendFormat:@"%C", character];
+    }
+    
+    // Replace ':' with respective arguments:
+    NSUInteger argumentIndex = 0;
+    for (NSUInteger i = 0; i < [message length]; i ++) {
+        unichar character = [message characterAtIndex:i];
+        if (character == ':') {
+            // Replace the ':' with the argument (leaving a space for reading purposes):
+            NSString *replacement = [NSString stringWithFormat:@" %@", arguments[argumentIndex]];
+            
+            // Increment the argument index and add a separating string if there are more to append:
+            if (++argumentIndex < [arguments count]) replacement = [NSString stringWithFormat:@"%@, and ", replacement];
+            
+            // Perform the replacement:
+            [message replaceCharactersInRange:NSMakeRange(i, 1) withString:replacement];
+        }
+    }
+    
+    return [NSString stringWithFormat:@"Expected %@ not to %@.", [self subject], message];
+}
+
+- (NSString *)negativeFailureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments
+{
+    NSString *failureMessage = [self failureMessageForSelector:selector arguments:arguments];
+    return [failureMessage stringByReplacingOccurrencesOfString:@" not to " withString:@" to "];
 }
 
 @end
