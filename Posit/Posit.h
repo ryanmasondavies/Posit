@@ -8,4 +8,5 @@
 
 #import "NSObject+PSTShould.h"
 #import "NSObject+PSTEquality.h"
+#import "PSTBooleanComparison.h"
 #import "PSTBeMatcher.h"

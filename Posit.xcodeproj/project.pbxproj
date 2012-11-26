@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		944EE9521663831100244AA9 /* PSTBooleanComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EE9511663831100244AA9 /* PSTBooleanComparison.m */; };
+		944EE9591663852D00244AA9 /* PSTBooleanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EE9581663852D00244AA9 /* PSTBooleanTests.m */; };
+		944EE95B166388A700244AA9 /* PSTBooleanComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EE95A166388A700244AA9 /* PSTBooleanComparisonTests.m */; };
 		949F47A9165FF12D00CC46A8 /* PSTTestMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */; };
 		94C2CCE11662C85B002F5AD7 /* PSTObjectEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */; };
 		94C2CCE51662CA0C002F5AD7 /* NSObject+PSTEquality.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2CCE41662CA0C002F5AD7 /* NSObject+PSTEquality.m */; };
@@ -65,6 +68,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		944EE9501663831100244AA9 /* PSTBooleanComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBooleanComparison.h; sourceTree = "<group>"; };
+		944EE9511663831100244AA9 /* PSTBooleanComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBooleanComparison.m; sourceTree = "<group>"; };
+		944EE9581663852D00244AA9 /* PSTBooleanTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBooleanTests.m; sourceTree = "<group>"; };
+		944EE95A166388A700244AA9 /* PSTBooleanComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBooleanComparisonTests.m; sourceTree = "<group>"; };
 		949F47A7165FF12D00CC46A8 /* PSTTestMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTTestMatcher.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		949F47A8165FF12D00CC46A8 /* PSTTestMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTTestMatcher.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectEquality.m; sourceTree = "<group>"; };
@@ -136,6 +143,8 @@
 				94C3B11E166119DF003B3F43 /* NSObject+PSTShould.m */,
 				94C2CCE31662CA0C002F5AD7 /* NSObject+PSTEquality.h */,
 				94C2CCE41662CA0C002F5AD7 /* NSObject+PSTEquality.m */,
+				944EE9501663831100244AA9 /* PSTBooleanComparison.h */,
+				944EE9511663831100244AA9 /* PSTBooleanComparison.m */,
 				94C3B122166119DF003B3F43 /* PSTExpectation.h */,
 				94C3B123166119DF003B3F43 /* PSTExpectation.m */,
 				94C3B124166119DF003B3F43 /* PSTMatcher.h */,
@@ -190,6 +199,7 @@
 			children = (
 				94D97B48165D2FD500282ABE /* PSTShouldTests.m */,
 				94C2CCE01662C85B002F5AD7 /* PSTObjectEquality.m */,
+				944EE95A166388A700244AA9 /* PSTBooleanComparisonTests.m */,
 				94D97B46165D2FD500282ABE /* PSTExpectationTests.m */,
 				94C2CCE71662CD04002F5AD7 /* PSTMatcherTests.m */,
 				94F554BA1662B63B00B21102 /* PSTBeMatcherTests.m */,
@@ -213,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				94D97B6B165D34F200282ABE /* PSTEqualityTests.m */,
+				944EE9581663852D00244AA9 /* PSTBooleanTests.m */,
 				94D97B59165D339600282ABE /* Supporting Files */,
 			);
 			path = "Integrated Tests";
@@ -371,6 +382,7 @@
 				94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */,
 				94F554BE1662B7CE00B21102 /* PSTBeMatcher.m in Sources */,
 				94C2CCE51662CA0C002F5AD7 /* NSObject+PSTEquality.m in Sources */,
+				944EE9521663831100244AA9 /* PSTBooleanComparison.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +396,7 @@
 				94F554BB1662B63B00B21102 /* PSTBeMatcherTests.m in Sources */,
 				94C2CCE11662C85B002F5AD7 /* PSTObjectEquality.m in Sources */,
 				94C2CCE81662CD04002F5AD7 /* PSTMatcherTests.m in Sources */,
+				944EE95B166388A700244AA9 /* PSTBooleanComparisonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D97B6C165D34F200282ABE /* PSTEqualityTests.m in Sources */,
+				944EE9591663852D00244AA9 /* PSTBooleanTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

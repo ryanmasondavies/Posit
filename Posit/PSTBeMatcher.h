@@ -13,7 +13,12 @@
 
 @interface PSTBeMatcher (PSTEquality)
 
+// Object comparison
 - (BOOL)beEqualTo:(id)other;
 - (BOOL)beIdenticalTo:(id)other;
+
+// Boolean comparison
+- (BOOL)beTrue;
+- (BOOL)beFalse;
 
 @end
