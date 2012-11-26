@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+PSTShould.h"
+#import "PSTShould.h"
 #import "PSTExpectation.h"
 
 @interface PSTShouldTests : SenTestCase

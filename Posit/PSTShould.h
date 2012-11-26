@@ -1,5 +1,5 @@
 //
-//  NSObject+PSTShould.h
+//  PSTShould.h
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.

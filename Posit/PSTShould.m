@@ -1,12 +1,12 @@
 //
-//  NSObject+PSTShould.m
+//  PSTShould.m
 //  Beehive
 //
 //  Created by Ryan Davies on 14/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+PSTShould.h"
+#import "PSTShould.h"
 #import "PSTExpectation.h"
 
 @implementation NSObject (PSTShould)
