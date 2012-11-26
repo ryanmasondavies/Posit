@@ -10,15 +10,18 @@
 
 @interface PSTTestSubject : NSObject
 - (BOOL)isValid;
+- (BOOL)isMember;
 @end
 
 @implementation PSTTestSubject
 - (BOOL)isValid { return YES; }
+- (BOOL)isMember { return YES; }
 - (NSString *)description { return @"test subject"; }
 @end
 
 @interface PSTBeMatcher ()
 - (BOOL)beValid;
+- (BOOL)beMember;
 @end
 
 @interface PSTBeMatcherTests : SenTestCase
@@ -44,6 +47,12 @@
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
     STAssertTrue([matcher beValid], @"Matcher did not return the result of calling -isValid on the subject.");
+}
+
+- (void)testReturnsResultOfMethodStartingWith_Is_ForInvocationsBeginningWithAndContaining_Be_
+{
+    PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
+    STAssertTrue([matcher beMember], @"Matcher did not return the result of calling -isMember on the subject.");
 }
 
 #pragma mark Generating failure messages

@@ -21,4 +21,8 @@
 - (BOOL)beTrue;
 - (BOOL)beFalse;
 
+// Class comparison
+- (BOOL)beKindOfClass:(Class)klass;
+- (BOOL)beMemberOfClass:(Class)klass;
+
 @end

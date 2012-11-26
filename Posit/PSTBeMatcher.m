@@ -9,7 +9,7 @@
 #import "PSTBeMatcher.h"
 
 @interface PSTBeMatcher ()
-- (SEL)selectorByReplacing:(NSString *)string1 with:(NSString *)string2 inSelector:(SEL)selector;
+- (SEL)selectorByReplacingPrefix:(NSString *)string1 with:(NSString *)string2 inSelector:(SEL)selector;
 @end
 
 @implementation PSTBeMatcher
@@ -20,20 +20,25 @@
     return [methodName hasPrefix:@"be"] && [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[methodName characterAtIndex:2]];
 }
 
-- (SEL)selectorByReplacing:(NSString *)string1 with:(NSString *)string2 inSelector:(SEL)selector
+- (SEL)selectorByReplacingPrefix:(NSString *)string1 with:(NSString *)string2 inSelector:(SEL)selector
 {
-    return NSSelectorFromString([NSStringFromSelector(selector) stringByReplacingOccurrencesOfString:string1 withString:string2]);
+    NSString *name = NSStringFromSelector(selector);
+    NSRange prefixRange = [name rangeOfString:string1];
+    if (prefixRange.location != 0) return selector;
+    
+    return NSSelectorFromString([name stringByReplacingCharactersInRange:prefixRange withString:string2]);
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    [invocation setSelector:[self selectorByReplacing:@"be" with:@"is" inSelector:[invocation selector]]];
+    SEL processedSelector = [self selectorByReplacingPrefix:@"be" with:@"is" inSelector:[invocation selector]];
+    [invocation setSelector:processedSelector];
     [invocation invokeWithTarget:[self subject]];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-    SEL processedSelector = [self selectorByReplacing:@"be" with:@"is" inSelector:selector];
+    SEL processedSelector = [self selectorByReplacingPrefix:@"be" with:@"is" inSelector:selector];
     return [[self subject] methodSignatureForSelector:processedSelector];
 }
 
