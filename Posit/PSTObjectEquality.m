@@ -1,12 +1,12 @@
 //
-//  NSObject+PSTEquality.m
+//  PSTObjectEquality.m
 //  Posit
 //
 //  Created by Ryan Davies on 25/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+PSTEquality.h"
+#import "PSTObjectEquality.h"
 
 @implementation NSObject (PSTEquality)
 

@@ -1,5 +1,5 @@
 //
-//  NSObject+PSTEquality.h
+//  PSTObjectEquality.h
 //  Posit
 //
 //  Created by Ryan Davies on 25/11/2012.

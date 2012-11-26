@@ -7,6 +7,6 @@
 //
 
 #import "NSObject+PSTShould.h"
-#import "NSObject+PSTEquality.h"
+#import "PSTObjectEquality.h"
 #import "PSTBooleanComparison.h"
 #import "PSTBeMatcher.h"

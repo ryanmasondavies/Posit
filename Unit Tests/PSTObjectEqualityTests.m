@@ -1,14 +1,14 @@
 //
-//  PSTObjectEquality.m
+//  PSTObjectEqualityTests.m
 //  Posit
 //
 //  Created by Ryan Davies on 25/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "NSObject+PSTEquality.h"
+#import "PSTObjectEquality.h"
 
-@interface PSTObjectEquality : SenTestCase
+@interface PSTObjectEqualityTests : SenTestCase
 @end
 
 @interface PSTObject : NSObject
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation PSTObjectEquality
+@implementation PSTObjectEqualityTests
 
 - (void)testIsIdenticalReturnsTrueForIdenticalObjects
 {
