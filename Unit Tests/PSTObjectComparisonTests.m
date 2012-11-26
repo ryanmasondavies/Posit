@@ -1,14 +1,14 @@
 //
-//  PSTObjectEqualityTests.m
+//  PSTObjectComparisonTests.m
 //  Posit
 //
 //  Created by Ryan Davies on 25/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "PSTObjectEquality.h"
+#import "PSTObjectComparison.h"
 
-@interface PSTObjectEqualityTests : SenTestCase
+@interface PSTObjectComparisonTests : SenTestCase
 @end
 
 @interface PSTObject : NSObject
@@ -32,29 +32,27 @@
 
 @end
 
-@implementation PSTObjectEqualityTests
+@implementation PSTObjectComparisonTests
 
-- (void)testIsIdenticalReturnsTrueForIdenticalObjects
+- (void)test_IsIdentical_ReturnsTrueForIdenticalObjects
 {
     NSObject *object = [NSObject new];
     STAssertTrue([object isIdentical:object], @"Expected isIdentical: to return true for the same instance.");
 }
 
-- (void)testIsIdenticalReturnsFalseForDifferentObjects
+- (void)test_IsIdentical_ReturnsFalseForDifferentObjects
 {
     STAssertFalse([[NSObject new] isIdentical:[NSObject new]], @"Expected isIdentical: to return false for two different instances.");
 }
 
-#pragma mark Aliases
-
-- (void)testIsEqualToAliasesToIsEqual
+- (void)test_IsEqualTo_AliasesTo_IsEqual
 {
     PSTObject *object = [PSTObject new];
     STAssertTrue([object isEqualTo:[NSObject new]], @"Expected isEqualTo: to return true, indicating that it was used as the return value.");
     STAssertTrue([object wasIsEqualCalled], @"Expected isEqual: to have been called when isEqualTo: was invoked.");
 }
 
-- (void)testIsIdenticalToAliasesToIsIdentical
+- (void)test_IsIdenticalTo_AliasesTo_IsIdentical
 {
     PSTObject *object = [PSTObject new];
     STAssertTrue([object isIdenticalTo:[NSObject new]], @"Expected isIdenticalTo: to return true, indicating that it was used as the return value.");

@@ -1,14 +1,14 @@
 //
-//  PSTObjectEquality.m
+//  PSTObjectComparison.m
 //  Posit
 //
 //  Created by Ryan Davies on 25/11/2012.
 //  Copyright (c) 2012 Ryan Davies. All rights reserved.
 //
 
-#import "PSTObjectEquality.h"
+#import "PSTObjectComparison.h"
 
-@implementation NSObject (PSTEquality)
+@implementation NSObject (PSTComparison)
 
 - (BOOL)isIdentical:(id)object
 {

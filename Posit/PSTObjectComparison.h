@@ -1,5 +1,5 @@
 //
-//  PSTObjectEquality.h
+//  PSTObjectComparison.h
 //  Posit
 //
 //  Created by Ryan Davies on 25/11/2012.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (PSTEquality)
+@interface NSObject (PSTComparison)
 
 - (BOOL)isIdentical:(id)object;
 

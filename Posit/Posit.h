@@ -7,6 +7,10 @@
 //
 
 #import "PSTShould.h"
-#import "PSTObjectEquality.h"
+
+// Comparison methods:
+#import "PSTObjectComparison.h"
 #import "PSTBooleanComparison.h"
+
+// Matchers:
 #import "PSTBeMatcher.h"

@@ -13,6 +13,9 @@
 
 @implementation PSTBooleanTests
 
+- (void)setUp {}
+- (void)tearDown {}
+
 #pragma mark beTrue
 
 - (void)test_BeTrue_SucceedsIfSubjectIsTrue
