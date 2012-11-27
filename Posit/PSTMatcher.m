@@ -7,7 +7,7 @@
 //
 
 #import "PSTMatcher.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 @interface NSObject (PSTHierarchy)
 + (NSArray *)subclasses;
