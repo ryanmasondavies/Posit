@@ -25,4 +25,14 @@
 - (BOOL)beKindOfClass:(Class)klass;
 - (BOOL)beMemberOfClass:(Class)klass;
 
+// Number comparison:
+- (BOOL)beZero;
+- (BOOL)bePositive;
+- (BOOL)beNegative;
+- (BOOL)beGreaterThan:(NSNumber *)number;
+- (BOOL)beLessThan:(NSNumber *)number;
+- (BOOL)beGreaterThanOrEqualTo:(NSNumber *)number;
+- (BOOL)beLessThanOrEqualTo:(NSNumber *)number;
+- (BOOL)beBetween:(NSNumber *)start and:(NSNumber *)end;
+
 @end

@@ -81,8 +81,16 @@
 - (void)testGeneratesFailureMessagesWithMultipleArguments
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject to be valid with this thing, and wordy against another thing.";
+    NSString *expected = @"Expected test subject to be valid with this thing and wordy against another thing.";
     NSString *actual = [matcher failureMessageForSelector:@selector(beValidWith:wordyAgainst:) arguments:@[@"this thing", @"another thing"]];
+    STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
+}
+
+- (void)testGeneratesFailureMessagesWithArgumentsStartingWithAnd
+{
+    PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
+    NSString *expected = @"Expected test subject to be valid with this thing and wordy against another thing.";
+    NSString *actual = [matcher failureMessageForSelector:@selector(beValidWith:andWordyAgainst:) arguments:@[@"this thing", @"another thing"]];
     STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
 }
 
@@ -120,8 +128,16 @@
 - (void)testGeneratesNegativeFailureMessagesWithMultipleArguments
 {
     PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
-    NSString *expected = @"Expected test subject not to be valid with this thing, and wordy against another thing.";
+    NSString *expected = @"Expected test subject not to be valid with this thing and wordy against another thing.";
     NSString *actual = [matcher negativeFailureMessageForSelector:@selector(beValidWith:wordyAgainst:) arguments:@[@"this thing", @"another thing"]];
+    STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
+}
+
+- (void)testGeneratesNegativeFailureMessagesWithArgumentsStartingWithAnd
+{
+    PSTBeMatcher *matcher = [[PSTBeMatcher alloc] initWithSubject:[PSTTestSubject new]];
+    NSString *expected = @"Expected test subject not to be valid with this thing and wordy against another thing.";
+    NSString *actual = [matcher negativeFailureMessageForSelector:@selector(beValidWith:andWordyAgainst:) arguments:@[@"this thing", @"another thing"]];
     STAssertEqualObjects(actual, expected, @"Failure message was not as expected.");
 }
 

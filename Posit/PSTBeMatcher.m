@@ -65,7 +65,14 @@
             NSString *replacement = [NSString stringWithFormat:@" %@", arguments[argumentIndex]];
             
             // Increment the argument index and add a separating string if there are more to append:
-            if (++argumentIndex < [arguments count]) replacement = [NSString stringWithFormat:@"%@, and ", replacement];
+            if (++argumentIndex < [arguments count]) {
+                // Do not separate with 'and' if 'and' is already part of the method name:
+                NSString *nextWord = [message substringWithRange:NSMakeRange(i + 1, 3)];
+                if ([nextWord isEqualToString:@"and"] == NO)
+                    replacement = [NSString stringWithFormat:@"%@ and ", replacement];
+                else
+                    replacement = [NSString stringWithFormat:@"%@ ", replacement];
+            }
             
             // Perform the replacement:
             [message replaceCharactersInRange:NSMakeRange(i, 1) withString:replacement];
