@@ -7,19 +7,15 @@ All arguments and return types must be provided as objects. This has been made s
 
 This library is a work in progress, and so the API may be subject to simplification and potentially drastic change.
 
-Expectations
-============
-
 Matchers
 --------
 
 Posit provides matchers in the format of [[subject should] ...], allowing for more readable examples. The default matchers provided are as follows:
 
     // Existence:
-    [object shouldBeNil];
+    [[object should] beNil];
     
     // Equality:
-    [[@(1+2) should] be:@3]; // Equivalent to beEqualTo:
     [[@(1+2) should] beEqualTo:@3];
     [[object should] beIdenticalTo:anotherObject];
     
@@ -47,13 +43,8 @@ Posit provides matchers in the format of [[subject should] ...], allowing for mo
     
     // Collections:
     [[pets should] beEmpty];
-    [[pets should] contain:cat];
-    [[pets should] contain:@[cat, dog]];
-    
-    // Collections by associations:
-    [[[person should] have:2] pets];
-    [[[person should] haveAtLeast:2] pets];
-    [[[person should] haveAtMost:2] pets];
+    [[pets should] haveObject:cat];
+    [[pets should] haveObjects:@[cat, dog]];
 
 In order to negate a matcher, either of the following is valid:
 
@@ -64,9 +55,10 @@ Use whichever you prefer.
 
 Some of the matchers listed above work based on the dynamic behaviour of Posit - if no matcher exists with the provided selector, the library will attempt to realize the behaviour that you intended, based on convention. If the matcher provided begins with 'be', 'be' will be swapped out for 'is' and attempt to call a method with the generated selector on the subject. For example, 'beEqualTo:' calls 'isEqualTo:' has no matcher – instead, Posit calls 'beEqualTo:' on the subject, providing the expected behaviour.
 
-If you have a method such as -isGreen on your object, you don't need to write a matcher in order for the following to be valid:
+Before calling a custom method, however, the compiler must know of its existence. This is achieved as follows:
 
-    [[object should] beGreen];
+    PSTAddMatcher(beSwitchedOn);
+    PSTAddMatcher(beValidWhenComparedTo:(id)object);
 
 License
 =======
