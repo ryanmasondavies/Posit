@@ -7,6 +7,7 @@
 //
 
 #import "PSTExpectation.h"
+#import <SenTestingKit/SenTestingKit.h>
 #import "PSTMatcher.h"
 
 @implementation PSTExpectation

@@ -83,7 +83,6 @@
 		94C2CCE31662CA0C002F5AD7 /* PSTObjectComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTObjectComparison.h; sourceTree = "<group>"; };
 		94C2CCE41662CA0C002F5AD7 /* PSTObjectComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectComparison.m; sourceTree = "<group>"; };
 		94C2CCE71662CD04002F5AD7 /* PSTMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherTests.m; sourceTree = "<group>"; };
-		94C3B11F166119DF003B3F43 /* Posit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "Posit-Prefix.pch"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B122166119DF003B3F43 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTExpectation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C3B123166119DF003B3F43 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTExpectation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B124166119DF003B3F43 /* PSTMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
@@ -155,17 +154,8 @@
 				94C3B125166119DF003B3F43 /* PSTMatcher.m */,
 				94F554BC1662B7CE00B21102 /* PSTBeMatcher.h */,
 				94F554BD1662B7CE00B21102 /* PSTBeMatcher.m */,
-				94C3B12F166119EA003B3F43 /* Supporting Files */,
 			);
 			path = Posit;
-			sourceTree = "<group>";
-		};
-		94C3B12F166119EA003B3F43 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				94C3B11F166119DF003B3F43 /* Posit-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		94D97AF1165D2EBA00282ABE = {
@@ -491,8 +481,6 @@
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Posit/Posit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Posit;
 				SKIP_INSTALL = YES;
@@ -507,8 +495,6 @@
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Posit/Posit-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Posit;
 				SKIP_INSTALL = YES;
