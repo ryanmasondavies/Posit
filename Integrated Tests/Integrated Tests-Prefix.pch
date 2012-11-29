@@ -6,3 +6,13 @@
     #import <Foundation/Foundation.h>
     #import <SenTestingKit/SenTestingKit.h>
 #endif
+
+#define PSTVerifyBlockRaisesExceptionWithReason(block, exceptionReason) \
+NSException *exception = nil; NSNumber *lineNumber = nil; \
+@try { lineNumber = @(__LINE__); block(); } \
+@catch(NSException *e) { exception = e; } \
+STAssertNotNil(exception, @"Should throw an exception"); \
+STAssertEqualObjects([exception name], SenTestFailureException, @"Expected exception to be a SenTestFailureException."); \
+STAssertEqualObjects([exception reason], exceptionReason, @"Expected the correct failure message."); \
+STAssertEqualObjects([exception userInfo][SenTestFilenameKey], @(__FILE__), @"Expected exception to specify the file in which it was raised."); \
+STAssertEqualObjects([exception userInfo][SenTestLineNumberKey], lineNumber, @"Expected exception to specify the line number on which it was raised.");
