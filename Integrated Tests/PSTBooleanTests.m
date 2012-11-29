@@ -25,7 +25,7 @@
 
 - (void)test_BeTrue_FailsIfSubjectIsFalse
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@TRUE should] beFalse]; }, @"Expected 1 to be false.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@TRUE should] beFalse], @"Expected 1 to be false.");
 }
 
 - (void)test_BeTrue_Negative_SucceedsIfSubjectIsFalse
@@ -35,7 +35,7 @@
 
 - (void)test_BeTrue_Negative_FailsIfSubjectIsFalse
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@TRUE shouldNot] beTrue]; }, @"Expected 1 not to be true.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@TRUE shouldNot] beTrue], @"Expected 1 not to be true.");
 }
 
 #pragma mark beFalse
@@ -47,7 +47,7 @@
 
 - (void)test_BeFalse_FailsIfSubjectIsTrue
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@TRUE should] beFalse]; }, @"Expected 1 to be false.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@TRUE should] beFalse], @"Expected 1 to be false.");
 }
 
 - (void)test_BeFalse_Negative_SucceedsIfSubjectIsTrue
@@ -57,7 +57,7 @@
 
 - (void)test_BeFalse_Negative_FailsIfSubjectIsFalse
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@FALSE shouldNot] beFalse]; }, @"Expected 0 not to be false.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@FALSE shouldNot] beFalse], @"Expected 0 not to be false.");
 }
 
 @end

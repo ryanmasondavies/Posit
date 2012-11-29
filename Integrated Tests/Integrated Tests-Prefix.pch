@@ -7,9 +7,9 @@
     #import <SenTestingKit/SenTestingKit.h>
 #endif
 
-#define PSTVerifyBlockRaisesExceptionWithReason(block, exceptionReason) \
+#define PSTVerifyBlockRaisesExceptionWithReason(expectation, exceptionReason) \
 NSException *exception = nil; NSNumber *lineNumber = nil; \
-@try { lineNumber = @(__LINE__); block(); } \
+@try { lineNumber = @(__LINE__); expectation; } \
 @catch(NSException *e) { exception = e; } \
 STAssertNotNil(exception, @"Should throw an exception"); \
 STAssertEqualObjects([exception name], SenTestFailureException, @"Expected exception to be a SenTestFailureException."); \

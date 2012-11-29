@@ -25,10 +25,7 @@
 
 - (void)test_Should_BeZero_FailsIfNotZero
 {
-    NSException *exception = nil;
-    @try { [[@1 should] beZero]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 to be zero.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beZero], @"Expected 1 to be zero.");
 }
 
 - (void)test_ShouldNot_BeZero_SucceedsIfNotZero
@@ -38,10 +35,7 @@
 
 - (void)test_ShouldNot_BeZero_FailsIfZero
 {
-    NSException *exception = nil;
-    @try { [[@0 shouldNot] beZero]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 0 not to be zero.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@0 shouldNot] beZero], @"Expected 0 not to be zero.");
 }
 
 #pragma mark bePositive
@@ -53,26 +47,17 @@
 
 - (void)test_Should_BePositive_FailsIfNegative
 {
-    NSException *exception = nil;
-    @try { [[@(-1) should] bePositive]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected -1 to be positive.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@(-1) should] bePositive], @"Expected -1 to be positive.");
 }
 
 - (void)test_Should_BePositive_FailsIfZero
 {
-    NSException *exception = nil;
-    @try { [[@0 should] bePositive]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 0 to be positive.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@0 should] bePositive], @"Expected 0 to be positive.");
 }
 
 - (void)test_ShouldNot_BePositive_FailsIfPositive
 {
-    NSException *exception = nil;
-    @try { [[@1 shouldNot] bePositive]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 not to be positive.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] bePositive], @"Expected 1 not to be positive.");
 }
 
 - (void)test_ShouldNot_BePositive_SucceedsIfNegative
@@ -89,10 +74,7 @@
 
 - (void)test_Should_BeNegative_FailsIfPositive
 {
-    NSException *exception = nil;
-    @try { [[@(-1) shouldNot] beNegative]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected -1 not to be negative.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@(-1) shouldNot] beNegative], @"Expected -1 not to be negative.");
 }
 
 - (void)test_Should_BeNegative_SucceedsIfNegative
@@ -102,10 +84,7 @@
 
 - (void)test_Should_BeNegative_FailsIfZero
 {
-    NSException *exception = nil;
-    @try { [[@0 should] beNegative]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 0 to be negative.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@0 should] beNegative], @"Expected 0 to be negative.");
 }
 
 - (void)test_ShouldNot_BeNegative_SucceedsIfPositive
@@ -115,10 +94,7 @@
 
 - (void)test_ShouldNot_BeNegative_FailsIfNegative
 {
-    NSException *exception = nil;
-    @try { [[@(-1) shouldNot] beNegative]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected -1 not to be negative.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@(-1) shouldNot] beNegative], @"Expected -1 not to be negative.");
 }
 
 - (void)test_ShouldNot_BeNegative_SucceedsIfZero
@@ -135,26 +111,17 @@
 
 - (void)test_Should_BeGreaterThan_FailsIfEqual
 {
-    NSException *exception = nil;
-    @try { [[@1 should] beGreaterThan:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 to be greater than 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beGreaterThan:@1], @"Expected 1 to be greater than 1.");
 }
 
 - (void)test_Should_BeGreaterThan_FailsIfLessThan
 {
-    NSException *exception = nil;
-    @try { [[@1 should] beGreaterThan:@2]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 to be greater than 2.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beGreaterThan:@2], @"Expected 1 to be greater than 2.");
 }
 
 - (void)test_ShouldNot_BeGreaterThan_FailsIfGreaterThan
 {
-    NSException *exception = nil;
-    @try { [[@2 shouldNot] beGreaterThan:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 2 not to be greater than 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@2 shouldNot] beGreaterThan:@1], @"Expected 2 not to be greater than 1.");
 }
 
 - (void)test_ShouldNot_BeGreaterThan_SucceedsIfEqual
@@ -171,18 +138,12 @@
 
 - (void)test_Should_BeLessThan_FailsIfGreaterThan
 {
-    NSException *exception = nil;
-    @try { [[@2 should] beLessThan:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 2 to be less than 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@2 should] beLessThan:@1], @"Expected 2 to be less than 1.");
 }
 
 - (void)test_Should_BeLessThan_FailsIfEqual
 {
-    NSException *exception = nil;
-    @try { [[@1 should] beLessThan:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 to be less than 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beLessThan:@1], @"Expected 1 to be less than 1.");
 }
 
 - (void)test_Should_BeLessThan_SucceedsIfLessThan
@@ -202,10 +163,7 @@
 
 - (void)test_ShouldNot_BeLessThan_FailsIfLessThan
 {
-    NSException *exception = nil;
-    @try { [[@1 shouldNot] beLessThan:@2]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 not to be less than 2.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] beLessThan:@2], @"Expected 1 not to be less than 2.");
 }
 
 #pragma mark beGreaterThanOrEqualTo:
@@ -222,26 +180,17 @@
 
 - (void)test_Should_BeGreaterThanOrEqualTo_FailsIfLessThan
 {
-    NSException *exception = nil;
-    @try { [[@1 should] beGreaterThanOrEqualTo:@2]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 to be greater than or equal to 2.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beGreaterThanOrEqualTo:@2], @"Expected 1 to be greater than or equal to 2.");
 }
 
 - (void)test_ShouldNot_BeGreaterThanOrEqualTo_FailsIfGreaterThan
 {
-    NSException *exception = nil;
-    @try { [[@2 shouldNot] beGreaterThanOrEqualTo:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 2 not to be greater than or equal to 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@2 shouldNot] beGreaterThanOrEqualTo:@1], @"Expected 2 not to be greater than or equal to 1.");
 }
 
 - (void)test_ShouldNot_BeGreaterThanOrEqualTo_FailsIfEqual
 {
-    NSException *exception = nil;
-    @try { [[@1 shouldNot] beGreaterThanOrEqualTo:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 not to be greater than or equal to 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] beGreaterThanOrEqualTo:@1], @"Expected 1 not to be greater than or equal to 1.");
 }
 
 - (void)test_ShouldNot_BeGreaterThanOrEqualTo_SucceedsIfLessThan
@@ -253,10 +202,7 @@
 
 - (void)test_Should_BeLessThanOrEqualTo_FailsIfGreaterThan
 {
-    NSException *exception = nil;
-    @try { [[@2 should] beLessThanOrEqualTo:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 2 to be less than or equal to 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@2 should] beLessThanOrEqualTo:@1], @"Expected 2 to be less than or equal to 1.");
 }
 
 - (void)test_Should_BeLessThanOrEqualTo_SucceedsIfEqual
@@ -276,18 +222,12 @@
 
 - (void)test_ShouldNot_BeLessThanOrEqualTo_FailsIfEqual
 {
-    NSException *exception = nil;
-    @try { [[@1 shouldNot] beLessThanOrEqualTo:@1]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 not to be less than or equal to 1.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] beLessThanOrEqualTo:@1], @"Expected 1 not to be less than or equal to 1.");
 }
 
 - (void)test_ShouldNot_BeLessThanOrEqualTo_FailsIfLessThan
 {
-    NSException *exception = nil;
-    @try { [[@1 shouldNot] beLessThanOrEqualTo:@2]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 not to be less than or equal to 2.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] beLessThanOrEqualTo:@2], @"Expected 1 not to be less than or equal to 2.");
 }
 
 #pragma mark beBetween:and:
@@ -309,34 +249,22 @@
 
 - (void)test_Should_BeBetween_And_FailsIfOutOfRange
 {
-    NSException *exception = nil;
-    @try { [[@1 should] beBetween:@2 and:@3]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 to be between 2 and 3.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beBetween:@2 and:@3], @"Expected 1 to be between 2 and 3.");
 }
 
 - (void)test_ShouldNot_BeBetween_And_FailsIfInRange
 {
-    NSException *exception = nil;
-    @try { [[@2 shouldNot] beBetween:@1 and:@3]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 2 not to be between 1 and 3.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@2 shouldNot] beBetween:@1 and:@3], @"Expected 2 not to be between 1 and 3.");
 }
 
 - (void)test_ShouldNot_BeBetween_And_FailsIfAtStartOfRange
 {
-    NSException *exception = nil;
-    @try { [[@1 shouldNot] beBetween:@1 and:@3]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 1 not to be between 1 and 3.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] beBetween:@1 and:@3], @"Expected 1 not to be between 1 and 3.");
 }
 
 - (void)test_ShouldNot_BeBetween_And_FailsIfAtEndOfRange
 {
-    NSException *exception = nil;
-    @try { [[@3 shouldNot] beBetween:@1 and:@3]; }
-    @catch(NSException *e) { exception = e; }
-    STAssertEqualObjects([exception reason], @"Expected 3 not to be between 1 and 3.", @"Expected statement to throw an exception with a certain message.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@3 shouldNot] beBetween:@1 and:@3], @"Expected 3 not to be between 1 and 3.");
 }
 
 - (void)test_ShouldNot_BeBetween_And_SucceedsIfOutOfRange

@@ -32,7 +32,7 @@
 
 - (void)test_BeEqualTo_FailsIfInequal
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@"foo" should] beEqualTo:@"bar"]; }, @"Expected foo to be equal to bar.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@"foo" should] beEqualTo:@"bar"], @"Expected foo to be equal to bar.");
 }
 
 - (void)test_BeEqualTo_Negative_SucceedsIfInequal
@@ -42,7 +42,7 @@
 
 - (void)test_BeEqualTo_Negative_FailsIfEqual
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@"foo" shouldNot] beEqualTo:@"foo"]; }, @"Expected foo not to be equal to foo.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@"foo" shouldNot] beEqualTo:@"foo"], @"Expected foo not to be equal to foo.");
 }
 
 #pragma mark beIdenticalTo
@@ -55,7 +55,7 @@
 
 - (void)test_BeIdenticalTo_FailsIfInequal
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@"foo" should] beIdenticalTo:@"bar"]; }, @"Expected foo to be identical to bar.");
+    PSTVerifyBlockRaisesExceptionWithReason([[@"foo" should] beIdenticalTo:@"bar"], @"Expected foo to be identical to bar.");
 }
 
 - (void)test_BeIdenticalTo_Negative_SucceedsIfInequal
@@ -66,7 +66,7 @@
 - (void)test_BeIdenticalTo_Negative_FailsIfEqual
 {
     id object = @"foo";
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[object shouldNot] beIdenticalTo:object]; }, @"Expected foo not to be identical to foo.");
+    PSTVerifyBlockRaisesExceptionWithReason([[object shouldNot] beIdenticalTo:object], @"Expected foo not to be identical to foo.");
 }
 
 
@@ -84,17 +84,17 @@
 
 - (void)test_should_beKindOfClass_FailsIfObjectDoesNotInheritFromClass
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[[PSTTestSubject new] should] beKindOfClass:[NSNumber class]]; }, @"Expected test subject to be kind of class NSNumber.");
+    PSTVerifyBlockRaisesExceptionWithReason([[[PSTTestSubject new] should] beKindOfClass:[NSNumber class]], @"Expected test subject to be kind of class NSNumber.");
 }
 
 - (void)test_shouldNot_beKindOfClass_FailsIfObjectIsOfSameClass
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[[PSTTestSubject new] shouldNot] beKindOfClass:[PSTTestSubject class]]; }, @"Expected test subject not to be kind of class PSTTestSubject.");
+    PSTVerifyBlockRaisesExceptionWithReason([[[PSTTestSubject new] shouldNot] beKindOfClass:[PSTTestSubject class]], @"Expected test subject not to be kind of class PSTTestSubject.");
 }
 
 - (void)test_shouldNot_beKindOfClass_FailsIfObjectInheritsFromClass
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[[PSTTestSubject new] shouldNot] beKindOfClass:[NSObject class]]; }, @"Expected test subject not to be kind of class NSObject.");
+    PSTVerifyBlockRaisesExceptionWithReason([[[PSTTestSubject new] shouldNot] beKindOfClass:[NSObject class]], @"Expected test subject not to be kind of class NSObject.");
 }
 
 - (void)test_shouldNot_beKindOfClass_SucceedsIfObjectDoesNotInheritFromClass
@@ -111,17 +111,17 @@
 
 - (void)test_should_beMemberOfClass_FailsIfObjectInheritsFromClass
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[[PSTTestSubject new] should] beMemberOfClass:[NSObject class]]; }, @"Expected test subject to be member of class NSObject.");
+    PSTVerifyBlockRaisesExceptionWithReason([[[PSTTestSubject new] should] beMemberOfClass:[NSObject class]], @"Expected test subject to be member of class NSObject.");
 }
 
 - (void)test_should_beMemberOfClass_FailsIfObjectIsNotOfIdenticalClass
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[[PSTTestSubject new] should] beMemberOfClass:[NSNumber class]]; }, @"Expected test subject to be member of class NSNumber.");
+    PSTVerifyBlockRaisesExceptionWithReason([[[PSTTestSubject new] should] beMemberOfClass:[NSNumber class]], @"Expected test subject to be member of class NSNumber.");
 }
 
 - (void)test_shouldNot_beMemberOfClass_FailsIfObjectIsOfSameClass
 {
-    PSTVerifyBlockRaisesExceptionWithReason(^{ [[[PSTTestSubject new] shouldNot] beMemberOfClass:[PSTTestSubject class]]; }, @"Expected test subject not to be member of class PSTTestSubject.");
+    PSTVerifyBlockRaisesExceptionWithReason([[[PSTTestSubject new] shouldNot] beMemberOfClass:[PSTTestSubject class]], @"Expected test subject not to be member of class PSTTestSubject.");
 }
 
 - (void)test_shouldNot_beMemberOfClass_SucceedsIfObjectInheritsFromClass
