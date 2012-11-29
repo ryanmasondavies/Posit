@@ -25,12 +25,7 @@
 
 - (void)test_BeTrue_FailsIfSubjectIsFalse
 {
-    NSException *exception = nil;
-    @try { [[@TRUE should] beFalse]; }
-    @catch(NSException *e) { exception = e; }
-    
-    STAssertNotNil(exception, @"Expected statement to throw an exception");
-    STAssertEqualObjects([exception reason], @"Expected 1 to be false.", @"Expected the correct failure message.");
+    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@TRUE should] beFalse]; }, @"Expected 1 to be false.");
 }
 
 - (void)test_BeTrue_Negative_SucceedsIfSubjectIsFalse
@@ -40,12 +35,7 @@
 
 - (void)test_BeTrue_Negative_FailsIfSubjectIsFalse
 {
-    NSException *exception = nil;
-    @try { [[@TRUE shouldNot] beTrue]; }
-    @catch(NSException *e) { exception = e; }
-    
-    STAssertNotNil(exception, @"Expected statement to throw an exception.");
-    STAssertEqualObjects([exception reason], @"Expected 1 not to be true.", @"Expected the correct failure message.");
+    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@TRUE shouldNot] beTrue]; }, @"Expected 1 not to be true.");
 }
 
 #pragma mark beFalse
@@ -57,12 +47,7 @@
 
 - (void)test_BeFalse_FailsIfSubjectIsTrue
 {
-    NSException *exception = nil;
-    @try { [[@TRUE should] beFalse]; }
-    @catch(NSException *e) { exception = e; }
-    
-    STAssertNotNil(exception, @"Expected statement to throw an exception");
-    STAssertEqualObjects([exception reason], @"Expected 1 to be false.", @"Expected the correct failure message.");
+    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@TRUE should] beFalse]; }, @"Expected 1 to be false.");
 }
 
 - (void)test_BeFalse_Negative_SucceedsIfSubjectIsTrue
@@ -72,12 +57,7 @@
 
 - (void)test_BeFalse_Negative_FailsIfSubjectIsFalse
 {
-    NSException *exception = nil;
-    @try { [[@FALSE shouldNot] beFalse]; }
-    @catch(NSException *e) { exception = e; }
-    
-    STAssertNotNil(exception, @"Expected statement to throw an exception.");
-    STAssertEqualObjects([exception reason], @"Expected 0 not to be false.", @"Expected the correct failure message.");
+    PSTVerifyBlockRaisesExceptionWithReason(^{ [[@FALSE shouldNot] beFalse]; }, @"Expected 0 not to be false.");
 }
 
 @end
