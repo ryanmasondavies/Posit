@@ -13,8 +13,18 @@
 
 - (id)initWithSubject:(id)subject
 {
+    if (self = [super init]) self.subject = subject;
+    return self;
+}
+
+- (id)initWithSubject:(id)subject filePath:(NSString *)filePath lineNumber:(NSNumber *)lineNumber
+{
     self = [super init];
-    if (self) self.subject = subject;
+    if (self) {
+        self.subject = subject;
+        self.filePath = filePath;
+        self.lineNumber = lineNumber;
+    }
     return self;
 }
 
@@ -74,13 +84,20 @@
             [arguments addObject:object];
         }
         
+        // Use positive or negative reason:
         NSString *reason;
         if ([self isNegative] == NO)
             reason = [[self matcher] failureMessageForSelector:[invocation selector] arguments:arguments];
         else
             reason = [[self matcher] negativeFailureMessageForSelector:[invocation selector] arguments:arguments];
         
-        [NSException raise:@"PSTMatcherException" format:reason, nil];
+        // Build up a user info dict for the exception:
+        NSMutableDictionary *info = [NSMutableDictionary dictionary];
+        if ([self filePath]) [info setObject:[self filePath] forKey:SenTestFilenameKey];
+        if ([self lineNumber]) [info setObject:[self lineNumber] forKey:SenTestLineNumberKey];
+        
+        // Raise a SenTestFailureException:
+        [[NSException exceptionWithName:SenTestFailureException reason:reason userInfo:info] raise];
     }
 }
 
@@ -89,6 +106,22 @@
     Class klass = [PSTMatcher subclassWhoseInstancesRespondToSelector:selector];
     self.matcher = [[klass alloc] initWithSubject:[self subject]];
     return [[self matcher] methodSignatureForSelector:selector];
+}
+
+@end
+
+@implementation NSObject (PSTExpectation)
+
+- (id)makeExpectationOnLine:(NSNumber *)lineNumber inFile:(NSString *)filePath
+{
+    return [[PSTExpectation alloc] initWithSubject:self filePath:filePath lineNumber:lineNumber];
+}
+
+- (id)makeNegativeExpectationOnLine:(NSNumber *)lineNumber inFile:(NSString *)filePath
+{
+    PSTExpectation *expectation = [[PSTExpectation alloc] initWithSubject:self filePath:filePath lineNumber:lineNumber];
+    [expectation setNegative:YES];
+    return expectation;
 }
 
 @end

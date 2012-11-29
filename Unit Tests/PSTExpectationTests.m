@@ -14,6 +14,40 @@
 
 @implementation PSTExpectationTests
 
+- (void)testRaisesSenTestFailureExceptionsOnFailure
+{
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
+    
+    NSException *exception = nil;
+    @try { [(id)expectation failureMethod]; }
+    @catch(NSException *e) { exception = e; }
+    
+    STAssertEqualObjects([exception name], SenTestFailureException, @"Exception was not a SenTestFailureException.");
+}
+
+- (void)testSetsExceptionFileNameOnFailure
+{
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
+    [expectation setFilePath:@"some file"];
+    
+    NSException *exception = nil;
+    @try { [(id)expectation failureMethod]; }
+    @catch(NSException *e) { exception = e; }
+    STAssertEqualObjects([exception userInfo][SenTestFilenameKey], @"some file", @"Exception file path was not correct.");
+}
+
+- (void)testSetsExceptionLineNumberOnFailure
+{
+    PSTExpectation *expectation = [[PSTExpectation alloc] init];
+    [expectation setLineNumber:@32];
+    
+    NSException *exception = nil;
+    @try { [(id)expectation failureMethod]; }
+    @catch(NSException *e) { exception = e; }
+    
+    STAssertEqualObjects([exception userInfo][SenTestLineNumberKey], @32, @"Exception line number was not correct.");
+}
+
 - (void)testThrowsExceptionIfMatcherFails
 {
     PSTExpectation *expectation = [[PSTExpectation alloc] init];
@@ -490,6 +524,28 @@
         NSString *message = [NSString stringWithFormat:@"Hello World succeeded with arguments 0, %@.", @(USHRT_MAX)];
         STAssertEqualObjects([exception reason], message, @"Exception reason did not match the matcher's negative failure message.");
     }
+}
+
+#pragma mark Category on NSObject
+
+- (void)test_makeExpectationOnLine_InFile_ShouldCreatePositiveExpectation
+{
+    id object = [NSObject new];
+    PSTExpectation *expectation = [object makeExpectationOnLine:@32 inFile:@"some file"];
+    STAssertEqualObjects([expectation subject], object, @"Expectation subject was not the object that -makeExpectationInFile:onLine: was called on.");
+    STAssertEqualObjects([expectation filePath], @"some file", @"Expected expectation to use the file given to -makeExpectationInFile:onLine:");
+    STAssertEqualObjects([expectation lineNumber], @32, @"Expected expectation to use the line number given to -makeExpectationInFile:onLine:");
+    STAssertFalse([expectation isNegative], @"Expectation should have been positive, but was negative.");
+}
+
+- (void)test_makeNegativeExpectationOnLine_InFile_ShouldNotCreateNegativeExpectation
+{
+    id object = [NSObject new];
+    PSTExpectation *expectation = [object makeNegativeExpectationOnLine:@32 inFile:@"some file"];
+    STAssertEqualObjects([expectation subject], object, @"Expectation subject was not the object that -makeNegativeExpectationInFile:onLine: was called on.");
+    STAssertEqualObjects([expectation filePath], @"some file", @"Expected expectation to use the file given to -makeExpectationInFile:onLine:");
+    STAssertEqualObjects([expectation lineNumber], @32, @"Expected expectation to use the line number given to -makeExpectationInFile:onLine:");
+    STAssertTrue([expectation isNegative], @"Expectation should have been negative, but was positive.");
 }
 
 @end
