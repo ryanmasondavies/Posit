@@ -14,6 +14,7 @@ Posit provides matchers in the format of [[subject should] ...], allowing for mo
 
     // Existence:
     [[object should] beNil];
+    [[object should] bePresent];
     
     // Equality:
     [[@(1+2) should] beEqualTo:@3];
