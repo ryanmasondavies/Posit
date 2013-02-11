@@ -8,7 +8,7 @@ All arguments and return types must be provided as objects. This has been made s
 This library is a work in progress, and so the API may be subject to simplification and potentially drastic change.
 
 Matchers
---------
+========
 
 Posit provides matchers in the format of [[subject should] ...], allowing for more readable examples. The default matchers provided are as follows:
 
@@ -60,6 +60,11 @@ Before calling a custom method, however, the compiler must know of its existence
 
     PSTAddMatcher(beSwitchedOn);
     PSTAddMatcher(beValidWhenComparedTo:(id)object);
+
+Installation
+============
+
+Posit can be installed using CocoaPods. Add `pod 'Posit'` to your Podfile.
 
 License
 =======
