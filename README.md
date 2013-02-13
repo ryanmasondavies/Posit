@@ -37,8 +37,8 @@ Posit provides matchers in the format of [[subject should] ...], allowing for mo
     [[@5 should] beBetween:@1 and:@10];
     
     // Objects:
-    [[object should] beKindOfClass:[NSObject class]];
-    [[object should] beMemberOfClass:[NSObject class]];
+    [[object should] beKindOf:[NSObject class]];
+    [[object should] beMemberOf:[NSObject class]];
     [[object should] conformToProtocol:@protocol(NSCoding)];
     [[object should] respondToSelector:@selector(description)];
     
