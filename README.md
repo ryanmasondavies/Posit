@@ -64,12 +64,12 @@ Before calling a custom method, however, the compiler must know of its existence
 Installation
 ============
 
-Posit can be installed using CocoaPods. Add `pod 'Posit'` to your Podfile.
+Posit can be installed using CocoaPods by adding `pod 'Posit', '~> 0.0.2'` to your Podfile.
 
 License
 =======
 
-    Copyright (c) 2012 Ryan Davies
+    Copyright (c) 2013 Ryan Davies
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
