@@ -20,7 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTExpectation.h"
 #import "PSTTestMatcher.h"
 
 @interface PSTExpectationTests : SenTestCase

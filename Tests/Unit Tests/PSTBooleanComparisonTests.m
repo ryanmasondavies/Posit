@@ -20,24 +20,33 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTMatcher.h"
-
-@interface PSTMatcherTests : SenTestCase
+@interface PSTBooleanComparisonTests : SenTestCase
 @end
 
-@interface PSTSampleMatcher : PSTMatcher
-- (BOOL)someMethod;
-@end
+@implementation PSTBooleanComparisonTests
 
-@implementation PSTSampleMatcher
-- (BOOL)someMethod { return NO; }
-@end
+#pragma mark isTrue
 
-@implementation PSTMatcherTests
-
-- (void)test_SubclassWhoseInstancesRespondToSelector_ToReturnSubclassThatRespondsToASelector
+- (void)test_IsTrue_ReturnsTrueForNumbersWithBooleanTrueValue
 {
-    STAssertTrue([PSTMatcher subclassWhoseInstancesRespondToSelector:@selector(someMethod)] == [PSTSampleMatcher class], @"Expected PSTMatcher to return PSTSampleMatcher as a subclass that responds to -someMethod.");
+    STAssertTrue([@TRUE isTrue], @"Expected true to be evaluated as true.");
+}
+
+- (void)test_IsTrue_ReturnsFalseForNumbersWithBooleanFalseValue
+{
+    STAssertFalse([@FALSE isTrue], @"Expected false not to be evaluated as true.");
+}
+
+#pragma mark isFalse
+
+- (void)test_IsFalse_ReturnsTrueForNumbersWithBooleanFalseValue
+{
+    STAssertTrue([@FALSE isFalse], @"Expected false to be evaluated as false.");
+}
+
+- (void)test_IsFalse_ReturnsFalseForNumbersWithBooleanTrueValue
+{
+    STAssertFalse([@TRUE isFalse], @"Expected true not to be evaluated as false.");
 }
 
 @end

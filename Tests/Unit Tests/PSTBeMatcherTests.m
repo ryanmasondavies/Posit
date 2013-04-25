@@ -20,18 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTBeMatcher.h"
-
-@interface PSTTestSubject : NSObject
-- (BOOL)isValid;
-- (BOOL)isMember;
-@end
-
-@implementation PSTTestSubject
-- (BOOL)isValid { return YES; }
-- (BOOL)isMember { return YES; }
-- (NSString *)description { return @"test subject"; }
-@end
+#import "PSTTestSubject.h"
 
 @interface PSTBeMatcher ()
 - (BOOL)beValid;

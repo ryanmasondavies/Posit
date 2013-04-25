@@ -20,16 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Expectations:
-#import "PSTExpectation.h"
+@interface PSTMatcherTests : SenTestCase
+@end
 
-#define should makeExpectationOnLine:@(__LINE__) inFile:@(__FILE__)
-#define shouldNot makeNegativeExpectationOnLine:@(__LINE__) inFile:@(__FILE__)
+@interface PSTSampleMatcher : PSTMatcher
+- (BOOL)someMethod;
+@end
 
-// Comparison methods:
-#import "PSTObjectComparison.h"
-#import "PSTBooleanComparison.h"
-#import "PSTNumberComparison.h"
+@implementation PSTSampleMatcher
+- (BOOL)someMethod { return NO; }
+@end
 
-// Matchers:
-#import "PSTBeMatcher.h"
+@implementation PSTMatcherTests
+
+- (void)test_SubclassWhoseInstancesRespondToSelector_ToReturnSubclassThatRespondsToASelector
+{
+    STAssertTrue([PSTMatcher subclassWhoseInstancesRespondToSelector:@selector(someMethod)] == [PSTSampleMatcher class], @"Expected PSTMatcher to return PSTSampleMatcher as a subclass that responds to -someMethod.");
+}
+
+@end

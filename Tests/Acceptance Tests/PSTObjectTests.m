@@ -20,16 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "Posit.h"
+#import "PSTTestSubject.h"
 
 @interface PSTObjectTests : SenTestCase
-@end
-
-@interface PSTTestSubject : NSObject
-@end
-
-@implementation PSTTestSubject
-- (NSString *)description { return @"test subject"; }
 @end
 
 @implementation PSTObjectTests
