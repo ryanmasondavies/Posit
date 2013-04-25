@@ -1,6 +1,8 @@
-# Xcode
+# Mac
 .DS_Store
-build/
+
+# Xcode
+build/*
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -14,5 +16,9 @@ build/
 xcuserdata
 profile
 *.moved-aside
-DerivedData
-.idea/
+
+# CocoaPods
+Pods
+
+# Aruba
+Features/tmp

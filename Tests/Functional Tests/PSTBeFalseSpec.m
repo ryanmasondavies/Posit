@@ -1,17 +1,17 @@
 // The MIT License
-// 
+//
 // Copyright (c) 2013 Ryan Davies
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,48 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTNumberComparison.h"
+SpecBegin(PSTBeFalse)
 
-@implementation NSNumber (PSTNumberComparison)
+describe(@"should be false", ^{
+    it(@"should do nothing if subject is false", PENDING);
+    it(@"should throw an exception if subject is true", PENDING);
+});
 
-- (BOOL)isZero
-{
-    return [self isEqualToNumber:@0];
-}
+describe(@"should not be false", ^{
+    it(@"should do nothing if subject is true", PENDING);
+    it(@"should throw an exception if subject is false", PENDING);
+});
 
-- (BOOL)isPositive
-{
-    return [self compare:@0] == NSOrderedDescending;
-}
-
-- (BOOL)isNegative
-{
-    return [self compare:@0] == NSOrderedAscending;
-}
-
-- (BOOL)isGreaterThan:(NSNumber *)number
-{
-    return [number compare:self] == NSOrderedAscending;
-}
-
-- (BOOL)isLessThan:(NSNumber *)number
-{
-    return [number compare:self] == NSOrderedDescending;
-}
-
-- (BOOL)isGreaterThanOrEqualTo:(NSNumber *)number
-{
-    return [number compare:self] != NSOrderedDescending;
-}
-
-- (BOOL)isLessThanOrEqualTo:(NSNumber *)number
-{
-    return [number compare:self] != NSOrderedAscending;
-}
-
-- (BOOL)isBetween:(NSNumber *)start and:(NSNumber *)end
-{
-    return [self isGreaterThanOrEqualTo:start] && [self isLessThanOrEqualTo:end];
-}
-
-@end
+SpecEnd

@@ -7,28 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		944EE9521663831100244AA9 /* PSTBooleanComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 944EE9511663831100244AA9 /* PSTBooleanComparison.m */; };
-		94627A751663ACF200CE00EE /* PSTNumberComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 94627A741663ACF200CE00EE /* PSTNumberComparison.m */; };
-		94C2CCE51662CA0C002F5AD7 /* PSTObjectComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C2CCE41662CA0C002F5AD7 /* PSTObjectComparison.m */; };
+		94B90D341729919300E4DE41 /* PSTBeTrueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B90D301729919300E4DE41 /* PSTBeTrueSpec.m */; };
+		94B90D351729919300E4DE41 /* PSTBeZeroSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B90D311729919300E4DE41 /* PSTBeZeroSpec.m */; };
+		94B90D361729919300E4DE41 /* PSTObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B90D321729919300E4DE41 /* PSTObjectSpec.m */; };
+		94B90D39172998F700E4DE41 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B90D38172998F700E4DE41 /* PSTBeFalseSpec.m */; };
+		94B90D3B1729998300E4DE41 /* PSTBePositiveSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B90D3A1729998300E4DE41 /* PSTBePositiveSpec.m */; };
 		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
 		94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B125166119DF003B3F43 /* PSTMatcher.m */; };
 		94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
 		94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B15165D2EBA00282ABE /* libPosit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFC165D2EBA00282ABE /* libPosit.a */; };
-		94DAFF3417294D820002BA45 /* PSTBooleanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF2617294D820002BA45 /* PSTBooleanTests.m */; };
-		94DAFF3517294D820002BA45 /* PSTNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF2717294D820002BA45 /* PSTNumberTests.m */; };
-		94DAFF3617294D820002BA45 /* PSTObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF2817294D820002BA45 /* PSTObjectTests.m */; };
-		94DAFF3817294D820002BA45 /* PSTBeMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF2C17294D820002BA45 /* PSTBeMatcherTests.m */; };
-		94DAFF3917294D820002BA45 /* PSTBooleanComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF2D17294D820002BA45 /* PSTBooleanComparisonTests.m */; };
-		94DAFF3A17294D820002BA45 /* PSTExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF2E17294D820002BA45 /* PSTExpectationTests.m */; };
-		94DAFF3B17294D820002BA45 /* PSTMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF2F17294D820002BA45 /* PSTMatcherTests.m */; };
-		94DAFF3C17294D820002BA45 /* PSTNumberComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF3017294D820002BA45 /* PSTNumberComparisonTests.m */; };
-		94DAFF3D17294D820002BA45 /* PSTObjectComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF3117294D820002BA45 /* PSTObjectComparisonTests.m */; };
 		94DAFF4117294E450002BA45 /* PSTTestSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF4017294E450002BA45 /* PSTTestSubject.m */; };
 		94DAFF4417294EC10002BA45 /* PSTTestMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DAFF4317294EC00002BA45 /* PSTTestMatcher.m */; };
 		94F469EA1667D39300573526 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
 		94F554BE1662B7CE00B21102 /* PSTBeMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F554BD1662B7CE00B21102 /* PSTBeMatcher.m */; };
+		F0F5FDAC075E4F58999727D1 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19FB613AE124AB6A03D8E09 /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +48,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		944EE9501663831100244AA9 /* PSTBooleanComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBooleanComparison.h; sourceTree = "<group>"; };
-		944EE9511663831100244AA9 /* PSTBooleanComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBooleanComparison.m; sourceTree = "<group>"; };
-		94627A731663ACF200CE00EE /* PSTNumberComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTNumberComparison.h; sourceTree = "<group>"; };
-		94627A741663ACF200CE00EE /* PSTNumberComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTNumberComparison.m; sourceTree = "<group>"; };
-		94C2CCE31662CA0C002F5AD7 /* PSTObjectComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTObjectComparison.h; sourceTree = "<group>"; };
-		94C2CCE41662CA0C002F5AD7 /* PSTObjectComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectComparison.m; sourceTree = "<group>"; };
+		94B90D301729919300E4DE41 /* PSTBeTrueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeTrueSpec.m; sourceTree = "<group>"; };
+		94B90D311729919300E4DE41 /* PSTBeZeroSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeZeroSpec.m; sourceTree = "<group>"; };
+		94B90D321729919300E4DE41 /* PSTObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectSpec.m; sourceTree = "<group>"; };
+		94B90D38172998F700E4DE41 /* PSTBeFalseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeFalseSpec.m; sourceTree = "<group>"; };
+		94B90D3A1729998300E4DE41 /* PSTBePositiveSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBePositiveSpec.m; sourceTree = "<group>"; };
 		94C3B122166119DF003B3F43 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTExpectation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C3B123166119DF003B3F43 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTExpectation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B124166119DF003B3F43 /* PSTMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
@@ -69,23 +62,16 @@
 		94D97AFF165D2EBA00282ABE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D97B0D165D2EBA00282ABE /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		94DAFF2617294D820002BA45 /* PSTBooleanTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBooleanTests.m; sourceTree = "<group>"; };
-		94DAFF2717294D820002BA45 /* PSTNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTNumberTests.m; sourceTree = "<group>"; };
-		94DAFF2817294D820002BA45 /* PSTObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectTests.m; sourceTree = "<group>"; };
 		94DAFF2917294D820002BA45 /* PSTTestHelper.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTTestHelper.pch; sourceTree = "<group>"; };
 		94DAFF2A17294D820002BA45 /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		94DAFF2C17294D820002BA45 /* PSTBeMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeMatcherTests.m; sourceTree = "<group>"; };
-		94DAFF2D17294D820002BA45 /* PSTBooleanComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBooleanComparisonTests.m; sourceTree = "<group>"; };
-		94DAFF2E17294D820002BA45 /* PSTExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationTests.m; sourceTree = "<group>"; };
-		94DAFF2F17294D820002BA45 /* PSTMatcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherTests.m; sourceTree = "<group>"; };
-		94DAFF3017294D820002BA45 /* PSTNumberComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTNumberComparisonTests.m; sourceTree = "<group>"; };
-		94DAFF3117294D820002BA45 /* PSTObjectComparisonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTObjectComparisonTests.m; sourceTree = "<group>"; };
 		94DAFF3F17294E450002BA45 /* PSTTestSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTTestSubject.h; sourceTree = "<group>"; };
 		94DAFF4017294E450002BA45 /* PSTTestSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTTestSubject.m; sourceTree = "<group>"; };
 		94DAFF4217294EC00002BA45 /* PSTTestMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTTestMatcher.h; sourceTree = "<group>"; };
 		94DAFF4317294EC00002BA45 /* PSTTestMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTTestMatcher.m; sourceTree = "<group>"; };
 		94F554BC1662B7CE00B21102 /* PSTBeMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBeMatcher.h; sourceTree = "<group>"; };
 		94F554BD1662B7CE00B21102 /* PSTBeMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeMatcher.m; sourceTree = "<group>"; };
+		B19FB613AE124AB6A03D8E09 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8C295140B8496881E97C00 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,22 +91,36 @@
 				94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */,
 				94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */,
 				94D97B15165D2EBA00282ABE /* libPosit.a in Frameworks */,
+				F0F5FDAC075E4F58999727D1 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94B90D2F1729919300E4DE41 /* Functional Tests */ = {
+			isa = PBXGroup;
+			children = (
+				94B90D301729919300E4DE41 /* PSTBeTrueSpec.m */,
+				94B90D38172998F700E4DE41 /* PSTBeFalseSpec.m */,
+				94B90D311729919300E4DE41 /* PSTBeZeroSpec.m */,
+				94B90D3A1729998300E4DE41 /* PSTBePositiveSpec.m */,
+				94B90D321729919300E4DE41 /* PSTObjectSpec.m */,
+			);
+			path = "Functional Tests";
+			sourceTree = "<group>";
+		};
+		94B90D331729919300E4DE41 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
 		94C3B11A166119DF003B3F43 /* Posit */ = {
 			isa = PBXGroup;
 			children = (
 				94C3B128166119DF003B3F43 /* Posit.h */,
-				94C2CCE31662CA0C002F5AD7 /* PSTObjectComparison.h */,
-				94C2CCE41662CA0C002F5AD7 /* PSTObjectComparison.m */,
-				944EE9501663831100244AA9 /* PSTBooleanComparison.h */,
-				944EE9511663831100244AA9 /* PSTBooleanComparison.m */,
-				94627A731663ACF200CE00EE /* PSTNumberComparison.h */,
-				94627A741663ACF200CE00EE /* PSTNumberComparison.m */,
 				94C3B122166119DF003B3F43 /* PSTExpectation.h */,
 				94C3B123166119DF003B3F43 /* PSTExpectation.m */,
 				94C3B124166119DF003B3F43 /* PSTMatcher.h */,
@@ -138,6 +138,7 @@
 				94DAFF2417294D820002BA45 /* Tests */,
 				94D97AFE165D2EBA00282ABE /* Frameworks */,
 				94D97AFD165D2EBA00282ABE /* Products */,
+				FF8C295140B8496881E97C00 /* Pods-Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +156,7 @@
 			children = (
 				94D97AFF165D2EBA00282ABE /* Foundation.framework */,
 				94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */,
+				B19FB613AE124AB6A03D8E09 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,35 +164,12 @@
 		94DAFF2417294D820002BA45 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				94DAFF2517294D820002BA45 /* Acceptance Tests */,
-				94DAFF2B17294D820002BA45 /* Unit Tests */,
+				94B90D2F1729919300E4DE41 /* Functional Tests */,
+				94B90D331729919300E4DE41 /* Unit Tests */,
 				94DAFF4517294EC50002BA45 /* Supporting Classes */,
 				94DAFF4617294ECE0002BA45 /* Supporting Files */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		94DAFF2517294D820002BA45 /* Acceptance Tests */ = {
-			isa = PBXGroup;
-			children = (
-				94DAFF2617294D820002BA45 /* PSTBooleanTests.m */,
-				94DAFF2717294D820002BA45 /* PSTNumberTests.m */,
-				94DAFF2817294D820002BA45 /* PSTObjectTests.m */,
-			);
-			path = "Acceptance Tests";
-			sourceTree = "<group>";
-		};
-		94DAFF2B17294D820002BA45 /* Unit Tests */ = {
-			isa = PBXGroup;
-			children = (
-				94DAFF2C17294D820002BA45 /* PSTBeMatcherTests.m */,
-				94DAFF2D17294D820002BA45 /* PSTBooleanComparisonTests.m */,
-				94DAFF2E17294D820002BA45 /* PSTExpectationTests.m */,
-				94DAFF2F17294D820002BA45 /* PSTMatcherTests.m */,
-				94DAFF3017294D820002BA45 /* PSTNumberComparisonTests.m */,
-				94DAFF3117294D820002BA45 /* PSTObjectComparisonTests.m */,
-			);
-			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 		94DAFF4517294EC50002BA45 /* Supporting Classes */ = {
@@ -237,10 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94D97B24165D2EBA00282ABE /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
+				83EDF312784F4DE3967B4AAE /* Check Pods Manifest.lock */,
 				94D97B08165D2EBA00282ABE /* Sources */,
 				94D97B09165D2EBA00282ABE /* Frameworks */,
 				94D97B0A165D2EBA00282ABE /* Resources */,
 				94D97B0B165D2EBA00282ABE /* ShellScript */,
+				BEB1F869E7DB4805A9F0833A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +272,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		83EDF312784F4DE3967B4AAE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
 		94D97B0B165D2EBA00282ABE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,6 +299,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		BEB1F869E7DB4805A9F0833A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -314,9 +323,6 @@
 				94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */,
 				94C3B12D166119DF003B3F43 /* PSTMatcher.m in Sources */,
 				94F554BE1662B7CE00B21102 /* PSTBeMatcher.m in Sources */,
-				94C2CCE51662CA0C002F5AD7 /* PSTObjectComparison.m in Sources */,
-				944EE9521663831100244AA9 /* PSTBooleanComparison.m in Sources */,
-				94627A751663ACF200CE00EE /* PSTNumberComparison.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,17 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DAFF3417294D820002BA45 /* PSTBooleanTests.m in Sources */,
-				94DAFF3517294D820002BA45 /* PSTNumberTests.m in Sources */,
-				94DAFF3617294D820002BA45 /* PSTObjectTests.m in Sources */,
-				94DAFF3817294D820002BA45 /* PSTBeMatcherTests.m in Sources */,
-				94DAFF3917294D820002BA45 /* PSTBooleanComparisonTests.m in Sources */,
-				94DAFF3A17294D820002BA45 /* PSTExpectationTests.m in Sources */,
-				94DAFF3B17294D820002BA45 /* PSTMatcherTests.m in Sources */,
-				94DAFF3C17294D820002BA45 /* PSTNumberComparisonTests.m in Sources */,
-				94DAFF3D17294D820002BA45 /* PSTObjectComparisonTests.m in Sources */,
 				94DAFF4117294E450002BA45 /* PSTTestSubject.m in Sources */,
 				94DAFF4417294EC10002BA45 /* PSTTestMatcher.m in Sources */,
+				94B90D341729919300E4DE41 /* PSTBeTrueSpec.m in Sources */,
+				94B90D351729919300E4DE41 /* PSTBeZeroSpec.m in Sources */,
+				94B90D361729919300E4DE41 /* PSTObjectSpec.m in Sources */,
+				94B90D39172998F700E4DE41 /* PSTBeFalseSpec.m in Sources */,
+				94B90D3B1729998300E4DE41 /* PSTBePositiveSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +374,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -391,6 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -426,15 +430,11 @@
 		};
 		94D97B25165D2EBA00282ABE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF8C295140B8496881E97C00 /* Pods-Tests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tests/PSTTestHelper.pch;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -442,15 +442,11 @@
 		};
 		94D97B26165D2EBA00282ABE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF8C295140B8496881E97C00 /* Pods-Tests.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tests/PSTTestHelper.pch;
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};

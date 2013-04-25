@@ -20,33 +20,19 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@interface PSTBooleanComparisonTests : SenTestCase
-@end
+SpecBegin(PSTBeTrue)
 
-@implementation PSTBooleanComparisonTests
+describe(@"true should be true", ^{
+    it(@"should not throw an exception", PENDING);
+});
 
-#pragma mark isTrue
+describe(@"false should be true", ^{
+    it(@"should throw an exception", PENDING);
+});
 
-- (void)test_IsTrue_ReturnsTrueForNumbersWithBooleanTrueValue
-{
-    STAssertTrue([@TRUE isTrue], @"Expected true to be evaluated as true.");
-}
+describe(@"should not be true", ^{
+    it(@"should do nothing if subject is false", PENDING);
+    it(@"should throw an exception if subject is true", PENDING);
+});
 
-- (void)test_IsTrue_ReturnsFalseForNumbersWithBooleanFalseValue
-{
-    STAssertFalse([@FALSE isTrue], @"Expected false not to be evaluated as true.");
-}
-
-#pragma mark isFalse
-
-- (void)test_IsFalse_ReturnsTrueForNumbersWithBooleanFalseValue
-{
-    STAssertTrue([@FALSE isFalse], @"Expected false to be evaluated as false.");
-}
-
-- (void)test_IsFalse_ReturnsFalseForNumbersWithBooleanTrueValue
-{
-    STAssertFalse([@TRUE isFalse], @"Expected true not to be evaluated as false.");
-}
-
-@end
+SpecEnd

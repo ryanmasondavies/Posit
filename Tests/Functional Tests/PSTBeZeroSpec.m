@@ -20,163 +20,70 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@interface PSTNumberTests : SenTestCase
-@end
+SpecBegin(PSTMatchingNumbers)
 
-@implementation PSTNumberTests
+describe(@"should be zero", ^{
+    it(@"should not throw an exception if subject is zero", PENDING);
+    it(@"should throw an exception if subject is not zero", PENDING);
+});
 
-- (void)setUp {}
-- (void)tearDown {}
+describe(@"should not be zero", ^{
+    it(@"should not throw an exception if subject is not zero", PENDING);
+    it(@"should throw an exception if subject is zero", PENDING);
+});
 
-#pragma mark beZero
+describe(@"should be positive", ^{
+    it(@"should not throw an exception if subject is larger than zero", PENDING);
+    it(@"should throw an exception if subject is zero", PENDING);
+    it(@"should throw an exception if subject is smaller than zero", PENDING);
+});
 
-- (void)test_Should_BeZero_SucceedsIfZero
-{
-    STAssertNoThrow([[@0 should] beZero], @"Expected statement not to throw an exception.");
-}
+describe(@"should not be positive", ^{
+    it(@"should not throw an exception if subject is zero", PENDING);
+    it(@"should not throw an exception if subject is smaller than zero", PENDING);
+    it(@"should throw an exception if subject is larger than zero", PENDING);
+});
 
-- (void)test_Should_BeZero_FailsIfNotZero
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beZero], @"Expected 1 to be zero.");
-}
+describe(@"should be negative", ^{
+    it(@"should not throw an exception if subject is smaller than zero", PENDING);
+    it(@"should throw an exception if subject is zero", PENDING);
+    it(@"should throw an exception if subject is larger than zero", PENDING);
+});
 
-- (void)test_ShouldNot_BeZero_SucceedsIfNotZero
-{
-    STAssertNoThrow([[@1 shouldNot] beZero], @"Expected statement not to throw an exception.");
-}
+describe(@"should not be negative", ^{
+    it(@"should not throw an exception if subject is zero", PENDING);
+    it(@"should not throw an exception if subject is smaller than zero", PENDING);
+    it(@"should throw an exception if subject is larger than zero", PENDING);
+});
 
-- (void)test_ShouldNot_BeZero_FailsIfZero
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@0 shouldNot] beZero], @"Expected 0 not to be zero.");
-}
+describe(@"should be greater than", ^{
+    it(@"should not throw an exception if subject is greater than", PENDING);
+    it(@"should throw an exception if subject is equal", PENDING);
+    it(@"should throw an exception if subject is less", PENDING);
+});
 
-#pragma mark bePositive
+describe(@"should not be greater than", ^{
+    it(@"should not throw an exception if subject is equal", PENDING);
+    it(@"should not throw an exception if subject is less", PENDING);
+    it(@"should throw an exception if subject is greater", PENDING);
+});
 
-- (void)test_Should_BePositive_SucceedsIfPositive
-{
-    STAssertNoThrow([[@1 should] bePositive], @"Expected statement not to throw an exception.");
-}
+describe(@"should be less than", ^{
+    it(@"should not throw an exception if subject is less", PENDING);
+    it(@"should throw an exception if subject is equal", PENDING);
+    it(@"should throw an exception if subject is greater", PENDING);
+});
 
-- (void)test_Should_BePositive_FailsIfNegative
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@(-1) should] bePositive], @"Expected -1 to be positive.");
-}
+describe(@"should not be less than", ^{
+    it(@"should not throw an exception if subject is equal", PENDING);
+    it(@"should not throw an exception if subject is greater", PENDING);
+    it(@"should throw an exception if subject is less", PENDING);
+});
 
-- (void)test_Should_BePositive_FailsIfZero
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@0 should] bePositive], @"Expected 0 to be positive.");
-}
-
-- (void)test_ShouldNot_BePositive_FailsIfPositive
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] bePositive], @"Expected 1 not to be positive.");
-}
-
-- (void)test_ShouldNot_BePositive_SucceedsIfNegative
-{
-    STAssertNoThrow([[@(-1) shouldNot] bePositive], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_ShouldNot_BePositive_SucceedsIfZero
-{
-    STAssertNoThrow([[@0 shouldNot] bePositive], @"Expected statement not to throw an exception.");
-}
-
-#pragma mark beNegative
-
-- (void)test_Should_BeNegative_FailsIfPositive
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@(-1) shouldNot] beNegative], @"Expected -1 not to be negative.");
-}
-
-- (void)test_Should_BeNegative_SucceedsIfNegative
-{
-    STAssertNoThrow([[@(-1) should] beNegative], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_Should_BeNegative_FailsIfZero
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@0 should] beNegative], @"Expected 0 to be negative.");
-}
-
-- (void)test_ShouldNot_BeNegative_SucceedsIfPositive
-{
-    STAssertNoThrow([[@1 shouldNot] beNegative], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_ShouldNot_BeNegative_FailsIfNegative
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@(-1) shouldNot] beNegative], @"Expected -1 not to be negative.");
-}
-
-- (void)test_ShouldNot_BeNegative_SucceedsIfZero
-{
-    STAssertNoThrow([[@0 shouldNot] beNegative], @"Expected statement not to throw an exception.");
-}
-
-#pragma mark beGreaterThan:
-
-- (void)test_Should_BeGreaterThan_SucceedsIfGreaterThan
-{
-    STAssertNoThrow([[@2 should] beGreaterThan:@1], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_Should_BeGreaterThan_FailsIfEqual
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beGreaterThan:@1], @"Expected 1 to be greater than 1.");
-}
-
-- (void)test_Should_BeGreaterThan_FailsIfLessThan
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beGreaterThan:@2], @"Expected 1 to be greater than 2.");
-}
-
-- (void)test_ShouldNot_BeGreaterThan_FailsIfGreaterThan
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@2 shouldNot] beGreaterThan:@1], @"Expected 2 not to be greater than 1.");
-}
-
-- (void)test_ShouldNot_BeGreaterThan_SucceedsIfEqual
-{
-    STAssertNoThrow([[@1 shouldNot] beGreaterThan:@1], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_ShouldNot_BeGreaterThan_SucceedsIfLessThan
-{
-    STAssertNoThrow([[@(-1) shouldNot] beGreaterThan:@1], @"Expected statement not to throw an exception.");
-}
-
-#pragma mark beLessThan:
-
-- (void)test_Should_BeLessThan_FailsIfGreaterThan
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@2 should] beLessThan:@1], @"Expected 2 to be less than 1.");
-}
-
-- (void)test_Should_BeLessThan_FailsIfEqual
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@1 should] beLessThan:@1], @"Expected 1 to be less than 1.");
-}
-
-- (void)test_Should_BeLessThan_SucceedsIfLessThan
-{
-    STAssertNoThrow([[@1 should] beLessThan:@2], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_ShouldNot_BeLessThan_SucceedsIfGreaterThan
-{
-    STAssertNoThrow([[@2 shouldNot] beLessThan:@1], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_ShouldNot_BeLessThan_SucceedsIfEqual
-{
-    STAssertNoThrow([[@1 shouldNot] beLessThan:@1], @"Expected statement not to throw an exception.");
-}
-
-- (void)test_ShouldNot_BeLessThan_FailsIfLessThan
-{
-    PSTVerifyBlockRaisesExceptionWithReason([[@1 shouldNot] beLessThan:@2], @"Expected 1 not to be less than 2.");
-}
+describe(@"should be greater than or equal to", ^{
+    it(@"should not throw an exception if subject is greater", PENDING);
+    it(@"should not throw an exception if subject is equal", PENDING);
+});
 
 #pragma mark beGreaterThanOrEqualTo:
 

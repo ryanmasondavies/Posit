@@ -26,10 +26,5 @@
 #define should makeExpectationOnLine:@(__LINE__) inFile:@(__FILE__)
 #define shouldNot makeNegativeExpectationOnLine:@(__LINE__) inFile:@(__FILE__)
 
-// Comparison methods:
-#import "PSTObjectComparison.h"
-#import "PSTBooleanComparison.h"
-#import "PSTNumberComparison.h"
-
 // Matchers:
 #import "PSTBeMatcher.h"
