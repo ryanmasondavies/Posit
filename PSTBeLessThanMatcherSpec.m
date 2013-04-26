@@ -1,17 +1,17 @@
 // The MIT License
-// 
+//
 // Copyright (c) 2013 Ryan Davies
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,16 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+SpecBegin(PSTBeLessThanMatcher)
 
-@interface PSTMatcher : NSObject
-@property (nonatomic, strong) id subject;
+when(@"comparing to 1", ^{
+    it(@"does match 1", PENDING);
+    it(@"matches 0", PENDING);
+    it(@"matches -1", PENDING);
+});
 
-+ (Class)subclassWhoseInstancesRespondToSelector:(SEL)selector;
+when(@"comparing to 0", ^{
+    it(@"does not match 1", PENDING);
+    it(@"does not match 0", PENDING);
+    it(@"matches -1", PENDING);
+});
 
-- (id)initWithSubject:(id)subject;
+when(@"comparing to -1", ^{
+    it(@"does not match 1", PENDING);
+    it(@"does not match 0", PENDING);
+    it(@"does not match -1", PENDING);
+});
 
-- (NSString *)failureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments;
-- (NSString *)negativeFailureMessageForSelector:(SEL)selector arguments:(NSArray *)arguments;
-
-@end
+SpecEnd

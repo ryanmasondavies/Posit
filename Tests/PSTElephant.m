@@ -20,16 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeFalse)
+#import "PSTElephant.h"
 
-describe(@"should be false", ^{
-    it(@"should do nothing if subject is false", PENDING);
-    it(@"should throw an exception if subject is true", PENDING);
-});
+@implementation PSTElephant
 
-describe(@"should not be false", ^{
-    it(@"should do nothing if subject is true", PENDING);
-    it(@"should throw an exception if subject is false", PENDING);
-});
-
-SpecEnd
+@end

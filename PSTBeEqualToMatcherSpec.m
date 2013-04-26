@@ -20,5 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Specify/Specify.h>
-#import "Posit.h"
+SpecBegin(PSTBeEqualToMatcher)
+
+when(@"equating to true", ^{
+    it(@"matches true", PENDING);
+    it(@"does not match false", PENDING);
+});
+
+when(@"equating to 'Foobar'", ^{
+    it(@"matches 'Foobar'", PENDING);
+    it(@"does not match 'Barfoo'", PENDING);
+});
+
+when(@"equating to 20", ^{
+    it(@"matches 20", PENDING);
+    it(@"does not match 21", PENDING);
+});
+
+SpecEnd

@@ -20,5 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Specify/Specify.h>
-#import "Posit.h"
+SpecBegin(PSTBeNegativeMatcher)
+
+it(@"matches -1", PENDING);
+it(@"matches -2", PENDING);
+it(@"does not match 0", PENDING);
+it(@"does not match -1", PENDING);
+
+SpecEnd

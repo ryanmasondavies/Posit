@@ -20,11 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Expectations:
 #import "PSTExpectation.h"
-
-#define should makeExpectationOnLine:@(__LINE__) inFile:@(__FILE__)
-#define shouldNot makeNegativeExpectationOnLine:@(__LINE__) inFile:@(__FILE__)
-
-// Matchers:
-#import "PSTBeMatcher.h"

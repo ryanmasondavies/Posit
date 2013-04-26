@@ -20,10 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBePositiveSpec)
+SpecBegin(PSTBeFalseMatcher)
 
-it(@"<#does something#>", ^{
-    // ...
-});
+it(@"matches false", PENDING);
+it(@"does not match true", PENDING);
 
 SpecEnd

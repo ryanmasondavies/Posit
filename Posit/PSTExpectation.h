@@ -21,23 +21,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@class PSTMatcher;
 
 @interface PSTExpectation : NSObject
-@property (nonatomic, strong) id subject;
-@property (nonatomic, copy) NSString *filePath;
-@property (nonatomic, copy) NSNumber *lineNumber;
-@property (nonatomic, strong) PSTMatcher *matcher;
-@property (nonatomic, getter=isNegative) BOOL negative;
-
-- (id)initWithSubject:(id)subject;
-- (id)initWithSubject:(id)subject filePath:(NSString *)filePath lineNumber:(NSNumber *)lineNumber;
-
-@end
-
-@interface NSObject (PSTExpectation)
-
-- (id)makeExpectationOnLine:(NSNumber *)lineNumber inFile:(NSString *)filePath;
-- (id)makeNegativeExpectationOnLine:(NSNumber *)lineNumber inFile:(NSString *)filePath;
 
 @end

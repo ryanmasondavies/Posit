@@ -20,5 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Specify/Specify.h>
-#import "Posit.h"
+#import "PSTPanda.h"
+
+@implementation PSTPanda
+
+@end

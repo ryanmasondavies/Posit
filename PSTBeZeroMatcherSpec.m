@@ -20,9 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+SpecBegin(PSTBeZeroMatcher)
 
-@interface PSTTestSubject : NSObject
-- (BOOL)isValid;
-- (BOOL)isMember;
-@end
+it(@"matches 0", PENDING);
+it(@"should not match 1", PENDING);
+it(@"should not match -1", PENDING);
+
+SpecEnd

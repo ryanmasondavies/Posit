@@ -20,5 +20,27 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Specify/Specify.h>
-#import "Posit.h"
+#import "PSTElephant.h"
+#import "PSTPanda.h"
+
+SpecBegin(PSTBeMemberOfMatcher)
+
+when(@"comparing to an instance of PSTElephant", ^{
+    it(@"matches PSTElephant", PENDING);
+    it(@"matches PSTMammal", PENDING);
+    it(@"does not match PSTPanda", PENDING);
+});
+
+when(@"comparing to an instance of PSTPanda", ^{
+    it(@"matches PSTPanda", PENDING);
+    it(@"matches PSTMammal", PENDING);
+    it(@"does not match PSTElephant", PENDING);
+});
+
+when(@"comparing to an instance of PSTMammal", ^{
+    it(@"matches PSTMammal", PENDING);
+    it(@"does not match PSTPanda", PENDING);
+    it(@"does not match PSTElephant", PENDING);
+});
+
+SpecEnd

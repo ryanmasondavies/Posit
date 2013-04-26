@@ -20,5 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Specify/Specify.h>
-#import "Posit.h"
+SpecBegin(PSTBeGreaterThanOrEqualToMatcher)
+
+when(@"comparing to 1", ^{
+    it(@"matches 1", PENDING);
+    it(@"does not match 0", PENDING);
+    it(@"does not match -1", PENDING);
+});
+
+when(@"comparing to 0", ^{
+    it(@"matches 1", PENDING);
+    it(@"matches 0", PENDING);
+    it(@"does not match -1", PENDING);
+});
+
+when(@"comparing to -1", ^{
+    it(@"matches 1", PENDING);
+    it(@"matches 0", PENDING);
+    it(@"matches -1", PENDING);
+});
+
+SpecEnd

@@ -20,10 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTTestSubject.h"
+#import "PSTMammal.h"
 
-@implementation PSTTestSubject
-- (BOOL)isValid { return YES; }
-- (BOOL)isMember { return YES; }
-- (NSString *)description { return @"test subject"; }
+@implementation PSTMammal
+
 @end
