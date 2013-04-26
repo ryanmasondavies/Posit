@@ -22,7 +22,18 @@
 
 SpecBegin(PSTBeTrueMatcher)
 
-it(@"matches true", PENDING);
-it(@"does not match false", PENDING);
+__block id<PSTMatcher> matcher;
+
+before(^{
+    matcher = [[PSTBeTrueMatcher alloc] init];
+});
+
+it(@"matches true", ^{
+    STAssertTrue([matcher matches:@TRUE], @"");
+});
+
+it(@"does not match false", ^{
+    STAssertFalse([matcher matches:@FALSE], @"");
+});
 
 SpecEnd
