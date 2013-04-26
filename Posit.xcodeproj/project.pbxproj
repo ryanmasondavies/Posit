@@ -25,6 +25,7 @@
 		94C9EBC6172AD3E8001E432C /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBC5172AD3E8001E432C /* PSTMammal.m */; };
 		94C9EBC9172AD3EF001E432C /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBC8172AD3EF001E432C /* PSTElephant.m */; };
 		94C9EBCC172AD3F6001E432C /* PSTPanda.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBCB172AD3F6001E432C /* PSTPanda.m */; };
+		94C9EBCE172B22A5001E432C /* PSTExpectationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBCD172B22A5001E432C /* PSTExpectationSpec.m */; };
 		94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
 		94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
@@ -79,6 +80,7 @@
 		94C9EBC8172AD3EF001E432C /* PSTElephant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTElephant.m; sourceTree = "<group>"; };
 		94C9EBCA172AD3F6001E432C /* PSTPanda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTPanda.h; sourceTree = "<group>"; };
 		94C9EBCB172AD3F6001E432C /* PSTPanda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTPanda.m; sourceTree = "<group>"; };
+		94C9EBCD172B22A5001E432C /* PSTExpectationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationSpec.m; sourceTree = SOURCE_ROOT; };
 		94D97AFC165D2EBA00282ABE /* libPosit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPosit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97AFF165D2EBA00282ABE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D97B0D165D2EBA00282ABE /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 		94B90D331729919300E4DE41 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				94C9EBCD172B22A5001E432C /* PSTExpectationSpec.m */,
 				94C9EB9F172A7ADD001E432C /* PSTBeTrueMatcherSpec.m */,
 				94C9EBA1172A7B13001E432C /* PSTBeFalseMatcherSpec.m */,
 				94C9EBA3172A7B2A001E432C /* PSTBeZeroMatcherSpec.m */,
@@ -359,6 +362,7 @@
 				94C9EBC6172AD3E8001E432C /* PSTMammal.m in Sources */,
 				94C9EBC9172AD3EF001E432C /* PSTElephant.m in Sources */,
 				94C9EBCC172AD3F6001E432C /* PSTPanda.m in Sources */,
+				94C9EBCE172B22A5001E432C /* PSTExpectationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
