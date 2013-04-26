@@ -20,9 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTInverterSpec)
+SpecBegin(PSTMatcherInverter)
 
-it(@"matches if the matcher does not match", PENDING);
-it(@"does not match if the matcher matches", PENDING);
+it(@"matches if the matcher does not match", ^{
+    PSTBeTrueMatcher *matcher = [[PSTBeTrueMatcher alloc] init];
+    PSTMatcherInverter *inverter = [[PSTMatcherInverter alloc] initWithMatcher:matcher];
+    STAssertTrue([inverter matches:@FALSE], @"");
+});
+
+it(@"does not match if the matcher matches", ^{
+    PSTBeTrueMatcher *matcher = [[PSTBeTrueMatcher alloc] init];
+    PSTMatcherInverter *inverter = [[PSTMatcherInverter alloc] initWithMatcher:matcher];
+    STAssertFalse([inverter matches:@TRUE], @"");
+});
 
 SpecEnd
