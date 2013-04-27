@@ -23,7 +23,7 @@
 #import "PSTElephant.h"
 #import "PSTPanda.h"
 
-SpecBegin(PSTBeKindOfMatcher)
+SpecBegin(PSTKindMatcher)
 
 when(@"comparing to an instance of PSTElephant", ^{
     it(@"matches PSTElephant", PENDING);
