@@ -20,7 +20,7 @@
 		94D943C4172C002E0044904D /* PSTIdentityMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */; };
 		94D943C5172C002E0044904D /* PSTKindMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B1172C002E0044904D /* PSTKindMatcherSpec.m */; };
 		94D943C6172C002E0044904D /* PSTLessMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B2172C002E0044904D /* PSTLessMatcherSpec.m */; };
-		94D943C8172C002E0044904D /* PSTBeMemberOfMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B4172C002E0044904D /* PSTBeMemberOfMatcherSpec.m */; };
+		94D943C8172C002E0044904D /* PSTMemberMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B4172C002E0044904D /* PSTMemberMatcherSpec.m */; };
 		94D943C9172C002E0044904D /* PSTBeNegativeMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B5172C002E0044904D /* PSTBeNegativeMatcherSpec.m */; };
 		94D943CA172C002E0044904D /* PSTBePositiveMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B6172C002E0044904D /* PSTBePositiveMatcherSpec.m */; };
 		94D943CC172C002E0044904D /* PSTBeZeroMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B8172C002E0044904D /* PSTBeZeroMatcherSpec.m */; };
@@ -83,7 +83,7 @@
 		94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B1172C002E0044904D /* PSTKindMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTKindMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B2172C002E0044904D /* PSTLessMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLessMatcherSpec.m; sourceTree = "<group>"; };
-		94D943B4172C002E0044904D /* PSTBeMemberOfMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeMemberOfMatcherSpec.m; sourceTree = "<group>"; };
+		94D943B4172C002E0044904D /* PSTMemberMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMemberMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B5172C002E0044904D /* PSTBeNegativeMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeNegativeMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B6172C002E0044904D /* PSTBePositiveMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBePositiveMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B8172C002E0044904D /* PSTBeZeroMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeZeroMatcherSpec.m; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 				94D943B2172C002E0044904D /* PSTLessMatcherSpec.m */,
 				94D943AB172C002E0044904D /* PSTBetweenMatcherSpec.m */,
 				94D943B1172C002E0044904D /* PSTKindMatcherSpec.m */,
-				94D943B4172C002E0044904D /* PSTBeMemberOfMatcherSpec.m */,
+				94D943B4172C002E0044904D /* PSTMemberMatcherSpec.m */,
 				94D943B8172C002E0044904D /* PSTBeZeroMatcherSpec.m */,
 				94D943B6172C002E0044904D /* PSTBePositiveMatcherSpec.m */,
 				94D943B5172C002E0044904D /* PSTBeNegativeMatcherSpec.m */,
@@ -361,7 +361,7 @@
 				94D943C4172C002E0044904D /* PSTIdentityMatcherSpec.m in Sources */,
 				94D943C5172C002E0044904D /* PSTKindMatcherSpec.m in Sources */,
 				94D943C6172C002E0044904D /* PSTLessMatcherSpec.m in Sources */,
-				94D943C8172C002E0044904D /* PSTBeMemberOfMatcherSpec.m in Sources */,
+				94D943C8172C002E0044904D /* PSTMemberMatcherSpec.m in Sources */,
 				94D943C9172C002E0044904D /* PSTBeNegativeMatcherSpec.m in Sources */,
 				94D943CA172C002E0044904D /* PSTBePositiveMatcherSpec.m in Sources */,
 				94D943CC172C002E0044904D /* PSTBeZeroMatcherSpec.m in Sources */,
