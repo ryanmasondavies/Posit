@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeBetweenMatcher)
+SpecBegin(PSTBetweenMatcher)
 
 describe(@"with a minimum of 2 and a maximum of 5", ^{
     it(@"matches 3", PENDING);
