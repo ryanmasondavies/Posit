@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeGreaterThanMatcher)
+SpecBegin(PSTGreaterMatcher)
 
 when(@"comparing to 1", ^{
     it(@"does not match 1", PENDING);
