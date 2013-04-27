@@ -24,3 +24,4 @@
 #import "PSTMatcherInverter.h"
 #import "PSTEqualityMatcher.h"
 #import "PSTIdentityMatcher.h"
+#import "PSTGreaterMatcher.h"

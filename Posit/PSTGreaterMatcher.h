@@ -20,12 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeMemberOf)
+#import <Foundation/Foundation.h>
+#import "PSTMatcher.h"
 
-describe(@"An instance of PSTElephant", ^{
-    it(@"is a kind of PSTElephant", PENDING);
-    it(@"is not a kind of PSTMammal", PENDING);
-    it(@"is not a kind of PSTPanda", PENDING);
-});
+/** Compares values to a number, returning TRUE if greater than the number, and FALSE if not. */
+@interface PSTGreaterMatcher : NSObject <PSTMatcher>
 
-SpecEnd
+/**
+ Initialize a greater matcher.
+ @param number The number to which values will be compared.
+ @return An initialized matcher.
+ */
+- (id)initWithNumber:(NSNumber *)number;
+
+@end

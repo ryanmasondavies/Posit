@@ -18,6 +18,7 @@
 		94C46513172C631B00382046 /* PSTBeNegativeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46512172C631B00382046 /* PSTBeNegativeSpec.m */; };
 		94C46515172C64AF00382046 /* PSTBeKindOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46514172C64AF00382046 /* PSTBeKindOfSpec.m */; };
 		94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46516172C674900382046 /* PSTBeMemberOfSpec.m */; };
+		94C4651A172C690900382046 /* PSTGreaterMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46519172C690900382046 /* PSTGreaterMatcher.m */; };
 		94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
@@ -79,6 +80,8 @@
 		94C46512172C631B00382046 /* PSTBeNegativeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeNegativeSpec.m; sourceTree = "<group>"; };
 		94C46514172C64AF00382046 /* PSTBeKindOfSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeKindOfSpec.m; sourceTree = "<group>"; };
 		94C46516172C674900382046 /* PSTBeMemberOfSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeMemberOfSpec.m; sourceTree = "<group>"; };
+		94C46518172C690900382046 /* PSTGreaterMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGreaterMatcher.h; sourceTree = "<group>"; };
+		94C46519172C690900382046 /* PSTGreaterMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGreaterMatcher.m; sourceTree = "<group>"; };
 		94C9EBD1172B2A7C001E432C /* PSTMatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
 		94C9EBDB172B2F18001E432C /* PSTMatcherInverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcherInverter.h; sourceTree = "<group>"; };
 		94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherInverter.m; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				94D943D1172C0B5A0044904D /* PSTEqualityMatcher.m */,
 				94D943D3172C31870044904D /* PSTIdentityMatcher.h */,
 				94D943D4172C31870044904D /* PSTIdentityMatcher.m */,
+				94C46518172C690900382046 /* PSTGreaterMatcher.h */,
+				94C46519172C690900382046 /* PSTGreaterMatcher.m */,
 			);
 			path = Posit;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */,
 				94D943D2172C0B5A0044904D /* PSTEqualityMatcher.m in Sources */,
 				94D943D5172C31870044904D /* PSTIdentityMatcher.m in Sources */,
+				94C4651A172C690900382046 /* PSTGreaterMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

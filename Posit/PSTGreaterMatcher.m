@@ -20,12 +20,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeMemberOf)
+#import "PSTGreaterMatcher.h"
 
-describe(@"An instance of PSTElephant", ^{
-    it(@"is a kind of PSTElephant", PENDING);
-    it(@"is not a kind of PSTMammal", PENDING);
-    it(@"is not a kind of PSTPanda", PENDING);
-});
+@interface PSTGreaterMatcher ()
+@property (strong, nonatomic) NSNumber *number;
+@end
 
-SpecEnd
+@implementation PSTGreaterMatcher
+
+- (id)initWithNumber:(NSNumber *)number
+{
+    if (self = [self init]) {
+        [self setNumber:number];
+    }
+    return self;
+}
+
+- (BOOL)matches:(NSNumber *)value
+{
+    return [[self number] compare:value] == NSOrderedAscending;
+}
+
+@end

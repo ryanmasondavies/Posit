@@ -22,22 +22,60 @@
 
 SpecBegin(PSTGreaterMatcher)
 
+__block id<PSTMatcher> matcher;
+
 when(@"Comparing to 1", ^{
-    it(@"does not match 1", PENDING);
-    it(@"does not match 0", PENDING);
-    it(@"does not match -1", PENDING);
+    before(^{
+        matcher = [[PSTGreaterMatcher alloc] initWithNumber:@1];
+    });
+    
+    it(@"does not match 1", ^{
+        STAssertFalse([matcher matches:@1], @"");
+    });
+    
+    it(@"does not match 0", ^{
+        STAssertFalse([matcher matches:@0], @"");
+    });
+    
+    it(@"does not match -1", ^{
+        STAssertFalse([matcher matches:@(-1)], @"");
+    });
 });
 
 when(@"Comparing to 0", ^{
-    it(@"matches 1", PENDING);
-    it(@"does not match 0", PENDING);
-    it(@"does not match -1", PENDING);
+    before(^{
+        matcher = [[PSTGreaterMatcher alloc] initWithNumber:@0];
+    });
+    
+    it(@"matches 1", ^{
+        STAssertTrue([matcher matches:@1], @"");
+    });
+    
+    it(@"does not match 0", ^{
+        STAssertFalse([matcher matches:@0], @"");
+    });
+    
+    it(@"does not match -1", ^{
+        STAssertFalse([matcher matches:@(-1)], @"");
+    });
 });
 
 when(@"Comparing to -1", ^{
-    it(@"matches 1", PENDING);
-    it(@"matches 0", PENDING);
-    it(@"does not match -1", PENDING);
+    before(^{
+        matcher = [[PSTGreaterMatcher alloc] initWithNumber:@(-1)];
+    });
+    
+    it(@"matches 1", ^{
+        STAssertTrue([matcher matches:@1], @"");
+    });
+    
+    it(@"matches 0", ^{
+        STAssertTrue([matcher matches:@0], @"");
+    });
+    
+    it(@"does not match -1", ^{
+        STAssertFalse([matcher matches:@(-1)], @"");
+    });
 });
 
 SpecEnd

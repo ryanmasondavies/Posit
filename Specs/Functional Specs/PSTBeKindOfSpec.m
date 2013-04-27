@@ -23,7 +23,7 @@
 SpecBegin(PSTBeKindOf)
 
 describe(@"An instance of PSTElephant", ^{
-    it(@"is a kind of PSTElephant", PENDING):
+    it(@"is a kind of PSTElephant", PENDING);
     it(@"is a kind of PSTMammal", PENDING);
     it(@"is not a kind of PSTPanda", PENDING);
 });
