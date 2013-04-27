@@ -20,50 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeEqualToMatcher)
+#import <Foundation/Foundation.h>
+#import "PSTMatcher.h"
 
-__block id<PSTMatcher> matcher;
+/** Equates an object to the expected object, returning TRUE if equal, and FALSE if not. */
+@interface PSTEqualityMatcher : NSObject <PSTMatcher>
 
-when(@"equating to true", ^{
-    before(^{
-        matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@TRUE];
-    });
-    
-    it(@"matches true", ^{
-        STAssertTrue([matcher matches:@TRUE], @"");
-    });
-    
-    it(@"does not match false", ^{
-        STAssertFalse([matcher matches:@FALSE], @"");
-    });
-});
+/**
+ Initialize an equal to matcher.
+ @param expected The expected object to match.
+ @return An initialized matcher.
+ */
+- (id)initWithExpected:(id)expected;
 
-when(@"equating to 'Foobar'", ^{
-    before(^{
-        matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@"Foobar"];
-    });
-    
-    it(@"matches 'Foobar'", ^{
-        STAssertTrue([matcher matches:@"Foobar"], @"");
-    });
-    
-    it(@"does not match 'Barfoo'", ^{
-        STAssertFalse([matcher matches:@"Barfoo"], @"");
-    });
-});
-
-when(@"equating to 20", ^{
-    before(^{
-        matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@20];
-    });
-    
-    it(@"matches 20", ^{
-        STAssertTrue([matcher matches:@20], @"");
-    });
-    
-    it(@"does not match 21", ^{
-        STAssertFalse([matcher matches:@21], @"");
-    });
-});
-
-SpecEnd
+@end

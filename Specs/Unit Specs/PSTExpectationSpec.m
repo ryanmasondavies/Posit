@@ -26,7 +26,7 @@ __block id<PSTMatcher> matcher;
 __block PSTExpectation *expectation;
 
 before(^{
-    matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@TRUE];
+    matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
 });
 
 when(@"matcher matches subject", ^{

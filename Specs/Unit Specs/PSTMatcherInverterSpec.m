@@ -26,7 +26,7 @@ __block id<PSTMatcher> matcher;
 __block PSTMatcherInverter *inverter;
 
 before(^{
-    matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@TRUE];
+    matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
     inverter = [[PSTMatcherInverter alloc] initWithMatcher:matcher];
 });
 

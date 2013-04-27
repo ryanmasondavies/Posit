@@ -22,5 +22,5 @@
 
 #import "PSTExpectation.h"
 #import "PSTMatcherInverter.h"
-#import "PSTBeEqualToMatcher.h"
+#import "PSTEqualityMatcher.h"
 #import "PSTBeIdenticalToMatcher.h"
