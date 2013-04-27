@@ -21,7 +21,29 @@
 // THE SOFTWARE.
 
 #import "PSTExpectation.h"
+#import "PSTMatcher.h"
+
+@interface PSTExpectation ()
+@property (strong, nonatomic) id subject;
+@property (strong, nonatomic) id<PSTMatcher> matcher;
+@end
 
 @implementation PSTExpectation
+
+- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher
+{
+    if (self = [self init]) {
+        [self setSubject:subject];
+        [self setMatcher:matcher];
+    }
+    return self;
+}
+
+- (void)verify
+{
+    if ([[self matcher] matches:[self subject]] == NO) {
+        [NSException raise:NSInternalInconsistencyException format:@"Raised an exception for some reason."];
+    }
+}
 
 @end

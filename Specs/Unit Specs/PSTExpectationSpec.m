@@ -22,12 +22,31 @@
 
 SpecBegin(PSTExpectationSpec)
 
+__block id<PSTMatcher> matcher;
+__block PSTExpectation *expectation;
+
+before(^{
+    matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@TRUE];
+});
+
 when(@"matcher matches subject", ^{
-    it(@"does not raise an exception", PENDING);
+    before(^{
+        expectation = [[PSTExpectation alloc] initWithSubject:@TRUE matcher:matcher];
+    });
+    
+    it(@"does not raise an exception", ^{
+        STAssertNoThrow([expectation verify], @"");
+    });
 });
 
 when(@"matcher doesn't match subject", ^{
-    it(@"raises an exception", PENDING);
+    before(^{
+        expectation = [[PSTExpectation alloc] initWithSubject:@FALSE matcher:matcher];
+    });
+    
+    it(@"raises an exception", ^{
+        STAssertThrows([expectation verify], @"");
+    });
 });
 
 SpecEnd
