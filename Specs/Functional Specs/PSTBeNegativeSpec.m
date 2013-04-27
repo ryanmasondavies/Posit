@@ -20,11 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeFalse)
+SpecBegin(PSTBeNegative)
 
-describe(@"false", ^{
-    it(@"is false", PENDING);
-    it(@"is not true", PENDING);
+describe(@"-1", ^{
+    it(@"is negative", PENDING);
+});
+
+describe(@"1", ^{
+    it(@"is not positive", PENDING);
 });
 
 SpecEnd

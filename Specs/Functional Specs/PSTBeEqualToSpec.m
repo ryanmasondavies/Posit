@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeFalse)
+SpecBegin(PSTBeEqualTo)
 
-describe(@"false", ^{
-    it(@"is false", PENDING);
-    it(@"is not true", PENDING);
+describe(@"'Foobar'", ^{
+    it(@"is equal to 'Foobar'", PENDING);
+    it(@"is not equal to 'Boofar'", PENDING);
 });
 
 SpecEnd

@@ -22,7 +22,9 @@
 
 SpecBegin(PSTBeTrue)
 
-it(@"matches true", PENDING);
-it(@"doesn't match false", PENDING);
+describe(@"true", ^{
+    it(@"is true", PENDING);
+    it(@"is not false", PENDING);
+});
 
 SpecEnd

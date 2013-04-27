@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeFalse)
+SpecBegin(PSTBeLessThan)
 
-describe(@"false", ^{
-    it(@"is false", PENDING);
-    it(@"is not true", PENDING);
+describe(@"10", ^{
+    it(@"is less than 20", PENDING);
+    it(@"is not less than 1", PENDING);
 });
 
 SpecEnd

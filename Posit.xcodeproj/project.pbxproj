@@ -10,6 +10,14 @@
 		949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */; };
 		949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */; };
 		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
+		94C46509172C5FE600382046 /* PSTBeEqualToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */; };
+		94C4650B172C616000382046 /* PSTBeIdenticalToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */; };
+		94C4650D172C61B900382046 /* PSTBeGreaterThanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650C172C61B900382046 /* PSTBeGreaterThanSpec.m */; };
+		94C4650F172C61DB00382046 /* PSTBeLessThanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650E172C61DB00382046 /* PSTBeLessThanSpec.m */; };
+		94C46511172C62BA00382046 /* PSTBePositiveSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46510172C62BA00382046 /* PSTBePositiveSpec.m */; };
+		94C46513172C631B00382046 /* PSTBeNegativeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46512172C631B00382046 /* PSTBeNegativeSpec.m */; };
+		94C46515172C64AF00382046 /* PSTBeKindOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46514172C64AF00382046 /* PSTBeKindOfSpec.m */; };
+		94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46516172C674900382046 /* PSTBeMemberOfSpec.m */; };
 		94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
@@ -63,6 +71,14 @@
 		94C3B122166119DF003B3F43 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTExpectation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C3B123166119DF003B3F43 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTExpectation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B128166119DF003B3F43 /* Posit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Posit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToSpec.m; sourceTree = "<group>"; };
+		94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeIdenticalToSpec.m; sourceTree = "<group>"; };
+		94C4650C172C61B900382046 /* PSTBeGreaterThanSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeGreaterThanSpec.m; sourceTree = "<group>"; };
+		94C4650E172C61DB00382046 /* PSTBeLessThanSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeLessThanSpec.m; sourceTree = "<group>"; };
+		94C46510172C62BA00382046 /* PSTBePositiveSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBePositiveSpec.m; sourceTree = "<group>"; };
+		94C46512172C631B00382046 /* PSTBeNegativeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeNegativeSpec.m; sourceTree = "<group>"; };
+		94C46514172C64AF00382046 /* PSTBeKindOfSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeKindOfSpec.m; sourceTree = "<group>"; };
+		94C46516172C674900382046 /* PSTBeMemberOfSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeMemberOfSpec.m; sourceTree = "<group>"; };
 		94C9EBD1172B2A7C001E432C /* PSTMatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
 		94C9EBDB172B2F18001E432C /* PSTMatcherInverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcherInverter.h; sourceTree = "<group>"; };
 		94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherInverter.m; sourceTree = "<group>"; };
@@ -123,8 +139,16 @@
 		949AD65A172C5B3000D08674 /* Functional Specs */ = {
 			isa = PBXGroup;
 			children = (
+				94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */,
+				94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */,
 				949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */,
 				949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */,
+				94C4650C172C61B900382046 /* PSTBeGreaterThanSpec.m */,
+				94C4650E172C61DB00382046 /* PSTBeLessThanSpec.m */,
+				94C46510172C62BA00382046 /* PSTBePositiveSpec.m */,
+				94C46512172C631B00382046 /* PSTBeNegativeSpec.m */,
+				94C46514172C64AF00382046 /* PSTBeKindOfSpec.m */,
+				94C46516172C674900382046 /* PSTBeMemberOfSpec.m */,
 			);
 			path = "Functional Specs";
 			sourceTree = "<group>";
@@ -358,6 +382,14 @@
 				94D943D8172C332A0044904D /* PSTCopyableObject.m in Sources */,
 				949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */,
 				949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */,
+				94C46509172C5FE600382046 /* PSTBeEqualToSpec.m in Sources */,
+				94C4650B172C616000382046 /* PSTBeIdenticalToSpec.m in Sources */,
+				94C4650D172C61B900382046 /* PSTBeGreaterThanSpec.m in Sources */,
+				94C4650F172C61DB00382046 /* PSTBeLessThanSpec.m in Sources */,
+				94C46511172C62BA00382046 /* PSTBePositiveSpec.m in Sources */,
+				94C46513172C631B00382046 /* PSTBeNegativeSpec.m in Sources */,
+				94C46515172C64AF00382046 /* PSTBeKindOfSpec.m in Sources */,
+				94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,11 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeFalse)
+SpecBegin(PSTBeIdenticalTo)
 
-describe(@"false", ^{
-    it(@"is false", PENDING);
-    it(@"is not true", PENDING);
+describe(@"an object", ^{
+    it(@"is identical to itself", PENDING);
+    it(@"is not identical to a copy", PENDING);
 });
 
 SpecEnd

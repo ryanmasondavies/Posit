@@ -20,11 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeFalse)
+SpecBegin(PSTBeKindOf)
 
-describe(@"false", ^{
-    it(@"is false", PENDING);
-    it(@"is not true", PENDING);
+describe(@"An instance of PSTElephant", ^{
+    it(@"is a kind of PSTElephant", PENDING):
+    it(@"is a kind of PSTMammal", PENDING);
+    it(@"is not a kind of PSTPanda", PENDING);
 });
 
 SpecEnd
