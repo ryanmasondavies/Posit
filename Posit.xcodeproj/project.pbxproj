@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */; };
+		949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */; };
 		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
 		94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		1FB6FBC4688D47E1AB6618E4 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeTrueSpec.m; sourceTree = "<group>"; };
+		949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeFalseSpec.m; sourceTree = "<group>"; };
 		94C3B122166119DF003B3F43 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTExpectation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C3B123166119DF003B3F43 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PSTExpectation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		94C3B128166119DF003B3F43 /* Posit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Posit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -126,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		949AD65A172C5B3000D08674 /* Functional Specs */ = {
+			isa = PBXGroup;
+			children = (
+				949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */,
+				949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */,
+			);
+			path = "Functional Specs";
+			sourceTree = "<group>";
+		};
 		94C3B11A166119DF003B3F43 /* Posit */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,7 @@
 		94D943A1172C002E0044904D /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				949AD65A172C5B3000D08674 /* Functional Specs */,
 				94D943AA172C002E0044904D /* Unit Specs */,
 				94D943CF172C00350044904D /* Support */,
 			);
@@ -362,6 +376,8 @@
 				94D943CD172C002E0044904D /* PSTExpectationSpec.m in Sources */,
 				94D943CE172C002E0044904D /* PSTMatcherInverterSpec.m in Sources */,
 				94D943D8172C332A0044904D /* PSTCopyableObject.m in Sources */,
+				949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */,
+				949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
