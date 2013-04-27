@@ -20,26 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTCopyableObject.h"
+#import <Foundation/Foundation.h>
+#import "PSTMatcher.h"
 
-SpecBegin(PSTBeIdenticalToMatcher)
+/** Compares an object to the expected object, returning TRUE if objects are __identical__, and FALSE if not. */
+@interface PSTIdentityMatcher : NSObject <PSTMatcher>
 
-__block PSTCopyableObject *object;
-__block id<PSTMatcher> matcher;
+/**
+ Initialize a be identical to matcher.
+ @param expected The expected object.
+ @return An initialized matcher.
+ */
+- (id)initWithExpected:(id)expected;
 
-when(@"comparing to an object", ^{
-    before(^{
-        object = [[PSTCopyableObject alloc] init];
-        matcher = [[PSTBeIdenticalToMatcher alloc] initWithExpected:object];
-    });
-    
-    it(@"matches the same object", ^{
-        STAssertTrue([matcher matches:object], @"");
-    });
-    
-    it(@"does not match a copy", ^{
-        STAssertFalse([matcher matches:[object copy]], @"");
-    });
-});
-
-SpecEnd
+@end

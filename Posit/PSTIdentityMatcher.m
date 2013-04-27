@@ -20,13 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTBeIdenticalToMatcher.h"
+#import "PSTIdentityMatcher.h"
 
-@interface PSTBeIdenticalToMatcher ()
+@interface PSTIdentityMatcher ()
 @property (strong, nonatomic) id expected;
 @end
 
-@implementation PSTBeIdenticalToMatcher
+@implementation PSTIdentityMatcher
 
 - (id)initWithExpected:(id)expected
 {

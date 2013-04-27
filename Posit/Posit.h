@@ -23,4 +23,4 @@
 #import "PSTExpectation.h"
 #import "PSTMatcherInverter.h"
 #import "PSTEqualityMatcher.h"
-#import "PSTBeIdenticalToMatcher.h"
+#import "PSTIdentityMatcher.h"
