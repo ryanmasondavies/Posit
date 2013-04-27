@@ -17,11 +17,9 @@
 		94D943BF172C002E0044904D /* PSTBeBetweenMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943AB172C002E0044904D /* PSTBeBetweenMatcherSpec.m */; };
 		94D943C0172C002E0044904D /* PSTEqualityMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943AC172C002E0044904D /* PSTEqualityMatcherSpec.m */; };
 		94D943C2172C002E0044904D /* PSTGreaterMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943AE172C002E0044904D /* PSTGreaterMatcherSpec.m */; };
-		94D943C3172C002E0044904D /* PSTBeGreaterThanOrEqualToMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943AF172C002E0044904D /* PSTBeGreaterThanOrEqualToMatcherSpec.m */; };
 		94D943C4172C002E0044904D /* PSTIdentityMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */; };
 		94D943C5172C002E0044904D /* PSTBeKindOfMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B1172C002E0044904D /* PSTBeKindOfMatcherSpec.m */; };
 		94D943C6172C002E0044904D /* PSTBeLessThanMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B2172C002E0044904D /* PSTBeLessThanMatcherSpec.m */; };
-		94D943C7172C002E0044904D /* PSTBeLessThanOrEqualToMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B3172C002E0044904D /* PSTBeLessThanOrEqualToMatcherSpec.m */; };
 		94D943C8172C002E0044904D /* PSTBeMemberOfMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B4172C002E0044904D /* PSTBeMemberOfMatcherSpec.m */; };
 		94D943C9172C002E0044904D /* PSTBeNegativeMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B5172C002E0044904D /* PSTBeNegativeMatcherSpec.m */; };
 		94D943CA172C002E0044904D /* PSTBePositiveMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B6172C002E0044904D /* PSTBePositiveMatcherSpec.m */; };
@@ -82,11 +80,9 @@
 		94D943AB172C002E0044904D /* PSTBeBetweenMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeBetweenMatcherSpec.m; sourceTree = "<group>"; };
 		94D943AC172C002E0044904D /* PSTEqualityMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityMatcherSpec.m; sourceTree = "<group>"; };
 		94D943AE172C002E0044904D /* PSTGreaterMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGreaterMatcherSpec.m; sourceTree = "<group>"; };
-		94D943AF172C002E0044904D /* PSTBeGreaterThanOrEqualToMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeGreaterThanOrEqualToMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B1172C002E0044904D /* PSTBeKindOfMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeKindOfMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B2172C002E0044904D /* PSTBeLessThanMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeLessThanMatcherSpec.m; sourceTree = "<group>"; };
-		94D943B3172C002E0044904D /* PSTBeLessThanOrEqualToMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeLessThanOrEqualToMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B4172C002E0044904D /* PSTBeMemberOfMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeMemberOfMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B5172C002E0044904D /* PSTBeNegativeMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeNegativeMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B6172C002E0044904D /* PSTBePositiveMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBePositiveMatcherSpec.m; sourceTree = "<group>"; };
@@ -174,9 +170,7 @@
 				94D943AC172C002E0044904D /* PSTEqualityMatcherSpec.m */,
 				94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */,
 				94D943AE172C002E0044904D /* PSTGreaterMatcherSpec.m */,
-				94D943AF172C002E0044904D /* PSTBeGreaterThanOrEqualToMatcherSpec.m */,
 				94D943B2172C002E0044904D /* PSTBeLessThanMatcherSpec.m */,
-				94D943B3172C002E0044904D /* PSTBeLessThanOrEqualToMatcherSpec.m */,
 				94D943AB172C002E0044904D /* PSTBeBetweenMatcherSpec.m */,
 				94D943B1172C002E0044904D /* PSTBeKindOfMatcherSpec.m */,
 				94D943B4172C002E0044904D /* PSTBeMemberOfMatcherSpec.m */,
@@ -364,11 +358,9 @@
 				94D943BF172C002E0044904D /* PSTBeBetweenMatcherSpec.m in Sources */,
 				94D943C0172C002E0044904D /* PSTEqualityMatcherSpec.m in Sources */,
 				94D943C2172C002E0044904D /* PSTGreaterMatcherSpec.m in Sources */,
-				94D943C3172C002E0044904D /* PSTBeGreaterThanOrEqualToMatcherSpec.m in Sources */,
 				94D943C4172C002E0044904D /* PSTIdentityMatcherSpec.m in Sources */,
 				94D943C5172C002E0044904D /* PSTBeKindOfMatcherSpec.m in Sources */,
 				94D943C6172C002E0044904D /* PSTBeLessThanMatcherSpec.m in Sources */,
-				94D943C7172C002E0044904D /* PSTBeLessThanOrEqualToMatcherSpec.m in Sources */,
 				94D943C8172C002E0044904D /* PSTBeMemberOfMatcherSpec.m in Sources */,
 				94D943C9172C002E0044904D /* PSTBeNegativeMatcherSpec.m in Sources */,
 				94D943CA172C002E0044904D /* PSTBePositiveMatcherSpec.m in Sources */,
