@@ -22,15 +22,19 @@
 
 SpecBegin(PSTMatcherInverter)
 
+__block id<PSTMatcher> matcher;
+__block PSTMatcherInverter *inverter;
+
+before(^{
+    matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@TRUE];
+    inverter = [[PSTMatcherInverter alloc] initWithMatcher:matcher];
+});
+
 it(@"matches if the matcher does not match", ^{
-    PSTBeTrueMatcher *matcher = [[PSTBeTrueMatcher alloc] init];
-    PSTMatcherInverter *inverter = [[PSTMatcherInverter alloc] initWithMatcher:matcher];
     STAssertTrue([inverter matches:@FALSE], @"");
 });
 
 it(@"does not match if the matcher matches", ^{
-    PSTBeTrueMatcher *matcher = [[PSTBeTrueMatcher alloc] init];
-    PSTMatcherInverter *inverter = [[PSTMatcherInverter alloc] initWithMatcher:matcher];
     STAssertFalse([inverter matches:@TRUE], @"");
 });
 
