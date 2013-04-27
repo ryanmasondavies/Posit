@@ -30,6 +30,7 @@
 		94D943CC172C002E0044904D /* PSTBeZeroMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B8172C002E0044904D /* PSTBeZeroMatcherSpec.m */; };
 		94D943CD172C002E0044904D /* PSTExpectationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B9172C002E0044904D /* PSTExpectationSpec.m */; };
 		94D943CE172C002E0044904D /* PSTMatcherInverterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943BA172C002E0044904D /* PSTMatcherInverterSpec.m */; };
+		94D943D2172C0B5A0044904D /* PSTBeEqualToMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943D1172C0B5A0044904D /* PSTBeEqualToMatcher.m */; };
 		94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
 		94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
@@ -96,6 +97,8 @@
 		94D943B8172C002E0044904D /* PSTBeZeroMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeZeroMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B9172C002E0044904D /* PSTExpectationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationSpec.m; sourceTree = "<group>"; };
 		94D943BA172C002E0044904D /* PSTMatcherInverterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherInverterSpec.m; sourceTree = "<group>"; };
+		94D943D0172C0B5A0044904D /* PSTBeEqualToMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBeEqualToMatcher.h; sourceTree = "<group>"; };
+		94D943D1172C0B5A0044904D /* PSTBeEqualToMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToMatcher.m; sourceTree = "<group>"; };
 		94D97AFC165D2EBA00282ABE /* libPosit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPosit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97AFF165D2EBA00282ABE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D97B0D165D2EBA00282ABE /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +143,8 @@
 				94C9EBD6172B2C4B001E432C /* PSTBeTrueMatcher.m */,
 				94C9EBD8172B2E3C001E432C /* PSTBeFalseMatcher.h */,
 				94C9EBD9172B2E3C001E432C /* PSTBeFalseMatcher.m */,
+				94D943D0172C0B5A0044904D /* PSTBeEqualToMatcher.h */,
+				94D943D1172C0B5A0044904D /* PSTBeEqualToMatcher.m */,
 			);
 			path = Posit;
 			sourceTree = "<group>";
@@ -245,7 +250,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94D97B24165D2EBA00282ABE /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
-				83EDF312784F4DE3967B4AAE /* Check Pods Manifest.lock */,
 				94D97B08165D2EBA00282ABE /* Sources */,
 				94D97B09165D2EBA00282ABE /* Frameworks */,
 				94D97B0A165D2EBA00282ABE /* Resources */,
@@ -315,20 +319,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
 		};
-		83EDF312784F4DE3967B4AAE /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
-		};
 		94D97B0B165D2EBA00282ABE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +343,7 @@
 				94C9EBD7172B2C4B001E432C /* PSTBeTrueMatcher.m in Sources */,
 				94C9EBDA172B2E3C001E432C /* PSTBeFalseMatcher.m in Sources */,
 				94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */,
+				94D943D2172C0B5A0044904D /* PSTBeEqualToMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

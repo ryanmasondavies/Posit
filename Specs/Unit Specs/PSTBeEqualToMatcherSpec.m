@@ -22,19 +22,48 @@
 
 SpecBegin(PSTBeEqualToMatcher)
 
+__block id<PSTMatcher> matcher;
+
 when(@"equating to true", ^{
-    it(@"matches true", PENDING);
-    it(@"does not match false", PENDING);
+    before(^{
+        matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@TRUE];
+    });
+    
+    it(@"matches true", ^{
+        STAssertTrue([matcher matches:@TRUE], @"");
+    });
+    
+    it(@"does not match false", ^{
+        STAssertFalse([matcher matches:@FALSE], @"");
+    });
 });
 
 when(@"equating to 'Foobar'", ^{
-    it(@"matches 'Foobar'", PENDING);
-    it(@"does not match 'Barfoo'", PENDING);
+    before(^{
+        matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@"Foobar"];
+    });
+    
+    it(@"matches 'Foobar'", ^{
+        STAssertTrue([matcher matches:@"Foobar"], @"");
+    });
+    
+    it(@"does not match 'Barfoo'", ^{
+        STAssertFalse([matcher matches:@"Barfoo"], @"");
+    });
 });
 
 when(@"equating to 20", ^{
-    it(@"matches 20", PENDING);
-    it(@"does not match 21", PENDING);
+    before(^{
+        matcher = [[PSTBeEqualToMatcher alloc] initWithExpected:@20];
+    });
+    
+    it(@"matches 20", ^{
+        STAssertTrue([matcher matches:@20], @"");
+    });
+    
+    it(@"does not match 21", ^{
+        STAssertFalse([matcher matches:@21], @"");
+    });
 });
 
 SpecEnd
