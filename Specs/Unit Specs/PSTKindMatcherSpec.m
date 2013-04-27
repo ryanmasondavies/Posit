@@ -25,19 +25,19 @@
 
 SpecBegin(PSTKindMatcher)
 
-when(@"comparing to an instance of PSTElephant", ^{
+when(@"Comparing to an instance of PSTElephant", ^{
     it(@"matches PSTElephant", PENDING);
     it(@"matches PSTMammal", PENDING);
     it(@"does not match PSTPanda", PENDING);
 });
 
-when(@"comparing to an instance of PSTPanda", ^{
+when(@"Comparing to an instance of PSTPanda", ^{
     it(@"matches PSTPanda", PENDING);
     it(@"matches PSTMammal", PENDING);
     it(@"does not match PSTElephant", PENDING);
 });
 
-when(@"comparing to an instance of PSTMammal", ^{
+when(@"Comparing to an instance of PSTMammal", ^{
     it(@"matches PSTMammal", PENDING);
     it(@"does not match PSTPanda", PENDING);
     it(@"does not match PSTElephant", PENDING);

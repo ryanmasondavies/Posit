@@ -22,7 +22,7 @@
 
 SpecBegin(PSTBeIdenticalTo)
 
-describe(@"an object", ^{
+describe(@"An object", ^{
     it(@"is identical to itself", PENDING);
     it(@"is not identical to a copy", PENDING);
 });

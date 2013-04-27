@@ -22,7 +22,7 @@
 
 SpecBegin(PSTBeFalse)
 
-describe(@"false", ^{
+describe(@"False", ^{
     it(@"is false", PENDING);
     it(@"is not true", PENDING);
 });

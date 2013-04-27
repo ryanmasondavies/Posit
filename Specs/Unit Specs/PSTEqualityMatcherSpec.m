@@ -24,7 +24,7 @@ SpecBegin(PSTEqualityMatcher)
 
 __block id<PSTMatcher> matcher;
 
-when(@"equating to true", ^{
+when(@"Equating to true", ^{
     before(^{
         matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
     });
@@ -38,7 +38,7 @@ when(@"equating to true", ^{
     });
 });
 
-when(@"equating to 'Foobar'", ^{
+when(@"Equating to 'Foobar'", ^{
     before(^{
         matcher = [[PSTEqualityMatcher alloc] initWithExpected:@"Foobar"];
     });
@@ -52,7 +52,7 @@ when(@"equating to 'Foobar'", ^{
     });
 });
 
-when(@"equating to 20", ^{
+when(@"Equating to 20", ^{
     before(^{
         matcher = [[PSTEqualityMatcher alloc] initWithExpected:@20];
     });

@@ -27,7 +27,7 @@ SpecBegin(PSTIdentityMatcher)
 __block PSTCopyableObject *object;
 __block id<PSTMatcher> matcher;
 
-when(@"comparing to an object", ^{
+when(@"Comparing to an object", ^{
     before(^{
         object = [[PSTCopyableObject alloc] init];
         matcher = [[PSTIdentityMatcher alloc] initWithExpected:object];

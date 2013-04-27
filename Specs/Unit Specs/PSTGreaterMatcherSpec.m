@@ -22,19 +22,19 @@
 
 SpecBegin(PSTGreaterMatcher)
 
-when(@"comparing to 1", ^{
+when(@"Comparing to 1", ^{
     it(@"does not match 1", PENDING);
     it(@"does not match 0", PENDING);
     it(@"does not match -1", PENDING);
 });
 
-when(@"comparing to 0", ^{
+when(@"Comparing to 0", ^{
     it(@"matches 1", PENDING);
     it(@"does not match 0", PENDING);
     it(@"does not match -1", PENDING);
 });
 
-when(@"comparing to -1", ^{
+when(@"Comparing to -1", ^{
     it(@"matches 1", PENDING);
     it(@"matches 0", PENDING);
     it(@"does not match -1", PENDING);

@@ -30,11 +30,11 @@ before(^{
     inverter = [[PSTMatcherInverter alloc] initWithMatcher:matcher];
 });
 
-it(@"matches if the matcher does not match", ^{
+it(@"Matches if the matcher does not match", ^{
     STAssertTrue([inverter matches:@FALSE], @"");
 });
 
-it(@"does not match if the matcher matches", ^{
+it(@"Does not match if the matcher matches", ^{
     STAssertFalse([inverter matches:@TRUE], @"");
 });
 

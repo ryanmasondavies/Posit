@@ -22,7 +22,7 @@
 
 SpecBegin(PSTBetweenMatcher)
 
-describe(@"with a minimum of 2 and a maximum of 5", ^{
+describe(@"With a minimum of 2 and a maximum of 5", ^{
     it(@"matches 3", PENDING);
     it(@"matches 4", PENDING);
     it(@"does not match 2", PENDING);

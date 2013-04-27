@@ -29,7 +29,7 @@ before(^{
     matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
 });
 
-when(@"matcher matches subject", ^{
+when(@"Matcher matches subject", ^{
     before(^{
         expectation = [[PSTExpectation alloc] initWithSubject:@TRUE matcher:matcher];
     });
@@ -39,7 +39,7 @@ when(@"matcher matches subject", ^{
     });
 });
 
-when(@"matcher doesn't match subject", ^{
+when(@"Matcher does not match subject", ^{
     before(^{
         expectation = [[PSTExpectation alloc] initWithSubject:@FALSE matcher:matcher];
     });
