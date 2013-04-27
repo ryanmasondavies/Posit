@@ -20,11 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "PSTCopyableObject.h"
+
 SpecBegin(PSTBeIdenticalToMatcher)
 
+__block PSTCopyableObject *object;
+__block id<PSTMatcher> matcher;
+
 when(@"comparing to an object", ^{
-    it(@"matches the same object", PENDING);
-    it(@"does not match a copy", PENDING);
+    before(^{
+        object = [[PSTCopyableObject alloc] init];
+        matcher = [[PSTBeIdenticalToMatcher alloc] initWithExpected:object];
+    });
+    
+    it(@"matches the same object", ^{
+        STAssertTrue([matcher matches:object], @"");
+    });
+    
+    it(@"does not match a copy", ^{
+        STAssertFalse([matcher matches:[object copy]], @"");
+    });
 });
 
 SpecEnd
