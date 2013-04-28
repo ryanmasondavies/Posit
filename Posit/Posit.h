@@ -32,3 +32,4 @@
 #import "PSTIdentityMatcher.h"
 #import "PSTGreaterMatcher.h"
 #import "PSTLessMatcher.h"
+#import "PSTKindMatcher.h"

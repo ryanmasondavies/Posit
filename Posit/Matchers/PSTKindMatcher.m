@@ -20,9 +20,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "PSTMammal.h"
+#import "PSTKindMatcher.h"
 
-@interface PSTPanda : PSTMammal
+@interface PSTKindMatcher ()
+@property (strong, nonatomic) Class klass;
+@end
+
+@implementation PSTKindMatcher
+
+- (id)initWithClass:(Class)klass
+{
+    if (self = [self init]) {
+        [self setKlass:klass];
+    }
+    return self;
+}
+
+- (BOOL)matches:(id)value
+{
+    return [value isKindOfClass:[self klass]];
+}
 
 @end

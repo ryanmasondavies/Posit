@@ -21,7 +21,8 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "PSTMammal.h"
 
-@interface PSTElephant : NSObject
+@interface PSTElephant : PSTMammal
 
 @end

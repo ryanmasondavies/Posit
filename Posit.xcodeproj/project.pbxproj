@@ -23,6 +23,7 @@
 		942687C9172D297900B70F47 /* PSTKindMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687C0172D297900B70F47 /* PSTKindMatcherSpec.m */; };
 		942687CA172D297900B70F47 /* PSTLessMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687C1172D297900B70F47 /* PSTLessMatcherSpec.m */; };
 		942687CB172D297900B70F47 /* PSTMemberMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687C2172D297900B70F47 /* PSTMemberMatcherSpec.m */; };
+		942687CE172D2AE100B70F47 /* PSTKindMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687CD172D2AE100B70F47 /* PSTKindMatcher.m */; };
 		949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */; };
 		949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */; };
 		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
@@ -95,6 +96,8 @@
 		942687C0172D297900B70F47 /* PSTKindMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTKindMatcherSpec.m; sourceTree = "<group>"; };
 		942687C1172D297900B70F47 /* PSTLessMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLessMatcherSpec.m; sourceTree = "<group>"; };
 		942687C2172D297900B70F47 /* PSTMemberMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMemberMatcherSpec.m; sourceTree = "<group>"; };
+		942687CC172D2AE100B70F47 /* PSTKindMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTKindMatcher.h; sourceTree = "<group>"; };
+		942687CD172D2AE100B70F47 /* PSTKindMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTKindMatcher.m; sourceTree = "<group>"; };
 		949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeTrueSpec.m; sourceTree = "<group>"; };
 		949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeFalseSpec.m; sourceTree = "<group>"; };
 		94C3B122166119DF003B3F43 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTExpectation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -166,15 +169,17 @@
 		942687A7172D296900B70F47 /* Matchers */ = {
 			isa = PBXGroup;
 			children = (
+				942687B0172D296900B70F47 /* PSTMatcher.h */,
 				942687A8172D296900B70F47 /* PSTEqualityMatcher.h */,
 				942687A9172D296900B70F47 /* PSTEqualityMatcher.m */,
-				942687AA172D296900B70F47 /* PSTGreaterMatcher.h */,
-				942687AB172D296900B70F47 /* PSTGreaterMatcher.m */,
 				942687AC172D296900B70F47 /* PSTIdentityMatcher.h */,
 				942687AD172D296900B70F47 /* PSTIdentityMatcher.m */,
+				942687AA172D296900B70F47 /* PSTGreaterMatcher.h */,
+				942687AB172D296900B70F47 /* PSTGreaterMatcher.m */,
 				942687AE172D296900B70F47 /* PSTLessMatcher.h */,
 				942687AF172D296900B70F47 /* PSTLessMatcher.m */,
-				942687B0172D296900B70F47 /* PSTMatcher.h */,
+				942687CC172D2AE100B70F47 /* PSTKindMatcher.h */,
+				942687CD172D2AE100B70F47 /* PSTKindMatcher.m */,
 			);
 			path = Matchers;
 			sourceTree = "<group>";
@@ -194,9 +199,9 @@
 			children = (
 				942687BD172D297900B70F47 /* PSTEqualityMatcherSpec.m */,
 				942687BE172D297900B70F47 /* PSTGreaterMatcherSpec.m */,
+				942687C1172D297900B70F47 /* PSTLessMatcherSpec.m */,
 				942687BF172D297900B70F47 /* PSTIdentityMatcherSpec.m */,
 				942687C0172D297900B70F47 /* PSTKindMatcherSpec.m */,
-				942687C1172D297900B70F47 /* PSTLessMatcherSpec.m */,
 				942687C2172D297900B70F47 /* PSTMemberMatcherSpec.m */,
 			);
 			path = Matchers;
@@ -419,6 +424,7 @@
 				942687B5172D296900B70F47 /* PSTGreaterMatcher.m in Sources */,
 				942687B6172D296900B70F47 /* PSTIdentityMatcher.m in Sources */,
 				942687B7172D296900B70F47 /* PSTLessMatcher.m in Sources */,
+				942687CE172D2AE100B70F47 /* PSTKindMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

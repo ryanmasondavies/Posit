@@ -21,8 +21,16 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "PSTMammal.h"
+#import "PSTMatcher.h"
 
-@interface PSTPanda : PSTMammal
+/** Matches if the object is part of the class hierarchy of the class. */
+@interface PSTKindMatcher : NSObject <PSTMatcher>
+
+/**
+ Initialize a kind matcher.
+ @param klass The class to match.
+ @return An initialized kind matcher.
+ */
+- (id)initWithClass:(Class)klass;
 
 @end
