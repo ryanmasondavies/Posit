@@ -23,13 +23,13 @@
 #import <Foundation/Foundation.h>
 #import "PSTMatcher.h"
 
-/** Inverts a matcher's evaluation. */
+/** Inverts a matcher's result. */
 @interface PSTInversionFilter : NSObject <PSTMatcher>
 
 /**
- Initialize an inverter.
+ Initialize a filter.
  @param matcher The matcher to invert.
- @return An initialized inverter.
+ @return An initialized filter.
  */
 - (id)initWithMatcher:(id<PSTMatcher>)matcher;
 
