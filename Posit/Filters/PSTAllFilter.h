@@ -24,7 +24,7 @@
 #import "PSTMatcher.h"
 
 /** Matches only if __all__ matchers match the value. */
-@interface PSTAndFilter : NSObject <PSTMatcher>
+@interface PSTAllFilter : NSObject <PSTMatcher>
 
 /**
  Initialize a filter.

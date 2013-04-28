@@ -20,13 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTAndFilter.h"
+#import "PSTAllFilter.h"
 
-@interface PSTAndFilter ()
+@interface PSTAllFilter ()
 @property (strong, nonatomic) NSArray *matchers;
 @end
 
-@implementation PSTAndFilter
+@implementation PSTAllFilter
 
 - (id)initWithMatchers:(NSArray *)matchers
 {

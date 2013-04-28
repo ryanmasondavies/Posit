@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTAndFilter)
+SpecBegin(PSTAllFilter)
 
 __block id<PSTMatcher> filter;
 
@@ -35,7 +35,7 @@ NSMutableArray *(^equalityMatchers)(NSUInteger, id) = ^(NSUInteger count, id exp
 when(@"All matchers match", ^{
     before(^{
         NSMutableArray *matchers = equalityMatchers(10, @TRUE);
-        filter = [[PSTAndFilter alloc] initWithMatchers:matchers];
+        filter = [[PSTAllFilter alloc] initWithMatchers:matchers];
     });
     
     it(@"matches", ^{
@@ -47,7 +47,7 @@ when(@"Not all matchers match", ^{
     before(^{
         NSMutableArray *matchers = equalityMatchers(10, @TRUE);
         matchers[5] = [[PSTEqualityMatcher alloc] initWithExpected:@FALSE];
-        filter = [[PSTAndFilter alloc] initWithMatchers:matchers];
+        filter = [[PSTAllFilter alloc] initWithMatchers:matchers];
     });
     
     it(@"does not match", ^{
@@ -58,7 +58,7 @@ when(@"Not all matchers match", ^{
 when(@"No matchers match", ^{
     before(^{
         NSMutableArray *matchers = equalityMatchers(10, @FALSE);
-        filter = [[PSTAndFilter alloc] initWithMatchers:matchers];
+        filter = [[PSTAllFilter alloc] initWithMatchers:matchers];
     });
     
     it(@"does not match", ^{
