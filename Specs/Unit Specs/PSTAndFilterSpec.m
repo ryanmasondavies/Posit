@@ -24,12 +24,17 @@ SpecBegin(PSTAndFilter)
 
 __block id<PSTMatcher> filter;
 
+NSMutableArray *(^equalityMatchers)(NSUInteger, id) = ^(NSUInteger count, id expected) {
+    NSMutableArray *matchers = [[NSMutableArray alloc] init];
+    for (NSUInteger i = 0; i < count; i ++) {
+        matchers[i] = [[PSTEqualityMatcher alloc] initWithExpected:expected];
+    }
+    return matchers;
+};
+
 when(@"All matchers match", ^{
     before(^{
-        NSMutableArray *matchers = [[NSMutableArray alloc] init];
-        for (NSUInteger i = 0; i < 10; i ++) {
-            matchers[i] = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
-        }
+        NSMutableArray *matchers = equalityMatchers(10, @TRUE);
         filter = [[PSTAndFilter alloc] initWithMatchers:matchers];
     });
     
@@ -38,12 +43,9 @@ when(@"All matchers match", ^{
     });
 });
 
-when(@"All but one matchers match", ^{
+when(@"Not all matchers match", ^{
     before(^{
-        NSMutableArray *matchers = [[NSMutableArray alloc] init];
-        for (NSUInteger i = 0; i < 10; i ++) {
-            matchers[i] = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
-        }
+        NSMutableArray *matchers = equalityMatchers(10, @TRUE);
         matchers[5] = [[PSTEqualityMatcher alloc] initWithExpected:@FALSE];
         filter = [[PSTAndFilter alloc] initWithMatchers:matchers];
     });
@@ -53,12 +55,9 @@ when(@"All but one matchers match", ^{
     });
 });
 
-when(@"All matchers do not match", ^{
+when(@"No matchers match", ^{
     before(^{
-        NSMutableArray *matchers = [[NSMutableArray alloc] init];
-        for (NSUInteger i = 0; i < 10; i ++) {
-            matchers[i] = [[PSTEqualityMatcher alloc] initWithExpected:@FALSE];
-        }
+        NSMutableArray *matchers = equalityMatchers(10, @FALSE);
         filter = [[PSTAndFilter alloc] initWithMatchers:matchers];
     });
     
