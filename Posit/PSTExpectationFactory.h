@@ -28,5 +28,6 @@
 - (id)initWithSubject:(id)subject;
 
 - (id)beEqualTo:(id)object;
+- (id)beIdenticalTo:(id)object;
 
 @end

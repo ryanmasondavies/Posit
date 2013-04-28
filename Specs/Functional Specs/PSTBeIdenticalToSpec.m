@@ -20,11 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "PSTCopyableObject.h"
+
 SpecBegin(PSTBeIdenticalTo)
 
+__block id object;
+
 describe(@"An object", ^{
-    it(@"is identical to itself", PENDING);
-    it(@"is not identical to a copy", PENDING);
+    before(^{
+        object = [[PSTCopyableObject alloc] init];
+    });
+    
+    it(@"is identical to itself", ^{
+        STAssertNoThrow([[expect(object) to] beIdenticalTo:object], @"");
+    });
+    
+    it(@"is not identical to a copy", ^{
+        STAssertThrows([[expect(object) to] beIdenticalTo:[object copy]], @"");
+    });
 });
 
 SpecEnd
