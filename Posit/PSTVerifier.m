@@ -20,16 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeEqualTo)
+#import "PSTVerifier.h"
+#import "PSTMatcher.h"
 
-describe(@"'Foobar'", ^{
-    it(@"is equal to 'Foobar'", ^{
-        STAssertNoThrow([[expect(@"Foobar") to] beEqualTo:@"Foobar"], nil);
-    });
-    
-    it(@"is not equal to 'Boofar'", ^{
-        STAssertThrows([[expect(@"Foobar") to] beEqualTo:@"Barfoo"], nil);
-    });
-});
+@implementation PSTVerifier
 
-SpecEnd
+- (void)verify:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception
+{
+    if ([matcher matches:subject] == NO) {
+        [exception raise];
+    }
+}
+
+@end

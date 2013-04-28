@@ -1,17 +1,17 @@
 // The MIT License
-// 
+//
 // Copyright (c) 2013 Ryan Davies
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -21,31 +21,41 @@
 // THE SOFTWARE.
 
 #import "PSTExpectation.h"
-#import "PSTMatcher.h"
+#import <SenTestingKit/SenTestingKit.h>
+#import "PSTVerifier.h"
+#import "PSTEqualityMatcher.h"
 
 @interface PSTExpectation ()
 @property (strong, nonatomic) id subject;
-@property (strong, nonatomic) id<PSTMatcher> matcher;
-@property (strong, nonatomic) NSException *exception;
+@property (strong, nonatomic) NSString *filename;
+@property (strong, nonatomic) NSNumber *lineNumber;
+@property (strong, nonatomic) PSTVerifier *verifier;
 @end
 
 @implementation PSTExpectation
 
-- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception
+- (id)initWithSubject:(id)subject filename:(NSString *)filename lineNumber:(NSNumber *)lineNumber verifier:(PSTVerifier *)verifier
 {
     if (self = [self init]) {
         [self setSubject:subject];
-        [self setMatcher:matcher];
-        [self setException:exception];
+        [self setFilename:filename];
+        [self setLineNumber:lineNumber];
+        [self setVerifier:verifier];
     }
     return self;
 }
 
-- (void)verify
+- (id)to
 {
-    if ([[self matcher] matches:[self subject]] == NO) {
-        [[self exception] raise];
-    }
+    return self;
+}
+
+- (void)beEqualTo:(id)object
+{
+    id matcher = [[PSTEqualityMatcher alloc] initWithExpected:object];
+    NSString *reason = [NSString stringWithFormat:@"Expected %@ to be equal to %@.", [self subject], object];
+    NSException *exception = [[NSException alloc] initWithName:SenTestFailureException reason:reason userInfo:@{SenTestFilenameKey: [self filename], SenTestLineNumberKey: [self lineNumber]}];
+    [[self verifier] verify:[self subject] matcher:matcher exception:exception];
 }
 
 @end

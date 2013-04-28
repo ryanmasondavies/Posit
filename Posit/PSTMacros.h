@@ -20,16 +20,4 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeEqualTo)
-
-describe(@"'Foobar'", ^{
-    it(@"is equal to 'Foobar'", ^{
-        STAssertNoThrow([[expect(@"Foobar") to] beEqualTo:@"Foobar"], nil);
-    });
-    
-    it(@"is not equal to 'Boofar'", ^{
-        STAssertThrows([[expect(@"Foobar") to] beEqualTo:@"Barfoo"], nil);
-    });
-});
-
-SpecEnd
+#define expect(subject) [[PSTExpectation alloc] initWithSubject:subject filename:@(__FILE__) lineNumber:@(__LINE__) verifier:[[PSTVerifier alloc] init]]

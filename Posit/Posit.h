@@ -20,7 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+// Verifying
+#import "PSTMacros.h"
 #import "PSTExpectation.h"
+#import "PSTVerifier.h"
 
 // Filters
 #import "PSTInversionFilter.h"

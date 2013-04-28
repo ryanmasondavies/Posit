@@ -20,16 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeEqualTo)
+#import <Foundation/Foundation.h>
+@protocol PSTMatcher;
 
-describe(@"'Foobar'", ^{
-    it(@"is equal to 'Foobar'", ^{
-        STAssertNoThrow([[expect(@"Foobar") to] beEqualTo:@"Foobar"], nil);
-    });
-    
-    it(@"is not equal to 'Boofar'", ^{
-        STAssertThrows([[expect(@"Foobar") to] beEqualTo:@"Barfoo"], nil);
-    });
-});
+/** Raises an exception if subjects don't match matchers. */
+@interface PSTVerifier : NSObject
 
-SpecEnd
+/**
+ @param subject The subject matched against the matcher.
+ @param matcher The matcher to match the subject against.
+ @param exception The exception raised if the subject does not match.
+ */
+- (void)verify:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception;
+
+@end

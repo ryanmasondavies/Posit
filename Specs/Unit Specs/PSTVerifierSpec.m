@@ -20,15 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTBeEqualTo)
+SpecBegin(PSTVerifier)
 
-describe(@"'Foobar'", ^{
-    it(@"is equal to 'Foobar'", ^{
-        STAssertNoThrow([[expect(@"Foobar") to] beEqualTo:@"Foobar"], nil);
+__block id<PSTMatcher> matcher;
+__block NSException *exception;
+__block PSTVerifier *verifier;
+
+before(^{
+    matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
+    exception = [[NSException alloc] initWithName:@"Exception" reason:nil userInfo:nil];
+    verifier = [[PSTVerifier alloc] init];
+});
+
+when(@"Matcher matches subject", ^{
+    it(@"does not throw exception", ^{
+        STAssertNoThrow([verifier verify:@TRUE matcher:matcher exception:exception], @"");
     });
-    
-    it(@"is not equal to 'Boofar'", ^{
-        STAssertThrows([[expect(@"Foobar") to] beEqualTo:@"Barfoo"], nil);
+});
+
+when(@"Matcher does not match subject", ^{
+    it(@"throws exception", ^{
+        NSException *caught = nil;
+        @try { [verifier verify:@FALSE matcher:matcher exception:exception]; }
+        @catch(NSException *e) { caught = e; };
+        STAssertEqualObjects(caught, exception, @"");
     });
 });
 
