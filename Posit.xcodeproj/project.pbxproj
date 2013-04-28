@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9426879D172D268200B70F47 /* PSTOrFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9426879C172D268200B70F47 /* PSTOrFilter.m */; };
+		9426879F172D269C00B70F47 /* PSTOrFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 9426879E172D269C00B70F47 /* PSTOrFilterSpec.m */; };
 		949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */; };
 		949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */; };
 		94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C3B123166119DF003B3F43 /* PSTExpectation.m */; };
@@ -69,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		1FB6FBC4688D47E1AB6618E4 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9426879B172D268200B70F47 /* PSTOrFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTOrFilter.h; sourceTree = "<group>"; };
+		9426879C172D268200B70F47 /* PSTOrFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTOrFilter.m; sourceTree = "<group>"; };
+		9426879E172D269C00B70F47 /* PSTOrFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTOrFilterSpec.m; sourceTree = "<group>"; };
 		949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeTrueSpec.m; sourceTree = "<group>"; };
 		949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeFalseSpec.m; sourceTree = "<group>"; };
 		94C3B122166119DF003B3F43 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PSTExpectation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -168,11 +173,13 @@
 				94C3B128166119DF003B3F43 /* Posit.h */,
 				94C3B122166119DF003B3F43 /* PSTExpectation.h */,
 				94C3B123166119DF003B3F43 /* PSTExpectation.m */,
+				94C9EBD1172B2A7C001E432C /* PSTMatcher.h */,
 				94C9EBDB172B2F18001E432C /* PSTInversionFilter.h */,
 				94C9EBDC172B2F18001E432C /* PSTInversionFilter.m */,
 				94D45F97172D234700BB4B92 /* PSTAndFilter.h */,
 				94D45F98172D234700BB4B92 /* PSTAndFilter.m */,
-				94C9EBD1172B2A7C001E432C /* PSTMatcher.h */,
+				9426879B172D268200B70F47 /* PSTOrFilter.h */,
+				9426879C172D268200B70F47 /* PSTOrFilter.m */,
 				94D943D0172C0B5A0044904D /* PSTEqualityMatcher.h */,
 				94D943D1172C0B5A0044904D /* PSTEqualityMatcher.m */,
 				94D943D3172C31870044904D /* PSTIdentityMatcher.h */,
@@ -201,6 +208,7 @@
 				94D943B9172C002E0044904D /* PSTExpectationSpec.m */,
 				94D943BA172C002E0044904D /* PSTInversionFilterSpec.m */,
 				94D45F95172D1E0A00BB4B92 /* PSTAndFilterSpec.m */,
+				9426879E172D269C00B70F47 /* PSTOrFilterSpec.m */,
 				94D943AC172C002E0044904D /* PSTEqualityMatcherSpec.m */,
 				94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */,
 				94D943AE172C002E0044904D /* PSTGreaterMatcherSpec.m */,
@@ -378,6 +386,7 @@
 				94C4651A172C690900382046 /* PSTGreaterMatcher.m in Sources */,
 				94C4651D172C6A9F00382046 /* PSTLessMatcher.m in Sources */,
 				94D45F99172D234700BB4B92 /* PSTAndFilter.m in Sources */,
+				9426879D172D268200B70F47 /* PSTOrFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +417,7 @@
 				94C46515172C64AF00382046 /* PSTBeKindOfSpec.m in Sources */,
 				94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */,
 				94D45F96172D1E0A00BB4B92 /* PSTAndFilterSpec.m in Sources */,
+				9426879F172D269C00B70F47 /* PSTOrFilterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
