@@ -20,17 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "PSTMatcher.h"
+SpecBegin(PSTInversionFilter)
 
-/** Inverts a matcher's evaluation. */
-@interface PSTMatcherInverter : NSObject <PSTMatcher>
+__block id<PSTMatcher> matcher;
+__block id<PSTMatcher> filter;
 
-/**
- Initialize an inverter.
- @param matcher The matcher to invert.
- @return An initialized inverter.
- */
-- (id)initWithMatcher:(id<PSTMatcher>)matcher;
+before(^{
+    matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
+    filter = [[PSTInversionFilter alloc] initWithMatcher:matcher];
+});
 
-@end
+it(@"Matches if the matcher does not match", ^{
+    STAssertTrue([filter matches:@FALSE], @"");
+});
+
+it(@"Does not match if the matcher matches", ^{
+    STAssertFalse([filter matches:@TRUE], @"");
+});
+
+SpecEnd

@@ -23,7 +23,7 @@
 #import "PSTExpectation.h"
 
 // Filters
-#import "PSTMatcherInverter.h"
+#import "PSTInversionFilter.h"
 #import "PSTAndFilter.h"
 
 // Matchers

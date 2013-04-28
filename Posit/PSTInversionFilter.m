@@ -20,13 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTMatcherInverter.h"
+#import "PSTInversionFilter.h"
 
-@interface PSTMatcherInverter ()
+@interface PSTInversionFilter ()
 @property (strong, nonatomic) id<PSTMatcher> matcher;
 @end
 
-@implementation PSTMatcherInverter
+@implementation PSTInversionFilter
 
 - (id)initWithMatcher:(id<PSTMatcher>)matcher
 {

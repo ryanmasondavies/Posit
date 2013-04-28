@@ -20,7 +20,7 @@
 		94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46516172C674900382046 /* PSTBeMemberOfSpec.m */; };
 		94C4651A172C690900382046 /* PSTGreaterMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46519172C690900382046 /* PSTGreaterMatcher.m */; };
 		94C4651D172C6A9F00382046 /* PSTLessMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4651C172C6A9F00382046 /* PSTLessMatcher.m */; };
-		94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */; };
+		94C9EBDD172B2F18001E432C /* PSTInversionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBDC172B2F18001E432C /* PSTInversionFilter.m */; };
 		94D45F96172D1E0A00BB4B92 /* PSTAndFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D45F95172D1E0A00BB4B92 /* PSTAndFilterSpec.m */; };
 		94D45F99172D234700BB4B92 /* PSTAndFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D45F98172D234700BB4B92 /* PSTAndFilter.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
@@ -33,7 +33,7 @@
 		94D943C6172C002E0044904D /* PSTLessMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B2172C002E0044904D /* PSTLessMatcherSpec.m */; };
 		94D943C8172C002E0044904D /* PSTMemberMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B4172C002E0044904D /* PSTMemberMatcherSpec.m */; };
 		94D943CD172C002E0044904D /* PSTExpectationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B9172C002E0044904D /* PSTExpectationSpec.m */; };
-		94D943CE172C002E0044904D /* PSTMatcherInverterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943BA172C002E0044904D /* PSTMatcherInverterSpec.m */; };
+		94D943CE172C002E0044904D /* PSTInversionFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943BA172C002E0044904D /* PSTInversionFilterSpec.m */; };
 		94D943D2172C0B5A0044904D /* PSTEqualityMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943D1172C0B5A0044904D /* PSTEqualityMatcher.m */; };
 		94D943D5172C31870044904D /* PSTIdentityMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943D4172C31870044904D /* PSTIdentityMatcher.m */; };
 		94D943D8172C332A0044904D /* PSTCopyableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943D7172C332A0044904D /* PSTCopyableObject.m */; };
@@ -87,8 +87,8 @@
 		94C4651B172C6A9E00382046 /* PSTLessMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLessMatcher.h; sourceTree = "<group>"; };
 		94C4651C172C6A9F00382046 /* PSTLessMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLessMatcher.m; sourceTree = "<group>"; };
 		94C9EBD1172B2A7C001E432C /* PSTMatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
-		94C9EBDB172B2F18001E432C /* PSTMatcherInverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcherInverter.h; sourceTree = "<group>"; };
-		94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherInverter.m; sourceTree = "<group>"; };
+		94C9EBDB172B2F18001E432C /* PSTInversionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTInversionFilter.h; sourceTree = "<group>"; };
+		94C9EBDC172B2F18001E432C /* PSTInversionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInversionFilter.m; sourceTree = "<group>"; };
 		94D45F95172D1E0A00BB4B92 /* PSTAndFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAndFilterSpec.m; sourceTree = "<group>"; };
 		94D45F97172D234700BB4B92 /* PSTAndFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAndFilter.h; sourceTree = "<group>"; };
 		94D45F98172D234700BB4B92 /* PSTAndFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAndFilter.m; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		94D943B2172C002E0044904D /* PSTLessMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLessMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B4172C002E0044904D /* PSTMemberMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMemberMatcherSpec.m; sourceTree = "<group>"; };
 		94D943B9172C002E0044904D /* PSTExpectationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationSpec.m; sourceTree = "<group>"; };
-		94D943BA172C002E0044904D /* PSTMatcherInverterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherInverterSpec.m; sourceTree = "<group>"; };
+		94D943BA172C002E0044904D /* PSTInversionFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInversionFilterSpec.m; sourceTree = "<group>"; };
 		94D943D0172C0B5A0044904D /* PSTEqualityMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTEqualityMatcher.h; sourceTree = "<group>"; };
 		94D943D1172C0B5A0044904D /* PSTEqualityMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityMatcher.m; sourceTree = "<group>"; };
 		94D943D3172C31870044904D /* PSTIdentityMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTIdentityMatcher.h; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 				94C3B128166119DF003B3F43 /* Posit.h */,
 				94C3B122166119DF003B3F43 /* PSTExpectation.h */,
 				94C3B123166119DF003B3F43 /* PSTExpectation.m */,
-				94C9EBDB172B2F18001E432C /* PSTMatcherInverter.h */,
-				94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */,
+				94C9EBDB172B2F18001E432C /* PSTInversionFilter.h */,
+				94C9EBDC172B2F18001E432C /* PSTInversionFilter.m */,
 				94D45F97172D234700BB4B92 /* PSTAndFilter.h */,
 				94D45F98172D234700BB4B92 /* PSTAndFilter.m */,
 				94C9EBD1172B2A7C001E432C /* PSTMatcher.h */,
@@ -199,7 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				94D943B9172C002E0044904D /* PSTExpectationSpec.m */,
-				94D943BA172C002E0044904D /* PSTMatcherInverterSpec.m */,
+				94D943BA172C002E0044904D /* PSTInversionFilterSpec.m */,
 				94D45F95172D1E0A00BB4B92 /* PSTAndFilterSpec.m */,
 				94D943AC172C002E0044904D /* PSTEqualityMatcherSpec.m */,
 				94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */,
@@ -372,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */,
-				94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */,
+				94C9EBDD172B2F18001E432C /* PSTInversionFilter.m in Sources */,
 				94D943D2172C0B5A0044904D /* PSTEqualityMatcher.m in Sources */,
 				94D943D5172C31870044904D /* PSTIdentityMatcher.m in Sources */,
 				94C4651A172C690900382046 /* PSTGreaterMatcher.m in Sources */,
@@ -395,7 +395,7 @@
 				94D943C6172C002E0044904D /* PSTLessMatcherSpec.m in Sources */,
 				94D943C8172C002E0044904D /* PSTMemberMatcherSpec.m in Sources */,
 				94D943CD172C002E0044904D /* PSTExpectationSpec.m in Sources */,
-				94D943CE172C002E0044904D /* PSTMatcherInverterSpec.m in Sources */,
+				94D943CE172C002E0044904D /* PSTInversionFilterSpec.m in Sources */,
 				94D943D8172C332A0044904D /* PSTCopyableObject.m in Sources */,
 				949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */,
 				949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */,
