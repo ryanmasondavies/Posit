@@ -23,7 +23,7 @@
 #import <Foundation/Foundation.h>
 #import "PSTMatcher.h"
 
-/** Combines matcher results together, returning TRUE if all matchers match, and FALSE if not. */
+/** Matches only if __all__ matchers match the value. */
 @interface PSTAndFilter : NSObject <PSTMatcher>
 
 /**
