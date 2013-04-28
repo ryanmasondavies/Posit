@@ -23,18 +23,19 @@
 #import <Foundation/Foundation.h>
 @protocol PSTMatcher;
 
-/** Throws an exception if the matcher doesn't match the subject. */
+/** Throws exception if the matcher doesn't match the subject. */
 @interface PSTExpectation : NSObject
 
 /**
  Initialize an expectation.
  @param subject The subject to match against.
  @param matcher The matcher used to match with the subject.
+ @param exception The exception to throw when the matcher fails.
  @return An initialized expectation.
  */
-- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher;
+- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception;
 
-/** Throws an exception if the matcher doesn't match the subject. */
+/** Throws exception if the matcher doesn't match the subject. */
 - (void)verify;
 
 @end

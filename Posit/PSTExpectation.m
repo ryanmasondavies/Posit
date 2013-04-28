@@ -26,15 +26,17 @@
 @interface PSTExpectation ()
 @property (strong, nonatomic) id subject;
 @property (strong, nonatomic) id<PSTMatcher> matcher;
+@property (strong, nonatomic) NSException *exception;
 @end
 
 @implementation PSTExpectation
 
-- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher
+- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception
 {
     if (self = [self init]) {
         [self setSubject:subject];
         [self setMatcher:matcher];
+        [self setException:exception];
     }
     return self;
 }
@@ -42,7 +44,7 @@
 - (void)verify
 {
     if ([[self matcher] matches:[self subject]] == NO) {
-        [NSException raise:NSInternalInconsistencyException format:@"Raised an exception for some reason."];
+        [[self exception] raise];
     }
 }
 
