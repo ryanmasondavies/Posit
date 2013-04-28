@@ -31,6 +31,7 @@
 		942687F5172DB45800B70F47 /* PSTExpectationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687F4172DB45700B70F47 /* PSTExpectationFactory.m */; };
 		942687F8172DB79000B70F47 /* PSTDisposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687F7172DB78F00B70F47 /* PSTDisposition.m */; };
 		942687FF172DBB5500B70F47 /* PSTExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687FE172DBB5400B70F47 /* PSTExpect.m */; };
+		94268804172DD55E00B70F47 /* PSTDispositionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94268803172DD55E00B70F47 /* PSTDispositionSpec.m */; };
 		949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */; };
 		949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */; };
 		94C46509172C5FE600382046 /* PSTBeEqualToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */; };
@@ -117,6 +118,7 @@
 		942687F7172DB78F00B70F47 /* PSTDisposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDisposition.m; sourceTree = "<group>"; };
 		942687FD172DBB5400B70F47 /* PSTExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpect.h; sourceTree = "<group>"; };
 		942687FE172DBB5400B70F47 /* PSTExpect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpect.m; sourceTree = "<group>"; };
+		94268803172DD55E00B70F47 /* PSTDispositionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDispositionSpec.m; sourceTree = "<group>"; };
 		949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeTrueSpec.m; sourceTree = "<group>"; };
 		949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeFalseSpec.m; sourceTree = "<group>"; };
 		94C3B128166119DF003B3F43 /* Posit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Posit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -278,6 +280,7 @@
 			children = (
 				942687B8172D297900B70F47 /* Filters */,
 				942687BC172D297900B70F47 /* Matchers */,
+				94268803172DD55E00B70F47 /* PSTDispositionSpec.m */,
 				94D943B9172C002E0044904D /* PSTExpectationSpec.m */,
 				942687E1172D670300B70F47 /* PSTExpectationVerifierSpec.m */,
 			);
@@ -490,6 +493,7 @@
 				942687CA172D297900B70F47 /* PSTLessMatcherSpec.m in Sources */,
 				942687CB172D297900B70F47 /* PSTMemberMatcherSpec.m in Sources */,
 				942687E2172D670300B70F47 /* PSTExpectationVerifierSpec.m in Sources */,
+				94268804172DD55E00B70F47 /* PSTDispositionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
