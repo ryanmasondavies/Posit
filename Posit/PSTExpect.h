@@ -20,31 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTVerifier)
+#import <Foundation/Foundation.h>
 
-__block id<PSTMatcher> matcher;
-__block NSException *exception;
-__block PSTVerifier *verifier;
-
-before(^{
-    matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
-    exception = [[NSException alloc] initWithName:@"Exception" reason:nil userInfo:nil];
-    verifier = [[PSTVerifier alloc] init];
-});
-
-when(@"Matcher matches subject", ^{
-    it(@"does not throw exception", ^{
-        STAssertNoThrow([verifier verify:@TRUE matcher:matcher exception:exception], @"");
-    });
-});
-
-when(@"Matcher does not match subject", ^{
-    it(@"throws exception", ^{
-        NSException *caught = nil;
-        @try { [verifier verify:@FALSE matcher:matcher exception:exception]; }
-        @catch(NSException *e) { caught = e; };
-        STAssertEqualObjects(caught, exception, @"");
-    });
-});
-
-SpecEnd
+id expect(id subject);

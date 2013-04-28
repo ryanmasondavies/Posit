@@ -21,30 +21,21 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@class PSTVerifier;
+@protocol PSTMatcher;
 
-/** Represents an expectation on a subject, verified whenever a builder method is called. */
+/** Represents an expectation on a subject. */
 @interface PSTExpectation : NSObject
 
 /**
  Initialize an expectation.
  @param subject The subject to be verified.
- @param filename The name of the file the expectation appears in.
- @param lineNumber The line number the expectation appears at in the file.
- @param verifier The verifier used to assert that the expectation is met.
+ @param matcher The matcher to compare the subject with.
+ @param exception The exception to throw if the subject does not match the matcher.
  @return An initialized expectation.
  */
-- (id)initWithSubject:(id)subject filename:(NSString *)filename lineNumber:(NSNumber *)lineNumber verifier:(PSTVerifier *)verifier;
+- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception;
 
-/**
- Syntactical sugar used for writing expectations.
- @return The expectation.
- */
-- (id)to;
-
-/**
- @param object The object the subject is expected to equal.
- */
-- (void)beEqualTo:(id)object;
+/** Raises exception if the matcher does not match the subject. */
+- (void)verify;
 
 @end

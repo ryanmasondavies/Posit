@@ -20,17 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-@protocol PSTMatcher;
+#import "PSTDisposition.h"
 
-/** Raises an exception if subjects don't match matchers. */
-@interface PSTVerifier : NSObject
+@interface PSTDisposition ()
+@property (strong, nonatomic) id positive;
+@property (strong, nonatomic) id negative;
+@end
 
-/**
- @param subject The subject matched against the matcher.
- @param matcher The matcher to match the subject against.
- @param exception The exception raised if the subject does not match.
- */
-- (void)verify:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception;
+@implementation PSTDisposition
+
+- (id)initWithPositive:(id)positive negative:(id)negative
+{
+    if (self = [self init]) {
+        [self setPositive:positive];
+        [self setNegative:negative];
+    }
+    return self;
+}
+
+- (id)to
+{
+    return [self positive];
+}
+
+- (id)notTo
+{
+    return [self negative];
+}
 
 @end

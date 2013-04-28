@@ -20,4 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#define expect(subject) [[PSTExpectation alloc] initWithSubject:subject filename:@(__FILE__) lineNumber:@(__LINE__) verifier:[[PSTVerifier alloc] init]]
+#import "PSTExpect.h"
+#import "PSTDisposition.h"
+#import "PSTExpectation.h"
+#import "PSTExpectationFactory.h"
+#import "PSTExpectationVerifier.h"
+
+id expect(id subject)
+{
+    PSTExpectationFactory *expectationFactory = [[PSTExpectationFactory alloc] initWithSubject:subject];
+    expectationFactory = (id)[[PSTExpectationVerifier alloc] initWithExpectationFactory:expectationFactory];
+    PSTDisposition *disposition = [[PSTDisposition alloc] initWithPositive:expectationFactory negative:nil];
+    return disposition;
+}

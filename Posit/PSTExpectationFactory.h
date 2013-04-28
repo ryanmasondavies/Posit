@@ -1,17 +1,17 @@
 // The MIT License
-// 
+//
 // Copyright (c) 2013 Ryan Davies
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,22 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Building expectations
-#import "PSTDisposition.h"
-#import "PSTExpect.h"
-#import "PSTExpectation.h"
-#import "PSTExpectationFactory.h"
-#import "PSTExpectationVerifier.h"
+#import <Foundation/Foundation.h>
+@class PSTExpectation;
 
-// Filters
-#import "PSTInversionFilter.h"
-#import "PSTAllFilter.h"
-#import "PSTAnyFilter.h"
+@interface PSTExpectationFactory : NSObject
 
-// Matchers
-#import "PSTEqualityMatcher.h"
-#import "PSTIdentityMatcher.h"
-#import "PSTGreaterMatcher.h"
-#import "PSTLessMatcher.h"
-#import "PSTKindMatcher.h"
-#import "PSTMemberMatcher.h"
+- (id)initWithSubject:(id)subject;
+
+- (id)beEqualTo:(id)object;
+
+@end

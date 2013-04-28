@@ -21,41 +21,31 @@
 // THE SOFTWARE.
 
 #import "PSTExpectation.h"
-#import <SenTestingKit/SenTestingKit.h>
-#import "PSTVerifier.h"
-#import "PSTEqualityMatcher.h"
+#import "PSTMatcher.h"
 
 @interface PSTExpectation ()
 @property (strong, nonatomic) id subject;
-@property (strong, nonatomic) NSString *filename;
-@property (strong, nonatomic) NSNumber *lineNumber;
-@property (strong, nonatomic) PSTVerifier *verifier;
+@property (strong, nonatomic) id<PSTMatcher> matcher;
+@property (strong, nonatomic) NSException *exception;
 @end
 
 @implementation PSTExpectation
 
-- (id)initWithSubject:(id)subject filename:(NSString *)filename lineNumber:(NSNumber *)lineNumber verifier:(PSTVerifier *)verifier
+- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception
 {
     if (self = [self init]) {
         [self setSubject:subject];
-        [self setFilename:filename];
-        [self setLineNumber:lineNumber];
-        [self setVerifier:verifier];
+        [self setMatcher:matcher];
+        [self setException:exception];
     }
     return self;
 }
 
-- (id)to
+- (void)verify
 {
-    return self;
-}
-
-- (void)beEqualTo:(id)object
-{
-    id matcher = [[PSTEqualityMatcher alloc] initWithExpected:object];
-    NSString *reason = [NSString stringWithFormat:@"Expected %@ to be equal to %@.", [self subject], object];
-    NSException *exception = [[NSException alloc] initWithName:SenTestFailureException reason:reason userInfo:@{SenTestFilenameKey: [self filename], SenTestLineNumberKey: [self lineNumber]}];
-    [[self verifier] verify:[self subject] matcher:matcher exception:exception];
+    if ([[self matcher] matches:[self subject]] == NO) {
+        [[self exception] raise];
+    }
 }
 
 @end

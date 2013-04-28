@@ -20,16 +20,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTVerifier.h"
-#import "PSTMatcher.h"
+#import "PSTExpectationFactory.h"
+#import <SenTestingKit/SenTestingKit.h>
+#import "PSTExpectation.h"
+#import "PSTEqualityMatcher.h"
 
-@implementation PSTVerifier
+@interface PSTExpectationFactory ()
+@property (strong, nonatomic) id subject;
+@end
 
-- (void)verify:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception
+@implementation PSTExpectationFactory
+
+- (id)initWithSubject:(id)subject
 {
-    if ([matcher matches:subject] == NO) {
-        [exception raise];
+    if (self = [self init]) {
+        [self setSubject:subject];
     }
+    return self;
+}
+
+- (id)beEqualTo:(id)object
+{
+    id matcher = [[PSTEqualityMatcher alloc] initWithExpected:object];
+    NSString *reason = [NSString stringWithFormat:@"Expected %@ to be equal to %@.", [self subject], object];
+    NSException *exception = [[NSException alloc] initWithName:SenTestFailureException reason:reason userInfo:@{SenTestFilenameKey: @(__FILE__), SenTestLineNumberKey: @(__LINE__)}];
+    return [[PSTExpectation alloc] initWithSubject:[self subject] matcher:matcher exception:exception];
 }
 
 @end
