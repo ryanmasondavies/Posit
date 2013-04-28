@@ -226,13 +226,6 @@
 			path = Matchers;
 			sourceTree = "<group>";
 		};
-		942687E6172D717800B70F47 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Factories;
-			sourceTree = "<group>";
-		};
 		949AD65A172C5B3000D08674 /* Functional Specs */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,7 +246,6 @@
 		94C3B11A166119DF003B3F43 /* Posit */ = {
 			isa = PBXGroup;
 			children = (
-				942687E6172D717800B70F47 /* Factories */,
 				942687A0172D296900B70F47 /* Filters */,
 				942687A7172D296900B70F47 /* Matchers */,
 				94C3B128166119DF003B3F43 /* Posit.h */,
