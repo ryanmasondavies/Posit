@@ -21,6 +21,8 @@
 		94C4651A172C690900382046 /* PSTGreaterMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46519172C690900382046 /* PSTGreaterMatcher.m */; };
 		94C4651D172C6A9F00382046 /* PSTLessMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4651C172C6A9F00382046 /* PSTLessMatcher.m */; };
 		94C9EBDD172B2F18001E432C /* PSTMatcherInverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */; };
+		94D45F96172D1E0A00BB4B92 /* PSTAndFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D45F95172D1E0A00BB4B92 /* PSTAndFilterSpec.m */; };
+		94D45F99172D234700BB4B92 /* PSTAndFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D45F98172D234700BB4B92 /* PSTAndFilter.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
 		94D943BD172C002E0044904D /* PSTPanda.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A7172C002E0044904D /* PSTPanda.m */; };
@@ -87,6 +89,9 @@
 		94C9EBD1172B2A7C001E432C /* PSTMatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
 		94C9EBDB172B2F18001E432C /* PSTMatcherInverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcherInverter.h; sourceTree = "<group>"; };
 		94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMatcherInverter.m; sourceTree = "<group>"; };
+		94D45F95172D1E0A00BB4B92 /* PSTAndFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAndFilterSpec.m; sourceTree = "<group>"; };
+		94D45F97172D234700BB4B92 /* PSTAndFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAndFilter.h; sourceTree = "<group>"; };
+		94D45F98172D234700BB4B92 /* PSTAndFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAndFilter.m; sourceTree = "<group>"; };
 		94D943A2172C002E0044904D /* PSTElephant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTElephant.h; sourceTree = "<group>"; };
 		94D943A3172C002E0044904D /* PSTElephant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTElephant.m; sourceTree = "<group>"; };
 		94D943A4172C002E0044904D /* PSTMammal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMammal.h; sourceTree = "<group>"; };
@@ -165,6 +170,8 @@
 				94C3B123166119DF003B3F43 /* PSTExpectation.m */,
 				94C9EBDB172B2F18001E432C /* PSTMatcherInverter.h */,
 				94C9EBDC172B2F18001E432C /* PSTMatcherInverter.m */,
+				94D45F97172D234700BB4B92 /* PSTAndFilter.h */,
+				94D45F98172D234700BB4B92 /* PSTAndFilter.m */,
 				94C9EBD1172B2A7C001E432C /* PSTMatcher.h */,
 				94D943D0172C0B5A0044904D /* PSTEqualityMatcher.h */,
 				94D943D1172C0B5A0044904D /* PSTEqualityMatcher.m */,
@@ -193,6 +200,7 @@
 			children = (
 				94D943B9172C002E0044904D /* PSTExpectationSpec.m */,
 				94D943BA172C002E0044904D /* PSTMatcherInverterSpec.m */,
+				94D45F95172D1E0A00BB4B92 /* PSTAndFilterSpec.m */,
 				94D943AC172C002E0044904D /* PSTEqualityMatcherSpec.m */,
 				94D943B0172C002E0044904D /* PSTIdentityMatcherSpec.m */,
 				94D943AE172C002E0044904D /* PSTGreaterMatcherSpec.m */,
@@ -369,6 +377,7 @@
 				94D943D5172C31870044904D /* PSTIdentityMatcher.m in Sources */,
 				94C4651A172C690900382046 /* PSTGreaterMatcher.m in Sources */,
 				94C4651D172C6A9F00382046 /* PSTLessMatcher.m in Sources */,
+				94D45F99172D234700BB4B92 /* PSTAndFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +407,7 @@
 				94C46513172C631B00382046 /* PSTBeNegativeSpec.m in Sources */,
 				94C46515172C64AF00382046 /* PSTBeKindOfSpec.m in Sources */,
 				94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */,
+				94D45F96172D1E0A00BB4B92 /* PSTAndFilterSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
