@@ -20,17 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-#import "PSTMatcher.h"
+#import "PSTAnyFilter.h"
 
-/** Matches if __any__ matcher matches the value. */
-@interface PSTOrFilter : NSObject <PSTMatcher>
+@interface PSTAnyFilter ()
+@property (strong, nonatomic) NSArray *matchers;
+@end
 
-/**
- Initialize a filter.
- @param matchers The matchers to combine when matching.
- @return An initialized filter.
- */
-- (id)initWithMatchers:(NSArray *)matchers;
+@implementation PSTAnyFilter
+
+- (id)initWithMatchers:(NSArray *)matchers
+{
+    if (self = [self init]) {
+        [self setMatchers:matchers];
+    }
+    return self;
+}
+
+- (BOOL)matches:(id)value
+{
+    __block BOOL passes = NO;
+    [[self matchers] enumerateObjectsUsingBlock:^(id<PSTMatcher> matcher, NSUInteger idx, BOOL *stop) {
+        if ([matcher matches:value]) {
+            passes = YES;
+            *stop = YES;
+        }
+    }];
+    return passes;
+}
 
 @end

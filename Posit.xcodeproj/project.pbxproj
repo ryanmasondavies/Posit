@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		942687B1172D296900B70F47 /* PSTAllFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A2172D296900B70F47 /* PSTAllFilter.m */; };
 		942687B2172D296900B70F47 /* PSTInversionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A4172D296900B70F47 /* PSTInversionFilter.m */; };
-		942687B3172D296900B70F47 /* PSTOrFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A6172D296900B70F47 /* PSTOrFilter.m */; };
+		942687B3172D296900B70F47 /* PSTAnyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A6172D296900B70F47 /* PSTAnyFilter.m */; };
 		942687B4172D296900B70F47 /* PSTEqualityMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A9172D296900B70F47 /* PSTEqualityMatcher.m */; };
 		942687B5172D296900B70F47 /* PSTGreaterMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687AB172D296900B70F47 /* PSTGreaterMatcher.m */; };
 		942687B6172D296900B70F47 /* PSTIdentityMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687AD172D296900B70F47 /* PSTIdentityMatcher.m */; };
 		942687B7172D296900B70F47 /* PSTLessMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687AF172D296900B70F47 /* PSTLessMatcher.m */; };
 		942687C3172D297900B70F47 /* PSTAllFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687B9172D297900B70F47 /* PSTAllFilterSpec.m */; };
 		942687C4172D297900B70F47 /* PSTInversionFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687BA172D297900B70F47 /* PSTInversionFilterSpec.m */; };
-		942687C5172D297900B70F47 /* PSTOrFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687BB172D297900B70F47 /* PSTOrFilterSpec.m */; };
+		942687C5172D297900B70F47 /* PSTAnyFilterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687BB172D297900B70F47 /* PSTAnyFilterSpec.m */; };
 		942687C6172D297900B70F47 /* PSTEqualityMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687BD172D297900B70F47 /* PSTEqualityMatcherSpec.m */; };
 		942687C7172D297900B70F47 /* PSTGreaterMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687BE172D297900B70F47 /* PSTGreaterMatcherSpec.m */; };
 		942687C8172D297900B70F47 /* PSTIdentityMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687BF172D297900B70F47 /* PSTIdentityMatcherSpec.m */; };
@@ -76,8 +76,8 @@
 		942687A2172D296900B70F47 /* PSTAllFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAllFilter.m; sourceTree = "<group>"; };
 		942687A3172D296900B70F47 /* PSTInversionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTInversionFilter.h; sourceTree = "<group>"; };
 		942687A4172D296900B70F47 /* PSTInversionFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInversionFilter.m; sourceTree = "<group>"; };
-		942687A5172D296900B70F47 /* PSTOrFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTOrFilter.h; sourceTree = "<group>"; };
-		942687A6172D296900B70F47 /* PSTOrFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTOrFilter.m; sourceTree = "<group>"; };
+		942687A5172D296900B70F47 /* PSTAnyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAnyFilter.h; sourceTree = "<group>"; };
+		942687A6172D296900B70F47 /* PSTAnyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAnyFilter.m; sourceTree = "<group>"; };
 		942687A8172D296900B70F47 /* PSTEqualityMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTEqualityMatcher.h; sourceTree = "<group>"; };
 		942687A9172D296900B70F47 /* PSTEqualityMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityMatcher.m; sourceTree = "<group>"; };
 		942687AA172D296900B70F47 /* PSTGreaterMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGreaterMatcher.h; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 		942687B0172D296900B70F47 /* PSTMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMatcher.h; sourceTree = "<group>"; };
 		942687B9172D297900B70F47 /* PSTAllFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAllFilterSpec.m; sourceTree = "<group>"; };
 		942687BA172D297900B70F47 /* PSTInversionFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInversionFilterSpec.m; sourceTree = "<group>"; };
-		942687BB172D297900B70F47 /* PSTOrFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTOrFilterSpec.m; sourceTree = "<group>"; };
+		942687BB172D297900B70F47 /* PSTAnyFilterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAnyFilterSpec.m; sourceTree = "<group>"; };
 		942687BD172D297900B70F47 /* PSTEqualityMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityMatcherSpec.m; sourceTree = "<group>"; };
 		942687BE172D297900B70F47 /* PSTGreaterMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGreaterMatcherSpec.m; sourceTree = "<group>"; };
 		942687BF172D297900B70F47 /* PSTIdentityMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityMatcherSpec.m; sourceTree = "<group>"; };
@@ -158,10 +158,10 @@
 			children = (
 				942687A1172D296900B70F47 /* PSTAllFilter.h */,
 				942687A2172D296900B70F47 /* PSTAllFilter.m */,
+				942687A5172D296900B70F47 /* PSTAnyFilter.h */,
+				942687A6172D296900B70F47 /* PSTAnyFilter.m */,
 				942687A3172D296900B70F47 /* PSTInversionFilter.h */,
 				942687A4172D296900B70F47 /* PSTInversionFilter.m */,
-				942687A5172D296900B70F47 /* PSTOrFilter.h */,
-				942687A6172D296900B70F47 /* PSTOrFilter.m */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -188,8 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				942687B9172D297900B70F47 /* PSTAllFilterSpec.m */,
+				942687BB172D297900B70F47 /* PSTAnyFilterSpec.m */,
 				942687BA172D297900B70F47 /* PSTInversionFilterSpec.m */,
-				942687BB172D297900B70F47 /* PSTOrFilterSpec.m */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -419,7 +419,7 @@
 				94C3B12C166119DF003B3F43 /* PSTExpectation.m in Sources */,
 				942687B1172D296900B70F47 /* PSTAllFilter.m in Sources */,
 				942687B2172D296900B70F47 /* PSTInversionFilter.m in Sources */,
-				942687B3172D296900B70F47 /* PSTOrFilter.m in Sources */,
+				942687B3172D296900B70F47 /* PSTAnyFilter.m in Sources */,
 				942687B4172D296900B70F47 /* PSTEqualityMatcher.m in Sources */,
 				942687B5172D296900B70F47 /* PSTGreaterMatcher.m in Sources */,
 				942687B6172D296900B70F47 /* PSTIdentityMatcher.m in Sources */,
@@ -449,7 +449,7 @@
 				94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */,
 				942687C3172D297900B70F47 /* PSTAllFilterSpec.m in Sources */,
 				942687C4172D297900B70F47 /* PSTInversionFilterSpec.m in Sources */,
-				942687C5172D297900B70F47 /* PSTOrFilterSpec.m in Sources */,
+				942687C5172D297900B70F47 /* PSTAnyFilterSpec.m in Sources */,
 				942687C6172D297900B70F47 /* PSTEqualityMatcherSpec.m in Sources */,
 				942687C7172D297900B70F47 /* PSTGreaterMatcherSpec.m in Sources */,
 				942687C8172D297900B70F47 /* PSTIdentityMatcherSpec.m in Sources */,

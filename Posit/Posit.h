@@ -25,7 +25,7 @@
 // Filters
 #import "PSTInversionFilter.h"
 #import "PSTAllFilter.h"
-#import "PSTOrFilter.h"
+#import "PSTAnyFilter.h"
 
 // Matchers
 #import "PSTEqualityMatcher.h"
