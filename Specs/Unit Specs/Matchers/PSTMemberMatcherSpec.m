@@ -25,22 +25,69 @@
 
 SpecBegin(PSTMemberMatcher)
 
-when(@"Comparing to an instance of PSTElephant", ^{
-    it(@"matches PSTElephant", PENDING);
-    it(@"does not match PSTMammal", PENDING);
-    it(@"does not match PSTPanda", PENDING);
+__block id<PSTMatcher> matcher;
+
+when(@"Comparing to PSTMammal", ^{
+    before(^{
+        matcher = [[PSTMemberMatcher alloc] initWithClass:[PSTMammal class]];
+    });
+    
+    it(@"matches an instance of PSTMammal", ^{
+        PSTMammal *mammal = [[PSTMammal alloc] init];
+        STAssertTrue([matcher matches:mammal], @"");
+    });
+    
+    it(@"does not match an instance of PSTElephant", ^{
+        PSTElephant *elephant = [[PSTElephant alloc] init];
+        STAssertFalse([matcher matches:elephant], @"");
+    });
+    
+    it(@"does not match an instance of PSTPanda", ^{
+        PSTPanda *panda = [[PSTPanda alloc] init];
+        STAssertFalse([matcher matches:panda], @"");
+    });
 });
 
-when(@"Comparing to an instance of PSTPanda", ^{
-    it(@"matches PSTPanda", PENDING);
-    it(@"does not match PSTMammal", PENDING);
-    it(@"does not match PSTElephant", PENDING);
+when(@"Comparing to PSTElephant", ^{
+    before(^{
+        matcher = [[PSTMemberMatcher alloc] initWithClass:[PSTElephant class]];
+    });
+    
+    it(@"matches an instance of PSTElephant", ^{
+        PSTElephant *elephant = [[PSTElephant alloc] init];
+        STAssertTrue([matcher matches:elephant], @"");
+    });
+    
+    it(@"does not match an instance of PSTPanda", ^{
+        PSTPanda *panda = [[PSTPanda alloc] init];
+        STAssertFalse([matcher matches:panda], @"");
+    });
+    
+    it(@"does not match an instance of PSTMammal", ^{
+        PSTMammal *mammal = [[PSTMammal alloc] init];
+        STAssertFalse([matcher matches:mammal], @"");
+    });
 });
 
-when(@"Comparing to an instance of PSTMammal", ^{
-    it(@"matches PSTMammal", PENDING);
-    it(@"does not match PSTPanda", PENDING);
-    it(@"does not match PSTElephant", PENDING);
+when(@"Comparing to PSTPanda", ^{
+    before(^{
+        matcher = [[PSTMemberMatcher alloc] initWithClass:[PSTPanda class]];
+    });
+    
+    it(@"matches an instance of PSTPanda", ^{
+        PSTPanda *panda = [[PSTPanda alloc] init];
+        STAssertTrue([matcher matches:panda], @"");
+    });
+    
+    it(@"does not match an instance of PSTMammal", ^{
+        PSTMammal *mammal = [[PSTMammal alloc] init];
+        STAssertFalse([matcher matches:mammal], @"");
+    });
+    
+    it(@"does not match an instance of PSTElephant", ^{
+        PSTElephant *elephant = [[PSTElephant alloc] init];
+        STAssertFalse([matcher matches:elephant], @"");
+    });
 });
 
 SpecEnd
