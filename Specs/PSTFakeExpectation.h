@@ -20,13 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTFakeFactory.h"
+#import <Foundation/Foundation.h>
 
-@implementation PSTFakeFactory
-
-- (id)create
-{
-    return nil;
-}
-
+@interface PSTFakeExpectation : PSTExpectation
+@property (assign, getter = isVerified) BOOL verified;
 @end

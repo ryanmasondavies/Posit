@@ -20,13 +20,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTFakeFactory.h"
+#import "PSTFakeExpectation.h"
 
-@implementation PSTFakeFactory
+@implementation PSTFakeExpectation
 
-- (id)create
+- (void)verify
 {
-    return nil;
+    [self setVerified:YES];
 }
 
 @end

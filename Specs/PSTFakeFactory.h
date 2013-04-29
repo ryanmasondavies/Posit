@@ -24,7 +24,6 @@
 
 @interface PSTFakeFactory : NSObject
 
-- (id)initWithYield:(id)yield;
-- (id)beEqualTo:(id)object;
+- (id)create;
 
 @end

@@ -20,6 +20,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "PSTFakeExpectation.h"
+#import "PSTFakeFactory.h"
+
 SpecBegin(PSTVerifier)
+
+it(@"Verifies the expectation returned when a router processes a route", ^{
+    NSMethodSignature *methodSignature = [PSTFakeFactory instanceMethodSignatureForSelector:@selector(create)];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
+    
+    PSTFakeExpectation *expectation = [[PSTFakeExpectation alloc] init];
+    [invocation setReturnValue:&expectation];
+    
+    PSTVerifier *verifier = [[PSTVerifier alloc] init];
+    [verifier router:nil didRouteInvocation:invocation];
+    
+    STAssertTrue([expectation isVerified], @"");
+});
 
 SpecEnd
