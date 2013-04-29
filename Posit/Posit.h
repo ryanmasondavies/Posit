@@ -24,7 +24,7 @@
 #import "PSTDispositionDefiner.h"
 #import "PSTExpect.h"
 #import "PSTExpectation.h"
-#import "PSTBeEqualToFactoryRoute.h"
+#import "PSTBeEqualToFactoryAdapter.h"
 #import "PSTVerifier.h"
 
 // Factories

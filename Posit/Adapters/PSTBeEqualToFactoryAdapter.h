@@ -20,26 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTBeEqualToFactoryRoute.h"
-#import "PSTBeEqualToFactory.h"
+#import <Foundation/Foundation.h>
+@class PSTBeEqualToFactory;
 
-@interface PSTBeEqualToFactoryRoute ()
-@property (strong, nonatomic) PSTBeEqualToFactory *factory;
-@end
+/** Adapts a BeEqualTo factory to a more conversational method. */
+@interface PSTBeEqualToFactoryAdapter : NSObject
 
-@implementation PSTBeEqualToFactoryRoute
+/**
+ Initialize an adapter.
+ @param factory The factory to adapt the method for.
+ @return An initialized adapter.
+ */
+- (id)initWithFactory:(PSTBeEqualToFactory *)factory;
 
-- (id)initWithFactory:(PSTBeEqualToFactory *)factory
-{
-    if (self = [self init]) {
-        [self setFactory:factory];
-    }
-    return self;
-}
-
-- (id)beEqualTo:(id)object
-{
-    return [[self factory] create:object];
-}
+/**
+ @param object The object to pass to the factory.
+ @return The result of calling the create: method on the factory.
+ */
+- (id)beEqualTo:(id)object;
 
 @end

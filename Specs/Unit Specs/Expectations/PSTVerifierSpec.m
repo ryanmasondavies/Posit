@@ -25,7 +25,7 @@
 
 SpecBegin(PSTVerifier)
 
-it(@"Verifies the expectation returned when a router processes a route", ^{
+it(@"Verifies the expectation returned when a method is dispatched", ^{
     NSMethodSignature *methodSignature = [PSTFakeFactory instanceMethodSignatureForSelector:@selector(create)];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
     
@@ -33,7 +33,7 @@ it(@"Verifies the expectation returned when a router processes a route", ^{
     [invocation setReturnValue:&expectation];
     
     PSTVerifier *verifier = [[PSTVerifier alloc] init];
-    [verifier router:nil didRouteInvocation:invocation];
+    [verifier methodDispatcher:nil didDispatchInvocation:invocation];
     
     STAssertTrue([expectation isVerified], @"");
 });

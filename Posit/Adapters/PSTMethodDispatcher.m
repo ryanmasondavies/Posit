@@ -20,20 +20,44 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTVerifier.h"
-#import "PSTExpectation.h"
 #import "PSTMethodDispatcher.h"
+#import "PSTMethodDispatcherDelegate.h"
 
-@interface PSTVerifier ()
+@interface PSTMethodDispatcher ()
+@property (strong, nonatomic) NSArray *receivers;
+@property (strong, nonatomic) id<PSTMethodDispatcherDelegate> delegate;
 @end
 
-@implementation PSTVerifier
+@implementation PSTMethodDispatcher
 
-- (void)methodDispatcher:(PSTMethodDispatcher *)router didDispatchInvocation:(NSInvocation *)invocation
+- (id)initWithReceivers:(NSArray *)receivers delegate:(id<PSTMethodDispatcherDelegate>)delegate
 {
-    __unsafe_unretained PSTExpectation *expectation;
-    [invocation getReturnValue:&expectation];
-    [expectation verify];
+    if (self = [self init]) {
+        [self setReceivers:receivers];
+        [self setDelegate:delegate];
+    }
+    return self;
+}
+
+- (id)receiverForSelector:(SEL)selector
+{
+    for (id receiver in [self receivers]) {
+        if ([receiver respondsToSelector:selector]) {
+            return receiver;
+        }
+    }
+    return nil;
+}
+
+- (void)forwardInvocation:(NSInvocation *)invocation
+{
+    [invocation invokeWithTarget:[self receiverForSelector:[invocation selector]]];
+    [[self delegate] methodDispatcher:self didDispatchInvocation:invocation];
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
+{
+    return [[self receiverForSelector:selector] methodSignatureForSelector:selector];
 }
 
 @end

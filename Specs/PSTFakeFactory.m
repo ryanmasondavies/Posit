@@ -29,4 +29,9 @@
     return nil;
 }
 
+- (id)create:(id)object
+{
+    return object;
+}
+
 @end

@@ -23,8 +23,8 @@
 #import "PSTExpect.h"
 #import "PSTDispositionDefiner.h"
 #import "PSTExpectation.h"
-#import "PSTRouter.h"
-#import "PSTBeEqualToFactoryRoute.h"
+#import "PSTMethodDispatcher.h"
+#import "PSTBeEqualToFactoryAdapter.h"
 #import "PSTBeEqualToFactory.h"
 #import "PSTVerifier.h"
 
@@ -32,10 +32,10 @@ id expect(id subject)
 {
     id factory = [[PSTBeEqualToFactory alloc] initWithSubject:subject];
     
-    NSMutableArray *routes = [[NSMutableArray alloc] init];
-    routes[0] = [[PSTBeEqualToFactoryRoute alloc] initWithFactory:factory];
+    NSMutableArray *adapters = [[NSMutableArray alloc] init];
+    adapters[0] = [[PSTBeEqualToFactoryAdapter alloc] initWithFactory:factory];
     
     PSTVerifier *verifier = [[PSTVerifier alloc] init];
-    PSTRouter *router = [[PSTRouter alloc] initWithDelegate:verifier routes:routes];
+    PSTMethodDispatcher *router = [[PSTMethodDispatcher alloc] initWithReceivers:adapters delegate:verifier];
     return [[PSTDispositionDefiner alloc] initWithPositive:router negative:nil];
 }

@@ -20,20 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTVerifier.h"
-#import "PSTExpectation.h"
-#import "PSTMethodDispatcher.h"
+#import "PSTBeEqualToFactoryAdapter.h"
+#import "PSTBeEqualToFactory.h"
 
-@interface PSTVerifier ()
+@interface PSTBeEqualToFactoryAdapter ()
+@property (strong, nonatomic) PSTBeEqualToFactory *factory;
 @end
 
-@implementation PSTVerifier
+@implementation PSTBeEqualToFactoryAdapter
 
-- (void)methodDispatcher:(PSTMethodDispatcher *)router didDispatchInvocation:(NSInvocation *)invocation
+- (id)initWithFactory:(PSTBeEqualToFactory *)factory
 {
-    __unsafe_unretained PSTExpectation *expectation;
-    [invocation getReturnValue:&expectation];
-    [expectation verify];
+    if (self = [self init]) {
+        [self setFactory:factory];
+    }
+    return self;
+}
+
+- (id)beEqualTo:(id)object
+{
+    return [[self factory] create:object];
 }
 
 @end

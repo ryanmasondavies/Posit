@@ -21,9 +21,9 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "PSTRouterDelegate.h"
+#import "PSTMethodDispatcherDelegate.h"
 
-/** Verifies expectations returned by routing messages. */
-@interface PSTVerifier : NSObject <PSTRouterDelegate>
+/** Verifies expectations returned by dispatching messages. */
+@interface PSTVerifier : NSObject <PSTMethodDispatcherDelegate>
 
 @end

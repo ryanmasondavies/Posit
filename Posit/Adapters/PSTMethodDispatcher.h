@@ -21,11 +21,10 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@class PSTBeEqualToFactory;
+@protocol PSTMethodDispatcherDelegate;
 
-@interface PSTBeEqualToFactoryRoute : NSObject
+@interface PSTMethodDispatcher : NSObject
 
-- (id)initWithFactory:(PSTBeEqualToFactory *)factory;
-- (id)beEqualTo:(id)object;
+- (id)initWithReceivers:(NSArray *)receivers delegate:(id<PSTMethodDispatcherDelegate>)delegate;
 
 @end

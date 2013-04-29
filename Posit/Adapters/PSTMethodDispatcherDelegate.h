@@ -21,10 +21,10 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@protocol PSTRouterDelegate;
+@class PSTMethodDispatcher;
 
-@interface PSTRouter : NSObject
+@protocol PSTMethodDispatcherDelegate <NSObject>
 
-- (id)initWithDelegate:(id<PSTRouterDelegate>)delegate routes:(NSArray *)routes;
+- (void)methodDispatcher:(PSTMethodDispatcher *)router didDispatchInvocation:(NSInvocation *)invocation;
 
 @end

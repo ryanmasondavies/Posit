@@ -20,11 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-@class PSTRouter;
+SpecBegin(PSTMethodDispatcher)
 
-@protocol PSTRouterDelegate <NSObject>
+it(@"", ^{
+    // ...
+});
 
-- (void)router:(PSTRouter *)router didRouteInvocation:(NSInvocation *)invocation;
-
-@end
+SpecEnd

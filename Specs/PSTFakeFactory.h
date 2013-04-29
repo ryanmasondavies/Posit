@@ -25,5 +25,6 @@
 @interface PSTFakeFactory : NSObject
 
 - (id)create;
+- (id)create:(id)object;
 
 @end
