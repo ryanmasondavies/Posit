@@ -23,13 +23,19 @@
 #import "PSTExpect.h"
 #import "PSTDisposition.h"
 #import "PSTExpectation.h"
-#import "PSTExpectationFactory.h"
-#import "PSTExpectationVerifier.h"
+#import "PSTRouter.h"
+#import "PSTBeEqualToFactoryRoute.h"
+#import "PSTBeEqualToFactory.h"
+#import "PSTVerifier.h"
 
 id expect(id subject)
 {
-    PSTExpectationFactory *expectationFactory = [[PSTExpectationFactory alloc] initWithSubject:subject];
-    expectationFactory = (id)[[PSTExpectationVerifier alloc] initWithExpectationFactory:expectationFactory];
-    PSTDisposition *disposition = [[PSTDisposition alloc] initWithPositive:expectationFactory negative:nil];
-    return disposition;
+    id factory = [[PSTBeEqualToFactory alloc] initWithSubject:subject];
+    
+    NSMutableArray *routes = [[NSMutableArray alloc] init];
+    routes[0] = [[PSTBeEqualToFactoryRoute alloc] initWithFactory:factory];
+    
+    PSTVerifier *verifier = [[PSTVerifier alloc] init];
+    PSTRouter *router = [[PSTRouter alloc] initWithDelegate:verifier routes:routes];
+    return [[PSTDisposition alloc] initWithPositive:router negative:nil];
 }

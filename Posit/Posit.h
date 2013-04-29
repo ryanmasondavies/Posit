@@ -20,12 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Building expectations
+// Expectations
 #import "PSTDisposition.h"
 #import "PSTExpect.h"
 #import "PSTExpectation.h"
-#import "PSTExpectationFactory.h"
-#import "PSTExpectationVerifier.h"
+#import "PSTBeEqualToFactoryRoute.h"
+#import "PSTVerifier.h"
+
+// Factories
+#import "PSTBeEqualToFactory.h"
 
 // Filters
 #import "PSTInversionFilter.h"

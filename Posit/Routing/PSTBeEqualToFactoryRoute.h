@@ -21,13 +21,11 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@class PSTExpectation;
+@class PSTBeEqualToFactory;
 
-@interface PSTExpectationFactory : NSObject
+@interface PSTBeEqualToFactoryRoute : NSObject
 
-- (id)initWithSubject:(id)subject;
-
+- (id)initWithFactory:(PSTBeEqualToFactory *)factory;
 - (id)beEqualTo:(id)object;
-- (id)beIdenticalTo:(id)object;
 
 @end

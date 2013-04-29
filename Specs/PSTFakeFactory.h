@@ -20,24 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTCopyableObject.h"
+#import <Foundation/Foundation.h>
 
-SpecBegin(PSTBeIdenticalTo)
+@interface PSTFakeFactory : NSObject
 
-__block id object;
+- (id)initWithYield:(id)yield;
+- (id)beEqualTo:(id)object;
 
-describe(@"An object", ^{
-    before(^{
-        object = [[PSTCopyableObject alloc] init];
-    });
-    
-    it(@"is identical to itself", ^{
-//        STAssertNoThrow([[expect(object) to] beIdenticalTo:object], @"");
-    });
-    
-    it(@"is not identical to a copy", ^{
-//        STAssertThrows([[expect(object) to] beIdenticalTo:[object copy]], @"");
-    });
-});
-
-SpecEnd
+@end

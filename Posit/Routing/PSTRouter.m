@@ -20,36 +20,44 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTExpectationVerifier.h"
-#import "PSTExpectationFactory.h"
-#import "PSTExpectation.h"
+#import "PSTRouter.h"
+#import "PSTRouterDelegate.h"
 
-@interface PSTExpectationVerifier ()
-@property (strong, nonatomic) PSTExpectationFactory *factory;
+@interface PSTRouter ()
+@property (strong, nonatomic) id<PSTRouterDelegate> delegate;
+@property (strong, nonatomic) NSArray *routes;
 @end
 
-@implementation PSTExpectationVerifier
+@implementation PSTRouter
 
-- (id)initWithExpectationFactory:(id)factory
+- (id)initWithDelegate:(id<PSTRouterDelegate>)delegate routes:(NSArray *)routes
 {
     if (self = [self init]) {
-        [self setFactory:factory];
+        [self setDelegate:delegate];
+        [self setRoutes:routes];
     }
     return self;
 }
 
+- (id)routeForSelector:(SEL)selector
+{
+    for (id route in [self routes]) {
+        if ([route respondsToSelector:selector]) {
+            return route;
+        }
+    }
+    return nil;
+}
+
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-    [invocation invokeWithTarget:[self factory]];
-    
-    __unsafe_unretained PSTExpectation *expectation;
-    [invocation getReturnValue:&expectation];
-    [expectation verify];
+    [invocation invokeWithTarget:[self routeForSelector:[invocation selector]]];
+    [[self delegate] router:self didRouteInvocation:invocation];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
 {
-    return [[self factory] methodSignatureForSelector:selector];
+    return [[self routeForSelector:selector] methodSignatureForSelector:selector];
 }
 
 @end

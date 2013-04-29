@@ -20,17 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTExpectationFactory.h"
+#import "PSTBeEqualToFactory.h"
 #import <SenTestingKit/SenTestingKit.h>
 #import "PSTExpectation.h"
 #import "PSTEqualityMatcher.h"
-#import "PSTIdentityMatcher.h"
 
-@interface PSTExpectationFactory ()
+@interface PSTBeEqualToFactory ()
 @property (strong, nonatomic) id subject;
 @end
 
-@implementation PSTExpectationFactory
+@implementation PSTBeEqualToFactory
 
 - (id)initWithSubject:(id)subject
 {
@@ -40,18 +39,10 @@
     return self;
 }
 
-- (id)beEqualTo:(id)object
+- (id)create:(id)object
 {
     id matcher = [[PSTEqualityMatcher alloc] initWithExpected:object];
     NSString *reason = [NSString stringWithFormat:@"Expected %@ to be equal to %@.", [self subject], object];
-    NSException *exception = [[NSException alloc] initWithName:SenTestFailureException reason:reason userInfo:@{SenTestFilenameKey: @(__FILE__), SenTestLineNumberKey: @(__LINE__)}];
-    return [[PSTExpectation alloc] initWithSubject:[self subject] matcher:matcher exception:exception];
-}
-
-- (id)beIdenticalTo:(id)object
-{
-    id matcher = [[PSTIdentityMatcher alloc] initWithExpected:object];
-    NSString *reason = [NSString stringWithFormat:@"Expected %@ to be identical to %@.", [self subject], object];
     NSException *exception = [[NSException alloc] initWithName:SenTestFailureException reason:reason userInfo:@{SenTestFilenameKey: @(__FILE__), SenTestLineNumberKey: @(__LINE__)}];
     return [[PSTExpectation alloc] initWithSubject:[self subject] matcher:matcher exception:exception];
 }

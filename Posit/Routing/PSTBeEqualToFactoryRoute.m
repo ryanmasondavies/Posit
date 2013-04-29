@@ -20,11 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-@class PSTExpectationFactory;
+#import "PSTBeEqualToFactoryRoute.h"
+#import "PSTBeEqualToFactory.h"
 
-@interface PSTExpectationVerifier : NSObject
+@interface PSTBeEqualToFactoryRoute ()
+@property (strong, nonatomic) PSTBeEqualToFactory *factory;
+@end
 
-- (id)initWithExpectationFactory:(PSTExpectationFactory *)factory;
+@implementation PSTBeEqualToFactoryRoute
+
+- (id)initWithFactory:(PSTBeEqualToFactory *)factory
+{
+    if (self = [self init]) {
+        [self setFactory:factory];
+    }
+    return self;
+}
+
+- (id)beEqualTo:(id)object
+{
+    return [[self factory] create:object];
+}
 
 @end

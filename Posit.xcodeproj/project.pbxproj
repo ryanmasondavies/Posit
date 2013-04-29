@@ -25,17 +25,21 @@
 		942687CB172D297900B70F47 /* PSTMemberMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687C2172D297900B70F47 /* PSTMemberMatcherSpec.m */; };
 		942687CE172D2AE100B70F47 /* PSTKindMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687CD172D2AE100B70F47 /* PSTKindMatcher.m */; };
 		942687D1172D2E8900B70F47 /* PSTMemberMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687D0172D2E8800B70F47 /* PSTMemberMatcher.m */; };
-		942687D7172D5AC700B70F47 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687D6172D5AC700B70F47 /* PSTExpectation.m */; };
-		942687DA172D5B0300B70F47 /* PSTExpectationVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687D9172D5B0300B70F47 /* PSTExpectationVerifier.m */; };
-		942687E2172D670300B70F47 /* PSTExpectationVerifierSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687E1172D670300B70F47 /* PSTExpectationVerifierSpec.m */; };
-		942687F5172DB45800B70F47 /* PSTExpectationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687F4172DB45700B70F47 /* PSTExpectationFactory.m */; };
-		942687F8172DB79000B70F47 /* PSTDisposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687F7172DB78F00B70F47 /* PSTDisposition.m */; };
-		942687FF172DBB5500B70F47 /* PSTExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687FE172DBB5400B70F47 /* PSTExpect.m */; };
-		94268804172DD55E00B70F47 /* PSTDispositionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94268803172DD55E00B70F47 /* PSTDispositionSpec.m */; };
 		949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */; };
 		949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */; };
-		94C46509172C5FE600382046 /* PSTBeEqualToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */; };
-		94C4650B172C616000382046 /* PSTBeIdenticalToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */; };
+		94A7034F172E8995004C0EA4 /* PSTFakeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7034E172E8995004C0EA4 /* PSTFakeFactory.m */; };
+		94A70351172E8B29004C0EA4 /* PSTBeEqualToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */; };
+		94A70353172E8CF5004C0EA4 /* PSTBeIdenticalToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */; };
+		94A7035A172E8DA9004C0EA4 /* PSTDispositionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70355172E8DA9004C0EA4 /* PSTDispositionSpec.m */; };
+		94A7035C172E8DA9004C0EA4 /* PSTExpectationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70357172E8DA9004C0EA4 /* PSTExpectationSpec.m */; };
+		94A7035D172E8DA9004C0EA4 /* PSTVerifierSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70358172E8DA9004C0EA4 /* PSTVerifierSpec.m */; };
+		94A7036B172E8DBD004C0EA4 /* PSTDisposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70360172E8DBD004C0EA4 /* PSTDisposition.m */; };
+		94A7036D172E8DBD004C0EA4 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70364172E8DBD004C0EA4 /* PSTExpectation.m */; };
+		94A7036F172E8DBD004C0EA4 /* PSTVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70368172E8DBD004C0EA4 /* PSTVerifier.m */; };
+		94A70372172E8DF4004C0EA4 /* PSTBeEqualToFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70371172E8DF4004C0EA4 /* PSTBeEqualToFactory.m */; };
+		94A70385172E9777004C0EA4 /* PSTBeEqualToFactoryRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70381172E9777004C0EA4 /* PSTBeEqualToFactoryRoute.m */; };
+		94A70386172E9777004C0EA4 /* PSTRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70383172E9777004C0EA4 /* PSTRouter.m */; };
+		94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70388172E9E68004C0EA4 /* PSTExpect.m */; };
 		94C4650D172C61B900382046 /* PSTBeGreaterThanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650C172C61B900382046 /* PSTBeGreaterThanSpec.m */; };
 		94C4650F172C61DB00382046 /* PSTBeLessThanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650E172C61DB00382046 /* PSTBeLessThanSpec.m */; };
 		94C46511172C62BA00382046 /* PSTBePositiveSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46510172C62BA00382046 /* PSTBePositiveSpec.m */; };
@@ -45,7 +49,6 @@
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
 		94D943BD172C002E0044904D /* PSTPanda.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A7172C002E0044904D /* PSTPanda.m */; };
-		94D943CD172C002E0044904D /* PSTExpectationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943B9172C002E0044904D /* PSTExpectationSpec.m */; };
 		94D943D8172C332A0044904D /* PSTCopyableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943D7172C332A0044904D /* PSTCopyableObject.m */; };
 		94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B0F165D2EBA00282ABE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
@@ -107,20 +110,28 @@
 		942687CD172D2AE100B70F47 /* PSTKindMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTKindMatcher.m; sourceTree = "<group>"; };
 		942687CF172D2E8800B70F47 /* PSTMemberMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMemberMatcher.h; sourceTree = "<group>"; };
 		942687D0172D2E8800B70F47 /* PSTMemberMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMemberMatcher.m; sourceTree = "<group>"; };
-		942687D5172D5AC600B70F47 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpectation.h; sourceTree = "<group>"; };
-		942687D6172D5AC700B70F47 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectation.m; sourceTree = "<group>"; };
-		942687D8172D5B0300B70F47 /* PSTExpectationVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpectationVerifier.h; sourceTree = "<group>"; };
-		942687D9172D5B0300B70F47 /* PSTExpectationVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationVerifier.m; sourceTree = "<group>"; };
-		942687E1172D670300B70F47 /* PSTExpectationVerifierSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationVerifierSpec.m; sourceTree = "<group>"; };
-		942687F3172DB45700B70F47 /* PSTExpectationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpectationFactory.h; sourceTree = "<group>"; };
-		942687F4172DB45700B70F47 /* PSTExpectationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationFactory.m; sourceTree = "<group>"; };
-		942687F6172DB78F00B70F47 /* PSTDisposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTDisposition.h; sourceTree = "<group>"; };
-		942687F7172DB78F00B70F47 /* PSTDisposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDisposition.m; sourceTree = "<group>"; };
-		942687FD172DBB5400B70F47 /* PSTExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpect.h; sourceTree = "<group>"; };
-		942687FE172DBB5400B70F47 /* PSTExpect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpect.m; sourceTree = "<group>"; };
-		94268803172DD55E00B70F47 /* PSTDispositionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDispositionSpec.m; sourceTree = "<group>"; };
 		949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeTrueSpec.m; sourceTree = "<group>"; };
 		949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeFalseSpec.m; sourceTree = "<group>"; };
+		94A7034D172E8995004C0EA4 /* PSTFakeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTFakeFactory.h; sourceTree = "<group>"; };
+		94A7034E172E8995004C0EA4 /* PSTFakeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTFakeFactory.m; sourceTree = "<group>"; };
+		94A70355172E8DA9004C0EA4 /* PSTDispositionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDispositionSpec.m; sourceTree = "<group>"; };
+		94A70357172E8DA9004C0EA4 /* PSTExpectationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationSpec.m; sourceTree = "<group>"; };
+		94A70358172E8DA9004C0EA4 /* PSTVerifierSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTVerifierSpec.m; sourceTree = "<group>"; };
+		94A7035F172E8DBD004C0EA4 /* PSTDisposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTDisposition.h; sourceTree = "<group>"; };
+		94A70360172E8DBD004C0EA4 /* PSTDisposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDisposition.m; sourceTree = "<group>"; };
+		94A70363172E8DBD004C0EA4 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpectation.h; sourceTree = "<group>"; };
+		94A70364172E8DBD004C0EA4 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectation.m; sourceTree = "<group>"; };
+		94A70367172E8DBD004C0EA4 /* PSTVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTVerifier.h; sourceTree = "<group>"; };
+		94A70368172E8DBD004C0EA4 /* PSTVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTVerifier.m; sourceTree = "<group>"; };
+		94A70370172E8DF4004C0EA4 /* PSTBeEqualToFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBeEqualToFactory.h; sourceTree = "<group>"; };
+		94A70371172E8DF4004C0EA4 /* PSTBeEqualToFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToFactory.m; sourceTree = "<group>"; };
+		94A70380172E9777004C0EA4 /* PSTBeEqualToFactoryRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBeEqualToFactoryRoute.h; sourceTree = "<group>"; };
+		94A70381172E9777004C0EA4 /* PSTBeEqualToFactoryRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToFactoryRoute.m; sourceTree = "<group>"; };
+		94A70382172E9777004C0EA4 /* PSTRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTRouter.h; sourceTree = "<group>"; };
+		94A70383172E9777004C0EA4 /* PSTRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTRouter.m; sourceTree = "<group>"; };
+		94A70384172E9777004C0EA4 /* PSTRouterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTRouterDelegate.h; sourceTree = "<group>"; };
+		94A70387172E9E68004C0EA4 /* PSTExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpect.h; sourceTree = "<group>"; };
+		94A70388172E9E68004C0EA4 /* PSTExpect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpect.m; sourceTree = "<group>"; };
 		94C3B128166119DF003B3F43 /* Posit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Posit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToSpec.m; sourceTree = "<group>"; };
 		94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeIdenticalToSpec.m; sourceTree = "<group>"; };
@@ -138,7 +149,6 @@
 		94D943A7172C002E0044904D /* PSTPanda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTPanda.m; sourceTree = "<group>"; };
 		94D943A8172C002E0044904D /* PSTSpecHelper.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTSpecHelper.pch; sourceTree = "<group>"; };
 		94D943A9172C002E0044904D /* Specs-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
-		94D943B9172C002E0044904D /* PSTExpectationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationSpec.m; sourceTree = "<group>"; };
 		94D943D6172C332A0044904D /* PSTCopyableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTCopyableObject.h; sourceTree = "<group>"; };
 		94D943D7172C332A0044904D /* PSTCopyableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTCopyableObject.m; sourceTree = "<group>"; };
 		94D97AFC165D2EBA00282ABE /* libPosit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPosit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,22 +255,68 @@
 			path = "Functional Specs";
 			sourceTree = "<group>";
 		};
+		94A70354172E8DA9004C0EA4 /* Expectations */ = {
+			isa = PBXGroup;
+			children = (
+				94A70355172E8DA9004C0EA4 /* PSTDispositionSpec.m */,
+				94A70357172E8DA9004C0EA4 /* PSTExpectationSpec.m */,
+				94A70358172E8DA9004C0EA4 /* PSTVerifierSpec.m */,
+			);
+			path = Expectations;
+			sourceTree = "<group>";
+		};
+		94A70359172E8DA9004C0EA4 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		94A7035E172E8DBD004C0EA4 /* Expectations */ = {
+			isa = PBXGroup;
+			children = (
+				94A7035F172E8DBD004C0EA4 /* PSTDisposition.h */,
+				94A70360172E8DBD004C0EA4 /* PSTDisposition.m */,
+				94A70363172E8DBD004C0EA4 /* PSTExpectation.h */,
+				94A70364172E8DBD004C0EA4 /* PSTExpectation.m */,
+				94A70367172E8DBD004C0EA4 /* PSTVerifier.h */,
+				94A70368172E8DBD004C0EA4 /* PSTVerifier.m */,
+			);
+			path = Expectations;
+			sourceTree = "<group>";
+		};
+		94A70369172E8DBD004C0EA4 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				94A70370172E8DF4004C0EA4 /* PSTBeEqualToFactory.h */,
+				94A70371172E8DF4004C0EA4 /* PSTBeEqualToFactory.m */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		94A7037F172E9777004C0EA4 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				94A70384172E9777004C0EA4 /* PSTRouterDelegate.h */,
+				94A70382172E9777004C0EA4 /* PSTRouter.h */,
+				94A70383172E9777004C0EA4 /* PSTRouter.m */,
+				94A70380172E9777004C0EA4 /* PSTBeEqualToFactoryRoute.h */,
+				94A70381172E9777004C0EA4 /* PSTBeEqualToFactoryRoute.m */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 		94C3B11A166119DF003B3F43 /* Posit */ = {
 			isa = PBXGroup;
 			children = (
+				94A7035E172E8DBD004C0EA4 /* Expectations */,
+				94A70369172E8DBD004C0EA4 /* Factories */,
 				942687A0172D296900B70F47 /* Filters */,
 				942687A7172D296900B70F47 /* Matchers */,
+				94A7037F172E9777004C0EA4 /* Routing */,
 				94C3B128166119DF003B3F43 /* Posit.h */,
-				942687F6172DB78F00B70F47 /* PSTDisposition.h */,
-				942687F7172DB78F00B70F47 /* PSTDisposition.m */,
-				942687FD172DBB5400B70F47 /* PSTExpect.h */,
-				942687FE172DBB5400B70F47 /* PSTExpect.m */,
-				942687D5172D5AC600B70F47 /* PSTExpectation.h */,
-				942687D6172D5AC700B70F47 /* PSTExpectation.m */,
-				942687F3172DB45700B70F47 /* PSTExpectationFactory.h */,
-				942687F4172DB45700B70F47 /* PSTExpectationFactory.m */,
-				942687D8172D5B0300B70F47 /* PSTExpectationVerifier.h */,
-				942687D9172D5B0300B70F47 /* PSTExpectationVerifier.m */,
+				94A70387172E9E68004C0EA4 /* PSTExpect.h */,
+				94A70388172E9E68004C0EA4 /* PSTExpect.m */,
 			);
 			path = Posit;
 			sourceTree = "<group>";
@@ -278,11 +334,10 @@
 		94D943AA172C002E0044904D /* Unit Specs */ = {
 			isa = PBXGroup;
 			children = (
+				94A70354172E8DA9004C0EA4 /* Expectations */,
+				94A70359172E8DA9004C0EA4 /* Factories */,
 				942687B8172D297900B70F47 /* Filters */,
 				942687BC172D297900B70F47 /* Matchers */,
-				94268803172DD55E00B70F47 /* PSTDispositionSpec.m */,
-				94D943B9172C002E0044904D /* PSTExpectationSpec.m */,
-				942687E1172D670300B70F47 /* PSTExpectationVerifierSpec.m */,
 			);
 			path = "Unit Specs";
 			sourceTree = "<group>";
@@ -292,6 +347,8 @@
 			children = (
 				94D943D6172C332A0044904D /* PSTCopyableObject.h */,
 				94D943D7172C332A0044904D /* PSTCopyableObject.m */,
+				94A7034D172E8995004C0EA4 /* PSTFakeFactory.h */,
+				94A7034E172E8995004C0EA4 /* PSTFakeFactory.m */,
 				94D943A2172C002E0044904D /* PSTElephant.h */,
 				94D943A3172C002E0044904D /* PSTElephant.m */,
 				94D943A4172C002E0044904D /* PSTMammal.h */,
@@ -456,11 +513,12 @@
 				942687B7172D296900B70F47 /* PSTLessMatcher.m in Sources */,
 				942687CE172D2AE100B70F47 /* PSTKindMatcher.m in Sources */,
 				942687D1172D2E8900B70F47 /* PSTMemberMatcher.m in Sources */,
-				942687D7172D5AC700B70F47 /* PSTExpectation.m in Sources */,
-				942687DA172D5B0300B70F47 /* PSTExpectationVerifier.m in Sources */,
-				942687F5172DB45800B70F47 /* PSTExpectationFactory.m in Sources */,
-				942687F8172DB79000B70F47 /* PSTDisposition.m in Sources */,
-				942687FF172DBB5500B70F47 /* PSTExpect.m in Sources */,
+				94A7036B172E8DBD004C0EA4 /* PSTDisposition.m in Sources */,
+				94A7036D172E8DBD004C0EA4 /* PSTExpectation.m in Sources */,
+				94A7036F172E8DBD004C0EA4 /* PSTVerifier.m in Sources */,
+				94A70372172E8DF4004C0EA4 /* PSTBeEqualToFactory.m in Sources */,
+				94A70385172E9777004C0EA4 /* PSTBeEqualToFactoryRoute.m in Sources */,
+				94A70386172E9777004C0EA4 /* PSTRouter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,12 +529,9 @@
 				94D943BB172C002E0044904D /* PSTElephant.m in Sources */,
 				94D943BC172C002E0044904D /* PSTMammal.m in Sources */,
 				94D943BD172C002E0044904D /* PSTPanda.m in Sources */,
-				94D943CD172C002E0044904D /* PSTExpectationSpec.m in Sources */,
 				94D943D8172C332A0044904D /* PSTCopyableObject.m in Sources */,
 				949AD65C172C5BA500D08674 /* PSTBeTrueSpec.m in Sources */,
 				949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */,
-				94C46509172C5FE600382046 /* PSTBeEqualToSpec.m in Sources */,
-				94C4650B172C616000382046 /* PSTBeIdenticalToSpec.m in Sources */,
 				94C4650D172C61B900382046 /* PSTBeGreaterThanSpec.m in Sources */,
 				94C4650F172C61DB00382046 /* PSTBeLessThanSpec.m in Sources */,
 				94C46511172C62BA00382046 /* PSTBePositiveSpec.m in Sources */,
@@ -492,8 +547,13 @@
 				942687C9172D297900B70F47 /* PSTKindMatcherSpec.m in Sources */,
 				942687CA172D297900B70F47 /* PSTLessMatcherSpec.m in Sources */,
 				942687CB172D297900B70F47 /* PSTMemberMatcherSpec.m in Sources */,
-				942687E2172D670300B70F47 /* PSTExpectationVerifierSpec.m in Sources */,
-				94268804172DD55E00B70F47 /* PSTDispositionSpec.m in Sources */,
+				94A7034F172E8995004C0EA4 /* PSTFakeFactory.m in Sources */,
+				94A70351172E8B29004C0EA4 /* PSTBeEqualToSpec.m in Sources */,
+				94A70353172E8CF5004C0EA4 /* PSTBeIdenticalToSpec.m in Sources */,
+				94A7035A172E8DA9004C0EA4 /* PSTDispositionSpec.m in Sources */,
+				94A7035C172E8DA9004C0EA4 /* PSTExpectationSpec.m in Sources */,
+				94A7035D172E8DA9004C0EA4 /* PSTVerifierSpec.m in Sources */,
+				94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

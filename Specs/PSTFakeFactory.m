@@ -20,6 +20,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTExpectationVerifier)
+#import "PSTFakeFactory.h"
 
-SpecEnd
+@interface PSTFakeFactory ()
+@property (strong, nonatomic) id yield;
+@end
+
+@implementation PSTFakeFactory
+
+- (id)initWithYield:(id)yield
+{
+    if (self = [self init]) {
+        [self setYield:yield];
+    }
+    return self;
+}
+
+- (id)beEqualTo:(id)object
+{
+    return [self yield];
+}
+
+@end

@@ -20,24 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTCopyableObject.h"
+#import <Foundation/Foundation.h>
+@protocol PSTRouterDelegate;
 
-SpecBegin(PSTBeIdenticalTo)
+@interface PSTRouter : NSObject
 
-__block id object;
+- (id)initWithDelegate:(id<PSTRouterDelegate>)delegate routes:(NSArray *)routes;
 
-describe(@"An object", ^{
-    before(^{
-        object = [[PSTCopyableObject alloc] init];
-    });
-    
-    it(@"is identical to itself", ^{
-//        STAssertNoThrow([[expect(object) to] beIdenticalTo:object], @"");
-    });
-    
-    it(@"is not identical to a copy", ^{
-//        STAssertThrows([[expect(object) to] beIdenticalTo:[object copy]], @"");
-    });
-});
-
-SpecEnd
+@end

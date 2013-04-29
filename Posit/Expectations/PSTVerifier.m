@@ -20,24 +20,20 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTCopyableObject.h"
+#import "PSTVerifier.h"
+#import "PSTExpectation.h"
+#import "PSTRouter.h"
 
-SpecBegin(PSTBeIdenticalTo)
+@interface PSTVerifier ()
+@end
 
-__block id object;
+@implementation PSTVerifier
 
-describe(@"An object", ^{
-    before(^{
-        object = [[PSTCopyableObject alloc] init];
-    });
-    
-    it(@"is identical to itself", ^{
-//        STAssertNoThrow([[expect(object) to] beIdenticalTo:object], @"");
-    });
-    
-    it(@"is not identical to a copy", ^{
-//        STAssertThrows([[expect(object) to] beIdenticalTo:[object copy]], @"");
-    });
-});
+- (void)router:(PSTRouter *)router didRouteInvocation:(NSInvocation *)invocation
+{
+    __unsafe_unretained PSTExpectation *expectation;
+    [invocation getReturnValue:&expectation];
+    [expectation verify];
+}
 
-SpecEnd
+@end
