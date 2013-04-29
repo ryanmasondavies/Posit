@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 // Expectations
-#import "PSTDisposition.h"
+#import "PSTDispositionDefiner.h"
 #import "PSTExpect.h"
 #import "PSTExpectation.h"
 #import "PSTBeEqualToFactoryRoute.h"

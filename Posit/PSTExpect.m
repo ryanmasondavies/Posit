@@ -21,7 +21,7 @@
 // THE SOFTWARE.
 
 #import "PSTExpect.h"
-#import "PSTDisposition.h"
+#import "PSTDispositionDefiner.h"
 #import "PSTExpectation.h"
 #import "PSTRouter.h"
 #import "PSTBeEqualToFactoryRoute.h"
@@ -37,5 +37,5 @@ id expect(id subject)
     
     PSTVerifier *verifier = [[PSTVerifier alloc] init];
     PSTRouter *router = [[PSTRouter alloc] initWithDelegate:verifier routes:routes];
-    return [[PSTDisposition alloc] initWithPositive:router negative:nil];
+    return [[PSTDispositionDefiner alloc] initWithPositive:router negative:nil];
 }

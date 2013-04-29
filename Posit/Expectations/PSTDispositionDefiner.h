@@ -22,11 +22,21 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PSTDisposition : NSObject
+/** To be or not to be. Defines disposition in a chain of methods. */
+@interface PSTDispositionDefiner : NSObject
 
+/**
+ Initialize a disposition.
+ @param positive The positive disposition.
+ @param negative The negative disposition.
+ @return An initialized disposition.
+ */
 - (id)initWithPositive:(id)positive negative:(id)negative;
 
+/** @return The positive disposition. */
 - (id)to;
+
+/** @return The negative disposition. */
 - (id)notTo;
 
 @end

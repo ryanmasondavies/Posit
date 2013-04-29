@@ -20,12 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTDisposition)
+SpecBegin(PSTDispositionDefiner)
 
 describe(@"-to", ^{
     it(@"returns the positive object", ^{
         id positive = [[NSObject alloc] init];
-        PSTDisposition *disposition = [[PSTDisposition alloc] initWithPositive:positive negative:nil];
+        PSTDispositionDefiner *disposition = [[PSTDispositionDefiner alloc] initWithPositive:positive negative:nil];
         STAssertEquals(positive, [disposition to], @"");
     });
 });
@@ -33,7 +33,7 @@ describe(@"-to", ^{
 describe(@"-notTo", ^{
     it(@"returns the negative object", ^{
         id negative = [[NSObject alloc] init];
-        PSTDisposition *disposition = [[PSTDisposition alloc] initWithPositive:nil negative:negative];
+        PSTDispositionDefiner *disposition = [[PSTDispositionDefiner alloc] initWithPositive:nil negative:negative];
         STAssertEquals(negative, [disposition notTo], @"");
     });
 });

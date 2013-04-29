@@ -20,14 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTDisposition.h"
+#import "PSTDispositionDefiner.h"
 
-@interface PSTDisposition ()
+@interface PSTDispositionDefiner ()
 @property (strong, nonatomic) id positive;
 @property (strong, nonatomic) id negative;
 @end
 
-@implementation PSTDisposition
+@implementation PSTDispositionDefiner
 
 - (id)initWithPositive:(id)positive negative:(id)negative
 {

@@ -23,6 +23,7 @@
 #import <Foundation/Foundation.h>
 #import "PSTRouterDelegate.h"
 
+/** Verifies expectations returned by routing messages. */
 @interface PSTVerifier : NSObject <PSTRouterDelegate>
 
 @end
