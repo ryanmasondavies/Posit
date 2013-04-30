@@ -39,10 +39,6 @@
 		94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70388172E9E68004C0EA4 /* PSTExpect.m */; };
 		94A7038C172EA954004C0EA4 /* PSTFakeExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7038B172EA954004C0EA4 /* PSTFakeExpectation.m */; };
 		94A7038F172EA9DB004C0EA4 /* PSTFakeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7038E172EA9DB004C0EA4 /* PSTFakeFactory.m */; };
-		94A703A6172EB5A1004C0EA4 /* PSTBeEqualToFactoryAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A703A2172EB5A1004C0EA4 /* PSTBeEqualToFactoryAdapter.m */; };
-		94A703A7172EB5A1004C0EA4 /* PSTMethodDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A703A4172EB5A1004C0EA4 /* PSTMethodDispatcher.m */; };
-		94A703AB172EB60B004C0EA4 /* PSTBeEqualToFactoryAdapterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A703A9172EB60B004C0EA4 /* PSTBeEqualToFactoryAdapterSpec.m */; };
-		94A703AC172EB60B004C0EA4 /* PSTMethodDispatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A703AA172EB60B004C0EA4 /* PSTMethodDispatcherSpec.m */; };
 		94C4650D172C61B900382046 /* PSTBeGreaterThanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650C172C61B900382046 /* PSTBeGreaterThanSpec.m */; };
 		94C4650F172C61DB00382046 /* PSTBeLessThanSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650E172C61DB00382046 /* PSTBeLessThanSpec.m */; };
 		94C46511172C62BA00382046 /* PSTBePositiveSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46510172C62BA00382046 /* PSTBePositiveSpec.m */; };
@@ -132,13 +128,6 @@
 		94A7038B172EA954004C0EA4 /* PSTFakeExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTFakeExpectation.m; sourceTree = "<group>"; };
 		94A7038D172EA9DB004C0EA4 /* PSTFakeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTFakeFactory.h; sourceTree = "<group>"; };
 		94A7038E172EA9DB004C0EA4 /* PSTFakeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTFakeFactory.m; sourceTree = "<group>"; };
-		94A703A1172EB5A1004C0EA4 /* PSTBeEqualToFactoryAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBeEqualToFactoryAdapter.h; sourceTree = "<group>"; };
-		94A703A2172EB5A1004C0EA4 /* PSTBeEqualToFactoryAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToFactoryAdapter.m; sourceTree = "<group>"; };
-		94A703A3172EB5A1004C0EA4 /* PSTMethodDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMethodDispatcher.h; sourceTree = "<group>"; };
-		94A703A4172EB5A1004C0EA4 /* PSTMethodDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMethodDispatcher.m; sourceTree = "<group>"; };
-		94A703A5172EB5A1004C0EA4 /* PSTMethodDispatcherDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMethodDispatcherDelegate.h; sourceTree = "<group>"; };
-		94A703A9172EB60B004C0EA4 /* PSTBeEqualToFactoryAdapterSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToFactoryAdapterSpec.m; sourceTree = "<group>"; };
-		94A703AA172EB60B004C0EA4 /* PSTMethodDispatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMethodDispatcherSpec.m; sourceTree = "<group>"; };
 		94C3B128166119DF003B3F43 /* Posit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Posit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToSpec.m; sourceTree = "<group>"; };
 		94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeIdenticalToSpec.m; sourceTree = "<group>"; };
@@ -301,31 +290,9 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
-		94A703A0172EB5A1004C0EA4 /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				94A703A3172EB5A1004C0EA4 /* PSTMethodDispatcher.h */,
-				94A703A4172EB5A1004C0EA4 /* PSTMethodDispatcher.m */,
-				94A703A5172EB5A1004C0EA4 /* PSTMethodDispatcherDelegate.h */,
-				94A703A1172EB5A1004C0EA4 /* PSTBeEqualToFactoryAdapter.h */,
-				94A703A2172EB5A1004C0EA4 /* PSTBeEqualToFactoryAdapter.m */,
-			);
-			path = Adapters;
-			sourceTree = "<group>";
-		};
-		94A703A8172EB60B004C0EA4 /* Adapting */ = {
-			isa = PBXGroup;
-			children = (
-				94A703AA172EB60B004C0EA4 /* PSTMethodDispatcherSpec.m */,
-				94A703A9172EB60B004C0EA4 /* PSTBeEqualToFactoryAdapterSpec.m */,
-			);
-			path = Adapting;
-			sourceTree = "<group>";
-		};
 		94C3B11A166119DF003B3F43 /* Posit */ = {
 			isa = PBXGroup;
 			children = (
-				94A703A0172EB5A1004C0EA4 /* Adapters */,
 				94A7035E172E8DBD004C0EA4 /* Expectations */,
 				94A70369172E8DBD004C0EA4 /* Factories */,
 				942687A0172D296900B70F47 /* Filters */,
@@ -350,7 +317,6 @@
 		94D943AA172C002E0044904D /* Unit Specs */ = {
 			isa = PBXGroup;
 			children = (
-				94A703A8172EB60B004C0EA4 /* Adapting */,
 				94A70354172E8DA9004C0EA4 /* Expectations */,
 				94A70359172E8DA9004C0EA4 /* Factories */,
 				942687B8172D297900B70F47 /* Filters */,
@@ -536,8 +502,6 @@
 				94A7036D172E8DBD004C0EA4 /* PSTExpectation.m in Sources */,
 				94A7036F172E8DBD004C0EA4 /* PSTVerifier.m in Sources */,
 				94A70372172E8DF4004C0EA4 /* PSTBeEqualToFactory.m in Sources */,
-				94A703A6172EB5A1004C0EA4 /* PSTBeEqualToFactoryAdapter.m in Sources */,
-				94A703A7172EB5A1004C0EA4 /* PSTMethodDispatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,8 +538,6 @@
 				94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */,
 				94A7038C172EA954004C0EA4 /* PSTFakeExpectation.m in Sources */,
 				94A7038F172EA9DB004C0EA4 /* PSTFakeFactory.m in Sources */,
-				94A703AB172EB60B004C0EA4 /* PSTBeEqualToFactoryAdapterSpec.m in Sources */,
-				94A703AC172EB60B004C0EA4 /* PSTMethodDispatcherSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
