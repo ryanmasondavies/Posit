@@ -40,10 +40,7 @@
  */
 - (void)apply:(id<PSTMatcher>)matcher exception:(NSException *)exception;
 
-/** @return The expectation. */
-- (id)to;
-
-/** @param object The object expected to match the subject. */
-- (void)beEqualTo:(id)object;
+- (void)toBeEqualTo:(id)object;
+ - (void)notToBeEqualTo:(id)object;
 
 @end

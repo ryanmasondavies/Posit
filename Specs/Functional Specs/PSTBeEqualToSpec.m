@@ -22,13 +22,27 @@
 
 SpecBegin(PSTBeEqualTo)
 
-describe(@"'Foobar'", ^{
-    it(@"is equal to 'Foobar'", ^{
-        STAssertNoThrow([[expect(@"Foobar") to] beEqualTo:@"Foobar"], nil);
+describe(@"expect 'Foobar' to be equal to 'Foobar'", ^{
+    it(@"doesn't throw an exception", ^{
+        STAssertNoThrow([expect(@"Foobar") toBeEqualTo:@"Foobar"], nil);
     });
-    
-    it(@"is not equal to 'Boofar'", ^{
-        STAssertThrows([[expect(@"Foobar") to] beEqualTo:@"Barfoo"], nil);
+});
+
+describe(@"expect 'Foobar' to be equal to 'Boofar'", ^{
+    it(@"throws an exception", ^{
+        STAssertThrows([expect(@"Foobar") toBeEqualTo:@"Barfoo"], nil);
+    });
+});
+
+describe(@"expect 'Foobar' not to be equal to 'Foobar'", ^{
+    it(@"throws an exception", ^{
+        STAssertThrows([expect(@"Foobar") notToBeEqualTo:@"Foobar"], nil);
+    });
+});
+
+describe(@"expect 'Foobar' not to be equal to 'Barfoo'", ^{
+    it(@"doesn't throw an exception", ^{
+        STAssertNoThrow([expect(@"Foobar") notToBeEqualTo:@"Barfoo"], nil);
     });
 });
 
