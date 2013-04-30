@@ -29,13 +29,21 @@
 /**
  Initialize an expectation.
  @param subject The subject to be verified.
- @param matcher The matcher to compare the subject with.
- @param exception The exception to throw if the subject does not match the matcher.
  @return An initialized expectation.
  */
-- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception;
+- (id)initWithSubject:(id)subject;
 
-/** Raises exception if the matcher does not match the subject. */
-- (void)verify;
+/**
+ Applies the matcher to the subject, and raises the exception if it does not match.
+ @param matcher The matcher to apply.
+ @param exception The exception to raise if the matcher doesn't match the subject.
+ */
+- (void)apply:(id<PSTMatcher>)matcher exception:(NSException *)exception;
+
+/** @return The expectation. */
+- (id)to;
+
+/** @param object The object expected to match the subject. */
+- (void)beEqualTo:(id)object;
 
 @end

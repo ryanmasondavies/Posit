@@ -21,21 +21,9 @@
 // THE SOFTWARE.
 
 #import "PSTExpect.h"
-#import "PSTDispositionDefiner.h"
 #import "PSTExpectation.h"
-#import "PSTMethodDispatcher.h"
-#import "PSTBeEqualToFactoryAdapter.h"
-#import "PSTBeEqualToFactory.h"
-#import "PSTVerifier.h"
 
 id expect(id subject)
 {
-    id factory = [[PSTBeEqualToFactory alloc] initWithSubject:subject];
-    
-    NSMutableArray *adapters = [[NSMutableArray alloc] init];
-    adapters[0] = [[PSTBeEqualToFactoryAdapter alloc] initWithFactory:factory];
-    
-    PSTVerifier *verifier = [[PSTVerifier alloc] init];
-    PSTMethodDispatcher *router = [[PSTMethodDispatcher alloc] initWithReceivers:adapters delegate:verifier];
-    return [[PSTDispositionDefiner alloc] initWithPositive:router negative:nil];
+    return [[PSTExpectation alloc] initWithSubject:subject];
 }

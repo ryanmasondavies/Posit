@@ -29,13 +29,8 @@
 		949AD65E172C5C7700D08674 /* PSTBeFalseSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */; };
 		94A70351172E8B29004C0EA4 /* PSTBeEqualToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46508172C5FE600382046 /* PSTBeEqualToSpec.m */; };
 		94A70353172E8CF5004C0EA4 /* PSTBeIdenticalToSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C4650A172C616000382046 /* PSTBeIdenticalToSpec.m */; };
-		94A7035A172E8DA9004C0EA4 /* PSTDispositionDefinerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70355172E8DA9004C0EA4 /* PSTDispositionDefinerSpec.m */; };
 		94A7035C172E8DA9004C0EA4 /* PSTExpectationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70357172E8DA9004C0EA4 /* PSTExpectationSpec.m */; };
-		94A7035D172E8DA9004C0EA4 /* PSTVerifierSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70358172E8DA9004C0EA4 /* PSTVerifierSpec.m */; };
-		94A7036B172E8DBD004C0EA4 /* PSTDispositionDefiner.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70360172E8DBD004C0EA4 /* PSTDispositionDefiner.m */; };
 		94A7036D172E8DBD004C0EA4 /* PSTExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70364172E8DBD004C0EA4 /* PSTExpectation.m */; };
-		94A7036F172E8DBD004C0EA4 /* PSTVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70368172E8DBD004C0EA4 /* PSTVerifier.m */; };
-		94A70372172E8DF4004C0EA4 /* PSTBeEqualToFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70371172E8DF4004C0EA4 /* PSTBeEqualToFactory.m */; };
 		94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A70388172E9E68004C0EA4 /* PSTExpect.m */; };
 		94A7038C172EA954004C0EA4 /* PSTFakeExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7038B172EA954004C0EA4 /* PSTFakeExpectation.m */; };
 		94A7038F172EA9DB004C0EA4 /* PSTFakeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A7038E172EA9DB004C0EA4 /* PSTFakeFactory.m */; };
@@ -111,17 +106,9 @@
 		942687D0172D2E8800B70F47 /* PSTMemberMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTMemberMatcher.m; sourceTree = "<group>"; };
 		949AD65B172C5BA500D08674 /* PSTBeTrueSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeTrueSpec.m; sourceTree = "<group>"; };
 		949AD65D172C5C7700D08674 /* PSTBeFalseSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeFalseSpec.m; sourceTree = "<group>"; };
-		94A70355172E8DA9004C0EA4 /* PSTDispositionDefinerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDispositionDefinerSpec.m; sourceTree = "<group>"; };
 		94A70357172E8DA9004C0EA4 /* PSTExpectationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationSpec.m; sourceTree = "<group>"; };
-		94A70358172E8DA9004C0EA4 /* PSTVerifierSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTVerifierSpec.m; sourceTree = "<group>"; };
-		94A7035F172E8DBD004C0EA4 /* PSTDispositionDefiner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTDispositionDefiner.h; sourceTree = "<group>"; };
-		94A70360172E8DBD004C0EA4 /* PSTDispositionDefiner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTDispositionDefiner.m; sourceTree = "<group>"; };
 		94A70363172E8DBD004C0EA4 /* PSTExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpectation.h; sourceTree = "<group>"; };
 		94A70364172E8DBD004C0EA4 /* PSTExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectation.m; sourceTree = "<group>"; };
-		94A70367172E8DBD004C0EA4 /* PSTVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTVerifier.h; sourceTree = "<group>"; };
-		94A70368172E8DBD004C0EA4 /* PSTVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTVerifier.m; sourceTree = "<group>"; };
-		94A70370172E8DF4004C0EA4 /* PSTBeEqualToFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBeEqualToFactory.h; sourceTree = "<group>"; };
-		94A70371172E8DF4004C0EA4 /* PSTBeEqualToFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeEqualToFactory.m; sourceTree = "<group>"; };
 		94A70387172E9E68004C0EA4 /* PSTExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpect.h; sourceTree = "<group>"; };
 		94A70388172E9E68004C0EA4 /* PSTExpect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpect.m; sourceTree = "<group>"; };
 		94A7038A172EA954004C0EA4 /* PSTFakeExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTFakeExpectation.h; sourceTree = "<group>"; };
@@ -254,47 +241,24 @@
 		94A70354172E8DA9004C0EA4 /* Expectations */ = {
 			isa = PBXGroup;
 			children = (
-				94A70355172E8DA9004C0EA4 /* PSTDispositionDefinerSpec.m */,
 				94A70357172E8DA9004C0EA4 /* PSTExpectationSpec.m */,
-				94A70358172E8DA9004C0EA4 /* PSTVerifierSpec.m */,
 			);
 			path = Expectations;
-			sourceTree = "<group>";
-		};
-		94A70359172E8DA9004C0EA4 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Factories;
 			sourceTree = "<group>";
 		};
 		94A7035E172E8DBD004C0EA4 /* Expectations */ = {
 			isa = PBXGroup;
 			children = (
-				94A7035F172E8DBD004C0EA4 /* PSTDispositionDefiner.h */,
-				94A70360172E8DBD004C0EA4 /* PSTDispositionDefiner.m */,
 				94A70363172E8DBD004C0EA4 /* PSTExpectation.h */,
 				94A70364172E8DBD004C0EA4 /* PSTExpectation.m */,
-				94A70367172E8DBD004C0EA4 /* PSTVerifier.h */,
-				94A70368172E8DBD004C0EA4 /* PSTVerifier.m */,
 			);
 			path = Expectations;
-			sourceTree = "<group>";
-		};
-		94A70369172E8DBD004C0EA4 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				94A70370172E8DF4004C0EA4 /* PSTBeEqualToFactory.h */,
-				94A70371172E8DF4004C0EA4 /* PSTBeEqualToFactory.m */,
-			);
-			path = Factories;
 			sourceTree = "<group>";
 		};
 		94C3B11A166119DF003B3F43 /* Posit */ = {
 			isa = PBXGroup;
 			children = (
 				94A7035E172E8DBD004C0EA4 /* Expectations */,
-				94A70369172E8DBD004C0EA4 /* Factories */,
 				942687A0172D296900B70F47 /* Filters */,
 				942687A7172D296900B70F47 /* Matchers */,
 				94C3B128166119DF003B3F43 /* Posit.h */,
@@ -318,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				94A70354172E8DA9004C0EA4 /* Expectations */,
-				94A70359172E8DA9004C0EA4 /* Factories */,
 				942687B8172D297900B70F47 /* Filters */,
 				942687BC172D297900B70F47 /* Matchers */,
 			);
@@ -498,10 +461,7 @@
 				942687B7172D296900B70F47 /* PSTLessMatcher.m in Sources */,
 				942687CE172D2AE100B70F47 /* PSTKindMatcher.m in Sources */,
 				942687D1172D2E8900B70F47 /* PSTMemberMatcher.m in Sources */,
-				94A7036B172E8DBD004C0EA4 /* PSTDispositionDefiner.m in Sources */,
 				94A7036D172E8DBD004C0EA4 /* PSTExpectation.m in Sources */,
-				94A7036F172E8DBD004C0EA4 /* PSTVerifier.m in Sources */,
-				94A70372172E8DF4004C0EA4 /* PSTBeEqualToFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,9 +492,7 @@
 				942687CB172D297900B70F47 /* PSTMemberMatcherSpec.m in Sources */,
 				94A70351172E8B29004C0EA4 /* PSTBeEqualToSpec.m in Sources */,
 				94A70353172E8CF5004C0EA4 /* PSTBeIdenticalToSpec.m in Sources */,
-				94A7035A172E8DA9004C0EA4 /* PSTDispositionDefinerSpec.m in Sources */,
 				94A7035C172E8DA9004C0EA4 /* PSTExpectationSpec.m in Sources */,
-				94A7035D172E8DA9004C0EA4 /* PSTVerifierSpec.m in Sources */,
 				94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */,
 				94A7038C172EA954004C0EA4 /* PSTFakeExpectation.m in Sources */,
 				94A7038F172EA9DB004C0EA4 /* PSTFakeFactory.m in Sources */,

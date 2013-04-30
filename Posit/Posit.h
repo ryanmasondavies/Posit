@@ -21,14 +21,8 @@
 // THE SOFTWARE.
 
 // Expectations
-#import "PSTDispositionDefiner.h"
 #import "PSTExpect.h"
 #import "PSTExpectation.h"
-#import "PSTBeEqualToFactoryAdapter.h"
-#import "PSTVerifier.h"
-
-// Factories
-#import "PSTBeEqualToFactory.h"
 
 // Filters
 #import "PSTInversionFilter.h"

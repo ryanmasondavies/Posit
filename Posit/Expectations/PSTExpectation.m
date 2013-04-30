@@ -21,31 +21,47 @@
 // THE SOFTWARE.
 
 #import "PSTExpectation.h"
+#import <SenTestingKit/SenTestingKit.h>
 #import "PSTMatcher.h"
+#import "PSTEqualityMatcher.h"
 
 @interface PSTExpectation ()
 @property (strong, nonatomic) id subject;
-@property (strong, nonatomic) id<PSTMatcher> matcher;
-@property (strong, nonatomic) NSException *exception;
 @end
 
 @implementation PSTExpectation
 
-- (id)initWithSubject:(id)subject matcher:(id<PSTMatcher>)matcher exception:(NSException *)exception
+- (id)initWithSubject:(id)subject
 {
     if (self = [self init]) {
         [self setSubject:subject];
-        [self setMatcher:matcher];
-        [self setException:exception];
     }
     return self;
 }
 
-- (void)verify
+- (id)to
 {
-    if ([[self matcher] matches:[self subject]] == NO) {
-        [[self exception] raise];
+    return self;
+}
+
+- (id)notTo
+{
+    return self;
+}
+
+- (void)apply:(id<PSTMatcher>)matcher exception:(NSException *)exception
+{
+    if ([matcher matches:[self subject]] == NO) {
+        [exception raise];
     }
+}
+
+- (void)beEqualTo:(id)object
+{
+    id matcher = [[PSTEqualityMatcher alloc] initWithExpected:object];
+    NSString *reason = [NSString stringWithFormat:@"Expected %@ to be equal to %@.", [self subject], object];
+    NSException *exception = [[NSException alloc] initWithName:SenTestFailureException reason:reason userInfo:@{SenTestFilenameKey: @(__FILE__), SenTestLineNumberKey: @(__LINE__)}];
+    [self apply:matcher exception:exception];
 }
 
 @end
