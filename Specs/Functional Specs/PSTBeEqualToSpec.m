@@ -24,25 +24,31 @@ SpecBegin(PSTBeEqualTo)
 
 describe(@"expect 'Foobar' to be equal to 'Foobar'", ^{
     it(@"doesn't throw an exception", ^{
-        STAssertNoThrow([expect(@"Foobar") toBeEqualTo:@"Foobar"], nil);
+        STAssertNoThrow([[expect(@"Foobar") to] beEqualTo:@"Foobar"], nil);
     });
 });
 
 describe(@"expect 'Foobar' to be equal to 'Boofar'", ^{
-    it(@"throws an exception", ^{
-        STAssertThrows([expect(@"Foobar") toBeEqualTo:@"Barfoo"], nil);
+    it(@"throws an exception with the reason 'Expected 'Foobar' to be equal to 'Barfoo'.'", ^{
+        NSException *exception = nil;
+        @try { [[expect(@"Foobar") to] beEqualTo:@"Barfoo"]; }
+        @catch(NSException *e) { exception = e; };
+        STAssertEqualObjects([exception reason], @"Expected 'Foobar' to be equal to 'Barfoo'.", nil);
     });
 });
 
 describe(@"expect 'Foobar' not to be equal to 'Foobar'", ^{
-    it(@"throws an exception", ^{
-        STAssertThrows([expect(@"Foobar") notToBeEqualTo:@"Foobar"], nil);
+    it(@"throws an exception with the reason 'Expected 'Foobar' not to be equal to 'Foobar'.", ^{
+        NSException *exception = nil;
+        @try { [[expect(@"Foobar") notTo] beEqualTo:@"Foobar"]; }
+        @catch(NSException *e) { exception = e; };
+        STAssertEqualObjects([exception reason], @"Expected 'Foobar' not to be equal to 'Foobar'.", nil);
     });
 });
 
 describe(@"expect 'Foobar' not to be equal to 'Barfoo'", ^{
     it(@"doesn't throw an exception", ^{
-        STAssertNoThrow([expect(@"Foobar") notToBeEqualTo:@"Barfoo"], nil);
+        STAssertNoThrow([[expect(@"Foobar") notTo] beEqualTo:@"Barfoo"], nil);
     });
 });
 

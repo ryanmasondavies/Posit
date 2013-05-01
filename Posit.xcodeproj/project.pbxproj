@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9415C1841731A153003454F7 /* PSTExpectationMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9415C1831731A152003454F7 /* PSTExpectationMaker.m */; };
 		942687B1172D296900B70F47 /* PSTAllFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A2172D296900B70F47 /* PSTAllFilter.m */; };
 		942687B2172D296900B70F47 /* PSTInversionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A4172D296900B70F47 /* PSTInversionFilter.m */; };
 		942687B3172D296900B70F47 /* PSTAnyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A6172D296900B70F47 /* PSTAnyFilter.m */; };
@@ -76,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		1FB6FBC4688D47E1AB6618E4 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9415C1821731A152003454F7 /* PSTExpectationMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpectationMaker.h; sourceTree = "<group>"; };
+		9415C1831731A152003454F7 /* PSTExpectationMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationMaker.m; sourceTree = "<group>"; };
 		942687A1172D296900B70F47 /* PSTAllFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAllFilter.h; sourceTree = "<group>"; };
 		942687A2172D296900B70F47 /* PSTAllFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAllFilter.m; sourceTree = "<group>"; };
 		942687A3172D296900B70F47 /* PSTInversionFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTInversionFilter.h; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 				94C3B128166119DF003B3F43 /* Posit.h */,
 				94A70387172E9E68004C0EA4 /* PSTExpect.h */,
 				94A70388172E9E68004C0EA4 /* PSTExpect.m */,
+				9415C1821731A152003454F7 /* PSTExpectationMaker.h */,
+				9415C1831731A152003454F7 /* PSTExpectationMaker.m */,
 			);
 			path = Posit;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				942687CE172D2AE100B70F47 /* PSTKindMatcher.m in Sources */,
 				942687D1172D2E8900B70F47 /* PSTMemberMatcher.m in Sources */,
 				94A7036D172E8DBD004C0EA4 /* PSTExpectation.m in Sources */,
+				9415C1841731A153003454F7 /* PSTExpectationMaker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

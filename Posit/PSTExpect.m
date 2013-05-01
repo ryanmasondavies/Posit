@@ -21,9 +21,9 @@
 // THE SOFTWARE.
 
 #import "PSTExpect.h"
-#import "PSTExpectation.h"
+#import "PSTExpectationMaker.h"
 
 id expect(id subject)
 {
-    return [[PSTExpectation alloc] initWithSubject:subject];
+    return [[PSTExpectationMaker alloc] initWithSubject:subject];
 }

@@ -22,36 +22,36 @@
 
 SpecBegin(PSTExpectation)
 
-//__block id<PSTMatcher> matcher;
-//__block NSException *exception;
-//__block PSTExpectation *expectation;
-//
-//before(^{
-//    matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
-//    exception = [[NSException alloc] initWithName:@"Exception" reason:nil userInfo:nil];
-//});
-//
-//when(@"Matcher matches subject", ^{
-//    before(^{
-//        expectation = [[PSTExpectation alloc] initWithSubject:@TRUE matcher:matcher exception:exception];
-//    });
-//    
-//    it(@"does not throw exception", ^{
-//        STAssertNoThrow([expectation verify], @"");
-//    });
-//});
-//
-//when(@"Matcher does not match subject", ^{
-//    before(^{
-//        expectation = [[PSTExpectation alloc] initWithSubject:@FALSE matcher:matcher exception:exception];
-//    });
-//    
-//    it(@"throws exception", ^{
-//        NSException *caught = nil;
-//        @try { [expectation verify]; }
-//        @catch(NSException *e) { caught = e; };
-//        STAssertEqualObjects(caught, exception, @"");
-//    });
-//});
+__block id<PSTMatcher> matcher;
+__block NSException *exception;
+__block PSTExpectation *expectation;
+
+before(^{
+    matcher = [[PSTEqualityMatcher alloc] initWithExpected:@TRUE];
+    exception = [[NSException alloc] initWithName:@"Exception" reason:nil userInfo:nil];
+});
+
+when(@"Matcher matches subject", ^{
+    before(^{
+        expectation = [[PSTExpectation alloc] initWithSubject:@TRUE matcher:matcher exception:exception];
+    });
+    
+    it(@"does not throw exception", ^{
+        STAssertNoThrow([expectation verify], @"");
+    });
+});
+
+when(@"Matcher does not match subject", ^{
+    before(^{
+        expectation = [[PSTExpectation alloc] initWithSubject:@FALSE matcher:matcher exception:exception];
+    });
+    
+    it(@"throws exception", ^{
+        NSException *caught = nil;
+        @try { [expectation verify]; }
+        @catch(NSException *e) { caught = e; };
+        STAssertEqualObjects(caught, exception, @"");
+    });
+});
 
 SpecEnd

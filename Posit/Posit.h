@@ -20,8 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Expectations
+// Making expectations
 #import "PSTExpect.h"
+#import "PSTExpectationMaker.h"
+
+// Expectations
 #import "PSTExpectation.h"
 
 // Filters
