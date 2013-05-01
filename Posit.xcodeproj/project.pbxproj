@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45791D9C140F40E4AEA3E49B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F52CE27FFE4AF1AB525381 /* libPods.a */; };
 		9415C1841731A153003454F7 /* PSTExpectationMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9415C1831731A152003454F7 /* PSTExpectationMaker.m */; };
 		942687B1172D296900B70F47 /* PSTAllFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A2172D296900B70F47 /* PSTAllFilter.m */; };
 		942687B2172D296900B70F47 /* PSTInversionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 942687A4172D296900B70F47 /* PSTInversionFilter.m */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		1FB6FBC4688D47E1AB6618E4 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25ADF57A11A344EFBD7F7125 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		9415C1821731A152003454F7 /* PSTExpectationMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTExpectationMaker.h; sourceTree = "<group>"; };
 		9415C1831731A152003454F7 /* PSTExpectationMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTExpectationMaker.m; sourceTree = "<group>"; };
 		942687A1172D296900B70F47 /* PSTAllFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAllFilter.h; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		94D97B0D165D2EBA00282ABE /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9645FEFC43C6495A9943887E /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
+		C7F52CE27FFE4AF1AB525381 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,7 @@
 			files = (
 				94D97B00165D2EBA00282ABE /* Foundation.framework in Frameworks */,
 				94F469EA1667D39300573526 /* SenTestingKit.framework in Frameworks */,
+				45791D9C140F40E4AEA3E49B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +326,7 @@
 				94D97AFE165D2EBA00282ABE /* Frameworks */,
 				94D97AFD165D2EBA00282ABE /* Products */,
 				9645FEFC43C6495A9943887E /* Pods-Specs.xcconfig */,
+				25ADF57A11A344EFBD7F7125 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,6 +345,7 @@
 				94D97AFF165D2EBA00282ABE /* Foundation.framework */,
 				94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */,
 				1FB6FBC4688D47E1AB6618E4 /* libPods-Specs.a */,
+				C7F52CE27FFE4AF1AB525381 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -351,9 +357,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94D97B21165D2EBA00282ABE /* Build configuration list for PBXNativeTarget "Posit" */;
 			buildPhases = (
+				FB09840F6FF846328C45BCDB /* Check Pods Manifest.lock */,
 				94D97AF8165D2EBA00282ABE /* Sources */,
 				94D97AF9165D2EBA00282ABE /* Frameworks */,
 				94D97AFA165D2EBA00282ABE /* CopyFiles */,
+				0E727C472386466F8AD17A06 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,6 +431,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E727C472386466F8AD17A06 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		82C63A03A14E4BF48E6ABF1E /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,6 +471,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		FB09840F6FF846328C45BCDB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -567,13 +603,13 @@
 		};
 		94D97B22165D2EBA00282ABE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25ADF57A11A344EFBD7F7125 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Posit;
 				SKIP_INSTALL = YES;
 			};
@@ -581,13 +617,13 @@
 		};
 		94D97B23165D2EBA00282ABE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25ADF57A11A344EFBD7F7125 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Posit;
 				SKIP_INSTALL = YES;
 			};
