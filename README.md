@@ -1,21 +1,13 @@
 Posit
 =====
 
-An Objective-C expectation framework based on the 'should' terminology.
-
-All arguments and return types must be provided as objects. This has been made significantly easier by the introduction of literals for the most common data types.
-
-This library is a work in progress, and so the API may be subject to simplification and potentially drastic change.
+An Objective-C expectation framework.
 
 Matchers
 ========
 
 Posit provides matchers in the format of [[subject should] ...], allowing for more readable examples. The default matchers provided are as follows:
 
-    // Existence:
-    [[object should] beNil];
-    [[object should] bePresent];
-    
     // Equality:
     [[@(1+2) should] beEqualTo:@3];
     [[object should] beIdenticalTo:anotherObject];
@@ -23,8 +15,6 @@ Posit provides matchers in the format of [[subject should] ...], allowing for mo
     // Booleans:
     [[@true should] beTrue];
     [[@false should] beFalse];
-    [[@YES should] beYes];
-    [[@NO should] beNo];
     
     // Numbers:
     [[@0 should] beZero];
@@ -39,13 +29,6 @@ Posit provides matchers in the format of [[subject should] ...], allowing for mo
     // Objects:
     [[object should] beKindOf:[NSObject class]];
     [[object should] beMemberOf:[NSObject class]];
-    [[object should] conformToProtocol:@protocol(NSCoding)];
-    [[object should] respondToSelector:@selector(description)];
-    
-    // Collections:
-    [[pets should] beEmpty];
-    [[pets should] haveObject:cat];
-    [[pets should] haveObjects:@[cat, dog]];
 
 In order to negate a matcher, either of the following is valid:
 
