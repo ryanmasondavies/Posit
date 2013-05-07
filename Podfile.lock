@@ -1,16 +1,16 @@
 PODS:
-  - Inline (0.3.1)
+  - Inline (0.3.2)
   - Pensive (0.0.1)
-  - Specify (0.1.0):
-    - Inline (~> 0.3.1)
+  - Specify (0.1.1):
+    - Inline (~> 0.3.2)
 
 DEPENDENCIES:
   - Pensive
   - Specify
 
 SPEC CHECKSUMS:
-  Inline: dfb3b0921cd022766e858cd9c85a16c3f78e5c9d
+  Inline: 6f42acc81b87412642fec6f389e56a68b6abe836
   Pensive: c7796259b6f4aa0f97218c28f9a25497a54e4fb9
-  Specify: 06703f96559e471681550dfbdf995108c336edb1
+  Specify: 0541d8a50435e69c99967002e667a5f67ce47fa5
 
 COCOAPODS: 0.18.1
