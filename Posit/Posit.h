@@ -20,22 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// Making expectations
+#import "PSTEqualityLaw.h"
 #import "PSTExpect.h"
-#import "PSTExpectationMaker.h"
-
-// Expectations
-#import "PSTExpectation.h"
-
-// Filters
-#import "PSTInversionFilter.h"
-#import "PSTAllFilter.h"
-#import "PSTAnyFilter.h"
-
-// Matchers
-#import "PSTEqualityMatcher.h"
-#import "PSTIdentityMatcher.h"
-#import "PSTGreaterMatcher.h"
-#import "PSTLessMatcher.h"
-#import "PSTKindMatcher.h"
-#import "PSTMemberMatcher.h"
+#import "PSTInvertedLaw.h"
+#import "PSTLegislation.h"
+#import "PSTLegislature.h"
+#import "PSTPreface.h"
+#import "PSTPunishment.h"
+#import "PSTResolution.h"
+#import "PSTTrial.h"

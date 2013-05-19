@@ -20,25 +20,50 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTEqualityMatcher.h"
+SpecBegin(PSTEqualityMatcher)
 
-@interface PSTEqualityMatcher ()
-@property (strong, nonatomic) id expected;
-@end
+__block id<PSTLaw> law;
 
-@implementation PSTEqualityMatcher
+when(@"Equating to @TRUE", ^{
+    before(^{
+        law = [[PSTEqualityLaw alloc] initWithObject:@TRUE];
+    });
+    
+    it(@"is broken by @FALSE", ^{
+        STAssertTrue([law isBrokenBySubject:@FALSE], @"");
+    });
+    
+    it(@"is not broken by @TRUE", ^{
+        STAssertFalse([law isBrokenBySubject:@TRUE], @"");
+    });
+});
 
-- (id)initWithExpected:(id)expected
-{
-    if (self = [self init]) {
-        [self setExpected:expected];
-    }
-    return self;
-}
+when(@"Equating to 'Foobar'", ^{
+    before(^{
+        law = [[PSTEqualityLaw alloc] initWithObject:@"Foobar"];
+    });
+    
+    it(@"is broken by 'Barfoo'", ^{
+        STAssertTrue([law isBrokenBySubject:@"Barfoo"], @"");
+    });
+    
+    it(@"is not broken by 'Foobar'", ^{
+        STAssertFalse([law isBrokenBySubject:@"Foobar"], @"");
+    });
+});
 
-- (BOOL)matches:(id)value
-{
-    return [value isEqual:[self expected]];
-}
+when(@"Equating to 20", ^{
+    before(^{
+        law = [[PSTEqualityLaw alloc] initWithObject:@20];
+    });
+    
+    it(@"is broken by @21", ^{
+        STAssertTrue([law isBrokenBySubject:@21], @"");
+    });
+    
+    it(@"is not broken by @20", ^{
+        STAssertFalse([law isBrokenBySubject:@20], @"");
+    });
+});
 
-@end
+SpecEnd

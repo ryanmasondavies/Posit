@@ -21,9 +21,17 @@
 // THE SOFTWARE.
 
 #import "PSTExpect.h"
-#import "PSTExpectationMaker.h"
+#import "PSTLegislation.h"
+#import "PSTLegislature.h"
+#import "PSTPunishment.h"
+#import "PSTResolution.h"
+#import "PSTTrial.h"
 
-id expect(id subject)
+PSTLegislature *PSTExpect(id subject, NSString *filename, NSNumber *lineNumber)
 {
-    return [[PSTExpectationMaker alloc] initWithSubject:subject];
+    PSTLegislation *legislation = [[PSTLegislation alloc] init];
+    PSTPunishment *punishment = [[PSTPunishment alloc] initWithFilename:filename lineNumber:lineNumber];
+    PSTTrial *trial = [[PSTTrial alloc] initWithSubject:@10 legislation:legislation punishment:punishment];
+    PSTResolution *resolution = [[PSTResolution alloc] initWithTrial:trial];
+    return [[PSTLegislature alloc] initWithLegislation:legislation delegate:resolution];
 }
