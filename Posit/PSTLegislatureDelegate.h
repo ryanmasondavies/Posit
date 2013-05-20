@@ -22,10 +22,10 @@
 
 #import <Foundation/Foundation.h>
 @class PSTLegislature;
-@protocol PSTLaw;
+@protocol PSTBreaking;
 
 @protocol PSTLegislatureDelegate <NSObject>
 
-- (void)legislature:(PSTLegislature *)legislature didAddLaw:(id<PSTLaw>)law;
+- (void)legislature:(PSTLegislature *)legislature didAddLaw:(id<PSTBreaking>)law;
 
 @end

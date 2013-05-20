@@ -21,13 +21,8 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "PSTBreaking.h"
 
-@protocol PSTLaw <NSObject>
-
-/** @return A boolean indicating whether or not the subject has broken the law. */
-- (BOOL)isBrokenBySubject:(id)subject;
-
-/** @return An explanation of how the subject has broken the law. */
-- (NSString *)explanationForSubject:(id)subject;
+@interface PSTLaw : NSObject <PSTBreaking>
 
 @end

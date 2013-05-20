@@ -21,11 +21,11 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@protocol PSTLaw;
+@class PSTLaw;
 
 @interface PSTLegislation : NSObject
 
-- (void)addLaw:(id<PSTLaw>)law;
+- (void)addLaw:(PSTLaw *)law;
 
 - (NSArray *)lawsBrokenBySubject:(id)subject;
 

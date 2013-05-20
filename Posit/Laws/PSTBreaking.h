@@ -20,10 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PSTLaw.h"
+#import <Foundation/Foundation.h>
 
-@interface PSTInvertedLaw : PSTLaw
+/** The PSTBreaking protocol declares the methods for breaking laws. */
+@protocol PSTBreaking <NSObject>
 
-- (id)initWithLaw:(PSTLaw *)law;
+/** @return A boolean indicating whether or not the subject has broken the law. */
+- (BOOL)isBrokenBySubject:(id)subject;
+
+/** @return An explanation of how the subject has broken the law. */
+- (NSString *)explanationForSubject:(id)subject;
 
 @end

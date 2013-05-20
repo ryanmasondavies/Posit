@@ -22,10 +22,9 @@
 
 #import <Foundation/Foundation.h>
 #import "PSTLawMaking.h"
-@class PSTLawFactory;
 
 @interface PSTInvertedLawFactory : NSObject <PSTLawMaking>
 
-- (id)initWithFactory:(PSTLawFactory *)factory;
+- (id)initWithFactory:(id<PSTLawMaking>)factory;
 
 @end

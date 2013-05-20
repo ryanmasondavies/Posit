@@ -22,7 +22,7 @@
 
 SpecBegin(PSTEqualityLaw)
 
-__block id<PSTLaw> law;
+__block PSTLaw law;
 
 when(@"Equating to @TRUE", ^{
     before(^{

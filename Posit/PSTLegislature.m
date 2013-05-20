@@ -47,7 +47,7 @@
 
 - (void)beEqualTo:(id)other
 {
-    id<PSTLaw> law = [[self factory] beEqualTo:other];
+    PSTLaw *law = [[self factory] beEqualTo:other];
     [[self legislation] addLaw:law];
     [[self delegate] legislature:self didAddLaw:law];
 }

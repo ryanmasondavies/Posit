@@ -37,7 +37,7 @@
     return self;
 }
 
-- (void)addLaw:(id<PSTLaw>)law
+- (void)addLaw:(PSTLaw *)law
 {
     [[self laws] addObject:law];
 }
@@ -45,7 +45,7 @@
 - (NSArray *)lawsBrokenBySubject:(id)subject
 {
     NSMutableArray *broken = [[NSMutableArray alloc] init];
-    for (id<PSTLaw> law in [self laws]) {
+    for (PSTLaw *law in [self laws]) {
         if ([law isBrokenBySubject:subject]) {
             [broken addObject:law];
         }

@@ -22,8 +22,16 @@
 
 #import "PSTLaw.h"
 
-@interface PSTInvertedLaw : PSTLaw
+@implementation PSTLaw
 
-- (id)initWithLaw:(PSTLaw *)law;
+- (BOOL)isBrokenBySubject:(id)subject
+{
+    return NO;
+}
+
+- (NSString *)explanationForSubject:(id)subject
+{
+    return nil;
+}
 
 @end

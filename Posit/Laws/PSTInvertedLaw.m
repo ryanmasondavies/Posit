@@ -23,12 +23,12 @@
 #import "PSTInvertedLaw.h"
 
 @interface PSTInvertedLaw ()
-@property (strong, nonatomic) id<PSTLaw> law;
+@property (strong, nonatomic) PSTLaw *law;
 @end
 
 @implementation PSTInvertedLaw
 
-- (id)initWithLaw:(id<PSTLaw>)law
+- (id)initWithLaw:(PSTLaw *)law
 {
     if (self = [self init]) {
         self.law = law;

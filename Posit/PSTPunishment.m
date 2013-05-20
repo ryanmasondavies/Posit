@@ -39,7 +39,7 @@
     return self;
 }
 
-- (void)punishSubject:(id)subject forBreakingLaw:(id<PSTLaw>)law
+- (void)punishSubject:(id)subject forBreakingLaw:(PSTLaw *)law
 {
     NSString *explanation = [law explanationForSubject:subject];
     NSException *exception = [[NSException alloc] initWithName:NSInternalInconsistencyException reason:explanation userInfo:nil];

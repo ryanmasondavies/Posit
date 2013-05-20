@@ -26,6 +26,7 @@
 		94D53556174A2DE000F6B1F1 /* PSTInvertedLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53552174A2DE000F6B1F1 /* PSTInvertedLaw.m */; };
 		94D5355A174A2DF200F6B1F1 /* PSTEqualityLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53558174A2DF200F6B1F1 /* PSTEqualityLawSpec.m */; };
 		94D5355B174A2DF200F6B1F1 /* PSTIdentityLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */; };
+		94D5355E174A2FD100F6B1F1 /* PSTLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D5355D174A2FD100F6B1F1 /* PSTLaw.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
 		94D943BD172C002E0044904D /* PSTPanda.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A7172C002E0044904D /* PSTPanda.m */; };
@@ -93,9 +94,11 @@
 		94D53550174A2DE000F6B1F1 /* PSTIdentityLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityLaw.m; sourceTree = "<group>"; };
 		94D53551174A2DE000F6B1F1 /* PSTInvertedLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTInvertedLaw.h; sourceTree = "<group>"; };
 		94D53552174A2DE000F6B1F1 /* PSTInvertedLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInvertedLaw.m; sourceTree = "<group>"; };
-		94D53553174A2DE000F6B1F1 /* PSTLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLaw.h; sourceTree = "<group>"; };
+		94D53553174A2DE000F6B1F1 /* PSTBreaking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTBreaking.h; sourceTree = "<group>"; };
 		94D53558174A2DF200F6B1F1 /* PSTEqualityLawSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityLawSpec.m; sourceTree = "<group>"; };
 		94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityLawSpec.m; sourceTree = "<group>"; };
+		94D5355C174A2FD100F6B1F1 /* PSTLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLaw.h; sourceTree = "<group>"; };
+		94D5355D174A2FD100F6B1F1 /* PSTLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLaw.m; sourceTree = "<group>"; };
 		94D943A2172C002E0044904D /* PSTElephant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTElephant.h; sourceTree = "<group>"; };
 		94D943A3172C002E0044904D /* PSTElephant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTElephant.m; sourceTree = "<group>"; };
 		94D943A4172C002E0044904D /* PSTMammal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMammal.h; sourceTree = "<group>"; };
@@ -201,13 +204,15 @@
 		94D5354C174A2DE000F6B1F1 /* Laws */ = {
 			isa = PBXGroup;
 			children = (
+				94D53553174A2DE000F6B1F1 /* PSTBreaking.h */,
 				94D5354D174A2DE000F6B1F1 /* PSTEqualityLaw.h */,
 				94D5354E174A2DE000F6B1F1 /* PSTEqualityLaw.m */,
 				94D5354F174A2DE000F6B1F1 /* PSTIdentityLaw.h */,
 				94D53550174A2DE000F6B1F1 /* PSTIdentityLaw.m */,
 				94D53551174A2DE000F6B1F1 /* PSTInvertedLaw.h */,
 				94D53552174A2DE000F6B1F1 /* PSTInvertedLaw.m */,
-				94D53553174A2DE000F6B1F1 /* PSTLaw.h */,
+				94D5355C174A2FD100F6B1F1 /* PSTLaw.h */,
+				94D5355D174A2FD100F6B1F1 /* PSTLaw.m */,
 			);
 			path = Laws;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				94D53554174A2DE000F6B1F1 /* PSTEqualityLaw.m in Sources */,
 				94D53555174A2DE000F6B1F1 /* PSTIdentityLaw.m in Sources */,
 				94D53556174A2DE000F6B1F1 /* PSTInvertedLaw.m in Sources */,
+				94D5355E174A2FD100F6B1F1 /* PSTLaw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

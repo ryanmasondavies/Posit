@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "PSTTrial.h"
-#import "PSTLaw.h"
 #import "PSTLegislation.h"
 #import "PSTPunishment.h"
 
@@ -46,7 +45,7 @@
 - (void)resolve
 {
     NSArray *brokenLaws = [[self legislation] lawsBrokenBySubject:[self subject]];
-    for (id<PSTLaw> law in brokenLaws) {
+    for (PSTLaw *law in brokenLaws) {
         [[self punishment] punishSubject:[self subject] forBreakingLaw:law];
     }
 }

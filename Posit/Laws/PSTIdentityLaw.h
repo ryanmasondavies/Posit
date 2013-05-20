@@ -20,10 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
 #import "PSTLaw.h"
 
-@interface PSTIdentityLaw : NSObject <PSTLaw>
+@interface PSTIdentityLaw : PSTLaw
 
 - (id)initWithObject:(id)object;
 

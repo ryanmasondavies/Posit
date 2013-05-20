@@ -4,24 +4,24 @@
 //
 
 #import <Foundation/Foundation.h>
-@protocol PSTLaw;
+@class PSTLaw;
 
 @protocol PSTLawMaking <NSObject>
 
-- (id<PSTLaw>)beEqualTo:(id)other;
-- (id<PSTLaw>)beIdenticalTo:(id)other;
+- (PSTLaw *)beEqualTo:(id)other;
+- (PSTLaw *)beIdenticalTo:(id)other;
 
-- (id<PSTLaw>)beZero;
-- (id<PSTLaw>)bePositive;
-- (id<PSTLaw>)beNegative;
+- (PSTLaw *)beZero;
+- (PSTLaw *)bePositive;
+- (PSTLaw *)beNegative;
 
-- (id<PSTLaw>)beGreaterThan:(NSNumber *)number;
-- (id<PSTLaw>)beLessThan:(NSNumber *)number;
-- (id<PSTLaw>)beGreaterThanOrEqualTo:(NSNumber *)number;
-- (id<PSTLaw>)beLessThanOrEqualTo:(NSNumber *)number;
-- (id<PSTLaw>)beBetween:(NSNumber *)low and:(NSNumber *)high;
+- (PSTLaw *)beGreaterThan:(NSNumber *)number;
+- (PSTLaw *)beLessThan:(NSNumber *)number;
+- (PSTLaw *)beGreaterThanOrEqualTo:(NSNumber *)number;
+- (PSTLaw *)beLessThanOrEqualTo:(NSNumber *)number;
+- (PSTLaw *)beBetween:(NSNumber *)low and:(NSNumber *)high;
 
-- (id<PSTLaw>)beKindOf:(Class)klass;
-- (id<PSTLaw>)beMemberOf:(Class)klass;
+- (PSTLaw *)beKindOf:(Class)klass;
+- (PSTLaw *)beMemberOf:(Class)klass;
 
 @end

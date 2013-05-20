@@ -21,17 +21,15 @@
 // THE SOFTWARE.
 
 #import "PSTInvertedLawFactory.h"
-#import "PSTLawFactory.h"
-#import "PSTLaw.h"
 #import "PSTInvertedLaw.h"
 
 @interface PSTInvertedLawFactory ()
-@property (strong, nonatomic) PSTLawFactory *factory;
+@property (strong, nonatomic) id<PSTLawMaking> factory;
 @end
 
 @implementation PSTInvertedLawFactory
 
-- (id)initWithFactory:(PSTLawFactory *)factory
+- (id)initWithFactory:(id<PSTLawMaking>)factory
 {
     if (self = [self init]) {
         self.factory = factory;
@@ -39,62 +37,62 @@
     return self;
 }
 
-- (id<PSTLaw>)beEqualTo:(id)other
+- (PSTLaw *)beEqualTo:(id)other
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beEqualTo:other]];
 }
 
-- (id<PSTLaw>)beIdenticalTo:(id)other
+- (PSTLaw *)beIdenticalTo:(id)other
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beIdenticalTo:other]];
 }
 
-- (id<PSTLaw>)beZero
+- (PSTLaw *)beZero
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beZero]];
 }
 
-- (id<PSTLaw>)bePositive
+- (PSTLaw *)bePositive
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] bePositive]];
 }
 
-- (id<PSTLaw>)beNegative
+- (PSTLaw *)beNegative
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beNegative]];
 }
 
-- (id<PSTLaw>)beGreaterThan:(NSNumber *)number
+- (PSTLaw *)beGreaterThan:(NSNumber *)number
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beGreaterThan:number]];
 }
 
-- (id<PSTLaw>)beLessThan:(NSNumber *)number
+- (PSTLaw *)beLessThan:(NSNumber *)number
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beLessThan:number]];
 }
 
-- (id<PSTLaw>)beGreaterThanOrEqualTo:(NSNumber *)number
+- (PSTLaw *)beGreaterThanOrEqualTo:(NSNumber *)number
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beGreaterThanOrEqualTo:number]];
 }
 
-- (id<PSTLaw>)beLessThanOrEqualTo:(NSNumber *)number
+- (PSTLaw *)beLessThanOrEqualTo:(NSNumber *)number
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beLessThanOrEqualTo:number]];
 }
 
-- (id<PSTLaw>)beBetween:(NSNumber *)low and:(NSNumber *)high
+- (PSTLaw *)beBetween:(NSNumber *)low and:(NSNumber *)high
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beBetween:low and:high]];
 }
 
-- (id<PSTLaw>)beKindOf:(Class)klass
+- (PSTLaw *)beKindOf:(Class)klass
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beKindOf:klass]];
 }
 
-- (id<PSTLaw>)beMemberOf:(Class)klass
+- (PSTLaw *)beMemberOf:(Class)klass
 {
     return [[PSTInvertedLaw alloc] initWithLaw:[[self factory] beMemberOf:klass]];
 }

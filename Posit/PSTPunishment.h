@@ -21,11 +21,11 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@protocol PSTLaw;
+@class PSTLaw;
 
 @interface PSTPunishment : NSObject
 
 - (id)initWithFilename:(NSString *)filename lineNumber:(NSNumber *)lineNumber;
-- (void)punishSubject:(id)subject forBreakingLaw:(id<PSTLaw>)law;
+- (void)punishSubject:(id)subject forBreakingLaw:(PSTLaw *)law;
 
 @end

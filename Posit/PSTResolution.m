@@ -38,7 +38,7 @@
     return self;
 }
 
-- (void)legislature:(PSTLegislature *)legislature didAddLaw:(id<PSTLaw>)law
+- (void)legislature:(PSTLegislature *)legislature didAddLaw:(PSTLaw *)law
 {
     [[self trial] resolve];
 }
