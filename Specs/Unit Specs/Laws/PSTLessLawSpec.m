@@ -121,7 +121,7 @@ when(@"Comparing to -1", ^{
 when(@"comparing to 1 and broken by 0", ^{
     it(@"explains that 0 is not less than 1", ^{
         law = [[PSTLessLaw alloc] initWithNumber:@1];
-        STAssertEqualObjects([law explanationForSubject:@0], @"Expected '0' to be less than '1'.", nil);
+        STAssertEqualObjects([law explanationForSubject:@0], @"Expected '0' to be less than '1'.", @"");
     });
 });
 

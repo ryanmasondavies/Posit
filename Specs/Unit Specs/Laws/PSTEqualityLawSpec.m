@@ -55,7 +55,7 @@ when(@"Equating to 'Foobar'", ^{
         });
         
         it(@"explains that 'Barfoo' is not equal to 'Foobar'.", ^{
-            STAssertEqualObjects([law explanationForSubject:@"Barfoo"], @"Expected 'Barfoo' to be equal to 'Foobar'.", nil);
+            STAssertEqualObjects([law explanationForSubject:@"Barfoo"], @"Expected 'Barfoo' to be equal to 'Foobar'.", @"");
         });
     });
     
@@ -75,7 +75,7 @@ when(@"Equating to 20", ^{
         });
         
         it(@"explains that 21 is not equal to 20", ^{
-            STAssertEqualObjects([law explanationForSubject:@21], @"Expected '21' to be equal to '20'.", nil);
+            STAssertEqualObjects([law explanationForSubject:@21], @"Expected '21' to be equal to '20'.", @"");
         });
     });
     

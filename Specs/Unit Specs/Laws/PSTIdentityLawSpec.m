@@ -25,16 +25,25 @@
 SpecBegin(PSTIdentityLaw)
 
 __block PSTCopyableObject *object;
+__block PSTCopyableObject *copy;
 __block PSTIdentityLaw *law;
 
 when(@"Comparing to an object", ^{
     before(^{
         object = [[PSTCopyableObject alloc] init];
+        copy = [object copy];
         law = [[PSTIdentityLaw alloc] initWithObject:object];
     });
     
-    it(@"is broken by a copy", ^{
-        STAssertTrue([law isBrokenBySubject:[object copy]], @"");
+    when(@"subject is a copy", ^{
+        it(@"is broken", ^{
+            STAssertTrue([law isBrokenBySubject:copy], @"");
+        });
+        
+        it(@"explains that the copy's hash is not equal to the subject's", ^{
+            NSString *explanation = [NSString stringWithFormat:@"Expected '%@' to be identical to '%@'.", copy, object];
+            STAssertEqualObjects([law explanationForSubject:copy], explanation, @"");
+        });
     });
     
     it(@"is not broken by the same object", ^{
