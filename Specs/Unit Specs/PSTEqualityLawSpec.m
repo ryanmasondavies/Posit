@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-SpecBegin(PSTEqualityMatcher)
+SpecBegin(PSTEqualityLaw)
 
 __block id<PSTLaw> law;
 
