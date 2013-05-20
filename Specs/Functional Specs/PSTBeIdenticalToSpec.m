@@ -24,19 +24,43 @@
 
 SpecBegin(PSTBeIdenticalTo)
 
-__block id object;
+__block PSTCopyableObject *object;
+__block PSTCopyableObject *copy;
 
-describe(@"An object", ^{
-    before(^{
-        object = [[PSTCopyableObject alloc] init];
+before(^{
+    object = [[PSTCopyableObject alloc] init];
+    copy = [object copy];
+});
+
+describe(@"expect object to be identical to itself", ^{
+    it(@"doesn't throw an exception", ^{
+        STAssertNoThrow([[expect(object) to] beIdenticalTo:object], nil);
     });
-    
-    it(@"is identical to itself", ^{
-//        STAssertNoThrow([[expect(object) to] beIdenticalTo:object], @"");
+});
+
+describe(@"expect object to be equal to copy", ^{
+    it(@"throws an exception with the reason 'Expected '<copy>' to be identical to '<object>'.'", ^{
+        NSException *exception = nil;
+        @try { [[expect(object) to] beIdenticalTo:copy]; }
+        @catch(NSException *e) { exception = e; };
+        NSString *explanation = [NSString stringWithFormat:@"Expected '%@' to be identical to '%@'.", object, copy];
+        STAssertEqualObjects([exception reason], explanation, nil);
     });
-    
-    it(@"is not identical to a copy", ^{
-//        STAssertThrows([[expect(object) to] beIdenticalTo:[object copy]], @"");
+});
+
+describe(@"expect object not to be equal to itself", ^{
+    it(@"throws an exception with the reason 'Expected '<object>' not to be equal to '<object>'.", ^{
+        NSException *exception = nil;
+        @try { [[expect(object) notTo] beIdenticalTo:object]; }
+        @catch(NSException *e) { exception = e; };
+        NSString *explanation = [NSString stringWithFormat:@"Expected '%@' not to be identical to '%@'.", object, object];
+        STAssertEqualObjects([exception reason], explanation, nil);
+    });
+});
+
+describe(@"expect object not to be equal to copy", ^{
+    it(@"doesn't throw an exception", ^{
+        STAssertNoThrow([[expect(object) notTo] beIdenticalTo:copy], nil);
     });
 });
 

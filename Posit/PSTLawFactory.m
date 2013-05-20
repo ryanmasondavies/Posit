@@ -22,6 +22,7 @@
 
 #import "PSTLawFactory.h"
 #import "PSTEqualityLaw.h"
+#import "PSTIdentityLaw.h"
 
 @implementation PSTLawFactory
 
@@ -32,7 +33,7 @@
 
 - (PSTLaw *)beIdenticalTo:(id)other
 {
-    return nil;
+    return [[PSTIdentityLaw alloc] initWithObject:other];
 }
 
 - (PSTLaw *)beZero

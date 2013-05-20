@@ -54,6 +54,9 @@
 
 - (void)beIdenticalTo:(id)other
 {
+    PSTLaw *law = [[self factory] beIdenticalTo:other];
+    [[self legislation] addLaw:law];
+    [[self delegate] legislature:self didAddLaw:law];
 }
 
 - (void)beZero
