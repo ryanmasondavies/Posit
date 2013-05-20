@@ -27,6 +27,8 @@
 		94D5355A174A2DF200F6B1F1 /* PSTEqualityLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53558174A2DF200F6B1F1 /* PSTEqualityLawSpec.m */; };
 		94D5355B174A2DF200F6B1F1 /* PSTIdentityLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */; };
 		94D5355E174A2FD100F6B1F1 /* PSTLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D5355D174A2FD100F6B1F1 /* PSTLaw.m */; };
+		94D53561174A318500F6B1F1 /* PSTLessLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53560174A318500F6B1F1 /* PSTLessLaw.m */; };
+		94D53563174A324C00F6B1F1 /* PSTLessLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53562174A324C00F6B1F1 /* PSTLessLawSpec.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
 		94D943BD172C002E0044904D /* PSTPanda.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A7172C002E0044904D /* PSTPanda.m */; };
@@ -99,6 +101,9 @@
 		94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityLawSpec.m; sourceTree = "<group>"; };
 		94D5355C174A2FD100F6B1F1 /* PSTLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLaw.h; sourceTree = "<group>"; };
 		94D5355D174A2FD100F6B1F1 /* PSTLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLaw.m; sourceTree = "<group>"; };
+		94D5355F174A318500F6B1F1 /* PSTLessLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLessLaw.h; sourceTree = "<group>"; };
+		94D53560174A318500F6B1F1 /* PSTLessLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLessLaw.m; sourceTree = "<group>"; };
+		94D53562174A324C00F6B1F1 /* PSTLessLawSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLessLawSpec.m; sourceTree = "<group>"; };
 		94D943A2172C002E0044904D /* PSTElephant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTElephant.h; sourceTree = "<group>"; };
 		94D943A3172C002E0044904D /* PSTElephant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTElephant.m; sourceTree = "<group>"; };
 		94D943A4172C002E0044904D /* PSTMammal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMammal.h; sourceTree = "<group>"; };
@@ -213,6 +218,8 @@
 				94D53552174A2DE000F6B1F1 /* PSTInvertedLaw.m */,
 				94D5355C174A2FD100F6B1F1 /* PSTLaw.h */,
 				94D5355D174A2FD100F6B1F1 /* PSTLaw.m */,
+				94D5355F174A318500F6B1F1 /* PSTLessLaw.h */,
+				94D53560174A318500F6B1F1 /* PSTLessLaw.m */,
 			);
 			path = Laws;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 			children = (
 				94D53558174A2DF200F6B1F1 /* PSTEqualityLawSpec.m */,
 				94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */,
+				94D53562174A324C00F6B1F1 /* PSTLessLawSpec.m */,
 			);
 			path = Laws;
 			sourceTree = "<group>";
@@ -448,6 +456,7 @@
 				94D53555174A2DE000F6B1F1 /* PSTIdentityLaw.m in Sources */,
 				94D53556174A2DE000F6B1F1 /* PSTInvertedLaw.m in Sources */,
 				94D5355E174A2FD100F6B1F1 /* PSTLaw.m in Sources */,
+				94D53561174A318500F6B1F1 /* PSTLessLaw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +481,7 @@
 				94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */,
 				94D5355A174A2DF200F6B1F1 /* PSTEqualityLawSpec.m in Sources */,
 				94D5355B174A2DF200F6B1F1 /* PSTIdentityLawSpec.m in Sources */,
+				94D53563174A324C00F6B1F1 /* PSTLessLawSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

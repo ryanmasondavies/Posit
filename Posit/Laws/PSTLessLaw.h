@@ -20,14 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-@class PSTLegislature;
+#import "PSTLaw.h"
 
-@interface PSTPreface : NSObject
+@interface PSTLessLaw : PSTLaw
 
-- (id)initWithTo:(PSTLegislature *)to notTo:(PSTLegislature *)notTo;
-
-@property (readonly) PSTLegislature *to;
-@property (readonly) PSTLegislature *notTo;
+- (id)initWithNumber:(NSNumber *)number;
 
 @end

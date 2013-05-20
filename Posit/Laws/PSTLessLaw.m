@@ -20,14 +20,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-@class PSTLegislature;
+#import "PSTLessLaw.h"
 
-@interface PSTPreface : NSObject
+@interface PSTLessLaw ()
+@property (strong, nonatomic) NSNumber *number;
+@end
 
-- (id)initWithTo:(PSTLegislature *)to notTo:(PSTLegislature *)notTo;
+@implementation PSTLessLaw
 
-@property (readonly) PSTLegislature *to;
-@property (readonly) PSTLegislature *notTo;
+- (id)initWithNumber:(NSNumber *)number
+{
+    if (self = [self init]) {
+        self.number = number;
+    }
+    return self;
+}
+
+- (BOOL)isBrokenBySubject:(id)subject
+{
+    return !([[self number] compare:subject] == NSOrderedDescending);
+}
+
+- (NSString *)explanationForSubject:(id)subject
+{
+    return [NSString stringWithFormat:@"Expected '%@' to be less than '%@'.", subject, [self number]];
+}
 
 @end

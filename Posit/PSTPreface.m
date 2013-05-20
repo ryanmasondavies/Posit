@@ -21,15 +21,16 @@
 // THE SOFTWARE.
 
 #import "PSTPreface.h"
+#import "PSTLegislature.h"
 
 @interface PSTPreface ()
-@property (strong, nonatomic) id to;
-@property (strong, nonatomic) id notTo;
+@property (strong, nonatomic) PSTLegislature *to;
+@property (strong, nonatomic) PSTLegislature *notTo;
 @end
 
 @implementation PSTPreface
 
-- (id)initWithTo:(id)to notTo:(id)notTo
+- (id)initWithTo:(PSTLegislature *)to notTo:(PSTLegislature *)notTo
 {
     if (self = [self init]) {
         self.to = to;
