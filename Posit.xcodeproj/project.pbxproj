@@ -19,6 +19,7 @@
 		94C46513172C631B00382046 /* PSTBeNegativeSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46512172C631B00382046 /* PSTBeNegativeSpec.m */; };
 		94C46515172C64AF00382046 /* PSTBeKindOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46514172C64AF00382046 /* PSTBeKindOfSpec.m */; };
 		94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46516172C674900382046 /* PSTBeMemberOfSpec.m */; };
+		94D53542174A219600F6B1F1 /* PSTLawFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53541174A219600F6B1F1 /* PSTLawFactory.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
 		94D943BD172C002E0044904D /* PSTPanda.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A7172C002E0044904D /* PSTPanda.m */; };
@@ -78,6 +79,8 @@
 		94C46512172C631B00382046 /* PSTBeNegativeSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeNegativeSpec.m; sourceTree = "<group>"; };
 		94C46514172C64AF00382046 /* PSTBeKindOfSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeKindOfSpec.m; sourceTree = "<group>"; };
 		94C46516172C674900382046 /* PSTBeMemberOfSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTBeMemberOfSpec.m; sourceTree = "<group>"; };
+		94D53540174A219600F6B1F1 /* PSTLawFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLawFactory.h; sourceTree = "<group>"; };
+		94D53541174A219600F6B1F1 /* PSTLawFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTLawFactory.m; sourceTree = "<group>"; };
 		94D943A2172C002E0044904D /* PSTElephant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTElephant.h; sourceTree = "<group>"; };
 		94D943A3172C002E0044904D /* PSTElephant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTElephant.m; sourceTree = "<group>"; };
 		94D943A4172C002E0044904D /* PSTMammal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMammal.h; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				94F59AC517497926007B5C5F /* PSTInvertedLaw.h */,
 				94F59AC617497926007B5C5F /* PSTInvertedLaw.m */,
 				94F59AC217497926007B5C5F /* PSTLaw.h */,
+				94D53540174A219600F6B1F1 /* PSTLawFactory.h */,
+				94D53541174A219600F6B1F1 /* PSTLawFactory.m */,
 				94F59ACB17497926007B5C5F /* PSTLegislation.h */,
 				94F59ACC17497926007B5C5F /* PSTLegislation.m */,
 				94F59ACD17497926007B5C5F /* PSTLegislature.h */,
@@ -403,6 +408,7 @@
 				94F59AD917497926007B5C5F /* PSTLegislature.m in Sources */,
 				94F59ADA17497926007B5C5F /* PSTResolution.m in Sources */,
 				94F59ADB17497926007B5C5F /* PSTTrial.m in Sources */,
+				94D53542174A219600F6B1F1 /* PSTLawFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,8 +21,8 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-@class PSTLegislature;
+@class PSTPreface;
 
 #define expect(x) PSTExpect(x, @(__FILE__), @(__LINE__))
 
-PSTLegislature *PSTExpect(id subject, NSString *filename, NSNumber *lineNumber);
+PSTPreface *PSTExpect(id subject, NSString *filename, NSNumber *lineNumber);

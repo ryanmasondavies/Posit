@@ -5,11 +5,12 @@
 
 #import <Foundation/Foundation.h>
 @class PSTLegislation;
+@class PSTLawFactory;
 @protocol PSTLegislatureDelegate;
 
 @interface PSTLegislature : NSObject
 
-- (id)initWithLegislation:(PSTLegislation *)legislation delegate:(id<PSTLegislatureDelegate>)delegate;
+- (id)initWithLegislation:(PSTLegislation *)legislation factory:(PSTLawFactory *)factory delegate:(id<PSTLegislatureDelegate>)delegate;
 
 - (void)beEqualTo:(id)other;
 - (void)beIdenticalTo:(id)other;

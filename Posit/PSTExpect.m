@@ -21,17 +21,23 @@
 // THE SOFTWARE.
 
 #import "PSTExpect.h"
+#import "PSTLawFactory.h"
 #import "PSTLegislation.h"
 #import "PSTLegislature.h"
+#import "PSTPreface.h"
 #import "PSTPunishment.h"
 #import "PSTResolution.h"
 #import "PSTTrial.h"
 
-PSTLegislature *PSTExpect(id subject, NSString *filename, NSNumber *lineNumber)
+PSTPreface *PSTExpect(id subject, NSString *filename, NSNumber *lineNumber)
 {
     PSTLegislation *legislation = [[PSTLegislation alloc] init];
     PSTPunishment *punishment = [[PSTPunishment alloc] initWithFilename:filename lineNumber:lineNumber];
     PSTTrial *trial = [[PSTTrial alloc] initWithSubject:@10 legislation:legislation punishment:punishment];
     PSTResolution *resolution = [[PSTResolution alloc] initWithTrial:trial];
-    return [[PSTLegislature alloc] initWithLegislation:legislation delegate:resolution];
+    PSTLawFactory *toFactory = [[PSTLawFactory alloc] init];
+    PSTLawFactory *notToFactory = [[PSTLawFactory alloc] init]; // inverted
+    PSTLegislature *toLegislature = [[PSTLegislature alloc] initWithLegislation:legislation factory:toFactory delegate:resolution];
+    PSTLegislature *notToLegislature = [[PSTLegislature alloc] initWithLegislation:legislation factory:notToFactory delegate:resolution];
+    return [[PSTPreface alloc] initWithTo:toLegislature notTo:notToLegislature];
 }

@@ -5,21 +5,24 @@
 
 #import "PSTLegislature.h"
 #import "PSTLegislation.h"
+#import "PSTLawFactory.h"
 #import "PSTLegislatureDelegate.h"
 #import "PSTEqualityLaw.h"
 #import "PSTInvertedLaw.h"
 
 @interface PSTLegislature ()
 @property (strong, nonatomic) PSTLegislation *legislation;
+@property (strong, nonatomic) PSTLawFactory *factory;
 @property (strong, nonatomic) id<PSTLegislatureDelegate> delegate;
 @end
 
 @implementation PSTLegislature
 
-- (id)initWithLegislation:(PSTLegislation *)legislation delegate:(id<PSTLegislatureDelegate>)delegate
+- (id)initWithLegislation:(PSTLegislation *)legislation factory:(PSTLawFactory *)factory delegate:(id<PSTLegislatureDelegate>)delegate
 {
     if (self = [self init]) {
         self.legislation = legislation;
+        self.factory = factory;
         self.delegate = delegate;
     }
     return self;
@@ -27,7 +30,7 @@
 
 - (void)beEqualTo:(id)other
 {
-    id<PSTLaw> law = [[PSTEqualityLaw alloc] initWithObject:other];
+    id<PSTLaw> law = [[self factory] beEqualTo:other];
     [[self legislation] addLaw:law];
     [[self delegate] legislature:self didAddLaw:law];
 }

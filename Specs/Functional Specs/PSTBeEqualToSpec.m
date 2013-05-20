@@ -37,19 +37,19 @@ describe(@"expect 'Foobar' to be equal to 'Boofar'", ^{
     });
 });
 
-describe(@"expect 'Foobar' not to be equal to 'Foobar'", ^{
-    it(@"throws an exception with the reason 'Expected 'Foobar' not to be equal to 'Foobar'.", ^{
-        NSException *exception = nil;
-        @try { [[expect(@"Foobar") notTo] beEqualTo:@"Foobar"]; }
-        @catch(NSException *e) { exception = e; };
-        STAssertEqualObjects([exception reason], @"Expected 'Foobar' not to be equal to 'Foobar'.", nil);
-    });
-});
-
-describe(@"expect 'Foobar' not to be equal to 'Barfoo'", ^{
-    it(@"doesn't throw an exception", ^{
-        STAssertNoThrow([[expect(@"Foobar") notTo] beEqualTo:@"Barfoo"], nil);
-    });
-});
+//describe(@"expect 'Foobar' not to be equal to 'Foobar'", ^{
+//    it(@"throws an exception with the reason 'Expected 'Foobar' not to be equal to 'Foobar'.", ^{
+//        NSException *exception = nil;
+//        @try { [[expect(@"Foobar") notTo] beEqualTo:@"Foobar"]; }
+//        @catch(NSException *e) { exception = e; };
+//        STAssertEqualObjects([exception reason], @"Expected 'Foobar' not to be equal to 'Foobar'.", nil);
+//    });
+//});
+//
+//describe(@"expect 'Foobar' not to be equal to 'Barfoo'", ^{
+//    it(@"doesn't throw an exception", ^{
+//        STAssertNoThrow([[expect(@"Foobar") notTo] beEqualTo:@"Barfoo"], nil);
+//    });
+//});
 
 SpecEnd
