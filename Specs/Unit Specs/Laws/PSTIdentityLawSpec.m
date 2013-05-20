@@ -22,7 +22,7 @@
 
 #import "PSTCopyableObject.h"
 
-SpecBegin(PSTIdentityMatcher)
+SpecBegin(PSTIdentityLaw)
 
 __block PSTCopyableObject *object;
 __block PSTIdentityLaw *law;
