@@ -21,6 +21,11 @@
 		94C46517172C674900382046 /* PSTBeMemberOfSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C46516172C674900382046 /* PSTBeMemberOfSpec.m */; };
 		94D53542174A219600F6B1F1 /* PSTLawFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53541174A219600F6B1F1 /* PSTLawFactory.m */; };
 		94D53545174A276200F6B1F1 /* PSTInvertedLawFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53544174A276200F6B1F1 /* PSTInvertedLawFactory.m */; };
+		94D53554174A2DE000F6B1F1 /* PSTEqualityLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D5354E174A2DE000F6B1F1 /* PSTEqualityLaw.m */; };
+		94D53555174A2DE000F6B1F1 /* PSTIdentityLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53550174A2DE000F6B1F1 /* PSTIdentityLaw.m */; };
+		94D53556174A2DE000F6B1F1 /* PSTInvertedLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53552174A2DE000F6B1F1 /* PSTInvertedLaw.m */; };
+		94D5355A174A2DF200F6B1F1 /* PSTEqualityLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53558174A2DF200F6B1F1 /* PSTEqualityLawSpec.m */; };
+		94D5355B174A2DF200F6B1F1 /* PSTIdentityLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */; };
 		94D943BB172C002E0044904D /* PSTElephant.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A3172C002E0044904D /* PSTElephant.m */; };
 		94D943BC172C002E0044904D /* PSTMammal.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A5172C002E0044904D /* PSTMammal.m */; };
 		94D943BD172C002E0044904D /* PSTPanda.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D943A7172C002E0044904D /* PSTPanda.m */; };
@@ -30,15 +35,12 @@
 		94D97B12165D2EBA00282ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFF165D2EBA00282ABE /* Foundation.framework */; };
 		94D97B15165D2EBA00282ABE /* libPosit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97AFC165D2EBA00282ABE /* libPosit.a */; };
 		94F469EA1667D39300573526 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */; };
-		94F59AD417497926007B5C5F /* PSTEqualityLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59AC417497926007B5C5F /* PSTEqualityLaw.m */; };
-		94F59AD517497926007B5C5F /* PSTInvertedLaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59AC617497926007B5C5F /* PSTInvertedLaw.m */; };
 		94F59AD617497926007B5C5F /* PSTPreface.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59AC817497926007B5C5F /* PSTPreface.m */; };
 		94F59AD717497926007B5C5F /* PSTPunishment.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59ACA17497926007B5C5F /* PSTPunishment.m */; };
 		94F59AD817497926007B5C5F /* PSTLegislation.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59ACC17497926007B5C5F /* PSTLegislation.m */; };
 		94F59AD917497926007B5C5F /* PSTLegislature.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59ACE17497926007B5C5F /* PSTLegislature.m */; };
 		94F59ADA17497926007B5C5F /* PSTResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59AD117497926007B5C5F /* PSTResolution.m */; };
 		94F59ADB17497926007B5C5F /* PSTTrial.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59AD317497926007B5C5F /* PSTTrial.m */; };
-		94F59ADD17497CDC007B5C5F /* PSTEqualityLawSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F59ADC17497CDC007B5C5F /* PSTEqualityLawSpec.m */; };
 		D35798F3A5DF4AF9A1F3D9D5 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB6FBC4688D47E1AB6618E4 /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,15 @@
 		94D53543174A276200F6B1F1 /* PSTInvertedLawFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTInvertedLawFactory.h; sourceTree = "<group>"; };
 		94D53544174A276200F6B1F1 /* PSTInvertedLawFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInvertedLawFactory.m; sourceTree = "<group>"; };
 		94D53546174A295000F6B1F1 /* PSTLawMaking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSTLawMaking.h; sourceTree = "<group>"; };
+		94D5354D174A2DE000F6B1F1 /* PSTEqualityLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTEqualityLaw.h; sourceTree = "<group>"; };
+		94D5354E174A2DE000F6B1F1 /* PSTEqualityLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityLaw.m; sourceTree = "<group>"; };
+		94D5354F174A2DE000F6B1F1 /* PSTIdentityLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTIdentityLaw.h; sourceTree = "<group>"; };
+		94D53550174A2DE000F6B1F1 /* PSTIdentityLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityLaw.m; sourceTree = "<group>"; };
+		94D53551174A2DE000F6B1F1 /* PSTInvertedLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTInvertedLaw.h; sourceTree = "<group>"; };
+		94D53552174A2DE000F6B1F1 /* PSTInvertedLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInvertedLaw.m; sourceTree = "<group>"; };
+		94D53553174A2DE000F6B1F1 /* PSTLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLaw.h; sourceTree = "<group>"; };
+		94D53558174A2DF200F6B1F1 /* PSTEqualityLawSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityLawSpec.m; sourceTree = "<group>"; };
+		94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTIdentityLawSpec.m; sourceTree = "<group>"; };
 		94D943A2172C002E0044904D /* PSTElephant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTElephant.h; sourceTree = "<group>"; };
 		94D943A3172C002E0044904D /* PSTElephant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTElephant.m; sourceTree = "<group>"; };
 		94D943A4172C002E0044904D /* PSTMammal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTMammal.h; sourceTree = "<group>"; };
@@ -99,11 +110,6 @@
 		94D97AFF165D2EBA00282ABE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D97B0D165D2EBA00282ABE /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D97B0E165D2EBA00282ABE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		94F59AC217497926007B5C5F /* PSTLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTLaw.h; sourceTree = "<group>"; };
-		94F59AC317497926007B5C5F /* PSTEqualityLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTEqualityLaw.h; sourceTree = "<group>"; };
-		94F59AC417497926007B5C5F /* PSTEqualityLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityLaw.m; sourceTree = "<group>"; };
-		94F59AC517497926007B5C5F /* PSTInvertedLaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTInvertedLaw.h; sourceTree = "<group>"; };
-		94F59AC617497926007B5C5F /* PSTInvertedLaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTInvertedLaw.m; sourceTree = "<group>"; };
 		94F59AC717497926007B5C5F /* PSTPreface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTPreface.h; sourceTree = "<group>"; };
 		94F59AC817497926007B5C5F /* PSTPreface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTPreface.m; sourceTree = "<group>"; };
 		94F59AC917497926007B5C5F /* PSTPunishment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTPunishment.h; sourceTree = "<group>"; };
@@ -117,7 +123,6 @@
 		94F59AD117497926007B5C5F /* PSTResolution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTResolution.m; sourceTree = "<group>"; };
 		94F59AD217497926007B5C5F /* PSTTrial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTTrial.h; sourceTree = "<group>"; };
 		94F59AD317497926007B5C5F /* PSTTrial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTTrial.m; sourceTree = "<group>"; };
-		94F59ADC17497CDC007B5C5F /* PSTEqualityLawSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTEqualityLawSpec.m; sourceTree = "<group>"; };
 		9645FEFC43C6495A9943887E /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = SOURCE_ROOT; };
 		C7F52CE27FFE4AF1AB525381 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,16 +172,12 @@
 		94C3B11A166119DF003B3F43 /* Posit */ = {
 			isa = PBXGroup;
 			children = (
+				94D5354C174A2DE000F6B1F1 /* Laws */,
 				94C3B128166119DF003B3F43 /* Posit.h */,
-				94F59AC317497926007B5C5F /* PSTEqualityLaw.h */,
-				94F59AC417497926007B5C5F /* PSTEqualityLaw.m */,
 				94A70387172E9E68004C0EA4 /* PSTExpect.h */,
 				94A70388172E9E68004C0EA4 /* PSTExpect.m */,
-				94F59AC517497926007B5C5F /* PSTInvertedLaw.h */,
-				94F59AC617497926007B5C5F /* PSTInvertedLaw.m */,
 				94D53543174A276200F6B1F1 /* PSTInvertedLawFactory.h */,
 				94D53544174A276200F6B1F1 /* PSTInvertedLawFactory.m */,
-				94F59AC217497926007B5C5F /* PSTLaw.h */,
 				94D53540174A219600F6B1F1 /* PSTLawFactory.h */,
 				94D53541174A219600F6B1F1 /* PSTLawFactory.m */,
 				94D53546174A295000F6B1F1 /* PSTLawMaking.h */,
@@ -197,6 +198,29 @@
 			path = Posit;
 			sourceTree = "<group>";
 		};
+		94D5354C174A2DE000F6B1F1 /* Laws */ = {
+			isa = PBXGroup;
+			children = (
+				94D5354D174A2DE000F6B1F1 /* PSTEqualityLaw.h */,
+				94D5354E174A2DE000F6B1F1 /* PSTEqualityLaw.m */,
+				94D5354F174A2DE000F6B1F1 /* PSTIdentityLaw.h */,
+				94D53550174A2DE000F6B1F1 /* PSTIdentityLaw.m */,
+				94D53551174A2DE000F6B1F1 /* PSTInvertedLaw.h */,
+				94D53552174A2DE000F6B1F1 /* PSTInvertedLaw.m */,
+				94D53553174A2DE000F6B1F1 /* PSTLaw.h */,
+			);
+			path = Laws;
+			sourceTree = "<group>";
+		};
+		94D53557174A2DF200F6B1F1 /* Laws */ = {
+			isa = PBXGroup;
+			children = (
+				94D53558174A2DF200F6B1F1 /* PSTEqualityLawSpec.m */,
+				94D53559174A2DF200F6B1F1 /* PSTIdentityLawSpec.m */,
+			);
+			path = Laws;
+			sourceTree = "<group>";
+		};
 		94D943A1172C002E0044904D /* Specs */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,7 +234,7 @@
 		94D943AA172C002E0044904D /* Unit Specs */ = {
 			isa = PBXGroup;
 			children = (
-				94F59ADC17497CDC007B5C5F /* PSTEqualityLawSpec.m */,
+				94D53557174A2DF200F6B1F1 /* Laws */,
 			);
 			path = "Unit Specs";
 			sourceTree = "<group>";
@@ -407,8 +431,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F59AD417497926007B5C5F /* PSTEqualityLaw.m in Sources */,
-				94F59AD517497926007B5C5F /* PSTInvertedLaw.m in Sources */,
 				94F59AD617497926007B5C5F /* PSTPreface.m in Sources */,
 				94F59AD717497926007B5C5F /* PSTPunishment.m in Sources */,
 				94F59AD817497926007B5C5F /* PSTLegislation.m in Sources */,
@@ -417,6 +439,9 @@
 				94F59ADB17497926007B5C5F /* PSTTrial.m in Sources */,
 				94D53542174A219600F6B1F1 /* PSTLawFactory.m in Sources */,
 				94D53545174A276200F6B1F1 /* PSTInvertedLawFactory.m in Sources */,
+				94D53554174A2DE000F6B1F1 /* PSTEqualityLaw.m in Sources */,
+				94D53555174A2DE000F6B1F1 /* PSTIdentityLaw.m in Sources */,
+				94D53556174A2DE000F6B1F1 /* PSTInvertedLaw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +464,8 @@
 				94A70351172E8B29004C0EA4 /* PSTBeEqualToSpec.m in Sources */,
 				94A70353172E8CF5004C0EA4 /* PSTBeIdenticalToSpec.m in Sources */,
 				94A70389172E9E68004C0EA4 /* PSTExpect.m in Sources */,
-				94F59ADD17497CDC007B5C5F /* PSTEqualityLawSpec.m in Sources */,
+				94D5355A174A2DF200F6B1F1 /* PSTEqualityLawSpec.m in Sources */,
+				94D5355B174A2DF200F6B1F1 /* PSTIdentityLawSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
