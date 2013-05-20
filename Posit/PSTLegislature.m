@@ -22,20 +22,20 @@
 
 #import "PSTLegislature.h"
 #import "PSTLegislation.h"
-#import "PSTLawFactory.h"
+#import "PSTLawMaking.h"
 #import "PSTLegislatureDelegate.h"
 #import "PSTEqualityLaw.h"
 #import "PSTInvertedLaw.h"
 
 @interface PSTLegislature ()
 @property (strong, nonatomic) PSTLegislation *legislation;
-@property (strong, nonatomic) PSTLawFactory *factory;
+@property (strong, nonatomic) id<PSTLawMaking> factory;
 @property (strong, nonatomic) id<PSTLegislatureDelegate> delegate;
 @end
 
 @implementation PSTLegislature
 
-- (id)initWithLegislation:(PSTLegislation *)legislation factory:(PSTLawFactory *)factory delegate:(id<PSTLegislatureDelegate>)delegate
+- (id)initWithLegislation:(PSTLegislation *)legislation factory:(id<PSTLawMaking>)factory delegate:(id<PSTLegislatureDelegate>)delegate
 {
     if (self = [self init]) {
         self.legislation = legislation;
