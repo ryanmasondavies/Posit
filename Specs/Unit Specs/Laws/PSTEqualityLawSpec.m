@@ -24,16 +24,22 @@ SpecBegin(PSTEqualityLaw)
 
 __block PSTEqualityLaw *law;
 
-when(@"Equating to @TRUE", ^{
+when(@"Equating to TRUE", ^{
     before(^{
         law = [[PSTEqualityLaw alloc] initWithObject:@TRUE];
     });
     
-    it(@"is broken by @FALSE", ^{
-        STAssertTrue([law isBrokenBySubject:@FALSE], @"");
+    when(@"subject is FALSE", ^{
+        it(@"is broken", ^{
+            STAssertTrue([law isBrokenBySubject:@FALSE], @"");
+        });
+        
+        it(@"explains that FALSE is not equal to TRUE", ^{
+            STAssertEqualObjects([law explanationForSubject:@FALSE], @"Expected '0' to be equal to '1'.", @"");
+        });
     });
     
-    it(@"is not broken by @TRUE", ^{
+    it(@"is not broken by TRUE", ^{
         STAssertFalse([law isBrokenBySubject:@TRUE], @"");
     });
 });
@@ -43,8 +49,14 @@ when(@"Equating to 'Foobar'", ^{
         law = [[PSTEqualityLaw alloc] initWithObject:@"Foobar"];
     });
     
-    it(@"is broken by 'Barfoo'", ^{
-        STAssertTrue([law isBrokenBySubject:@"Barfoo"], @"");
+    when(@"subject is 'Barfoo'", ^{
+        it(@"is broken", ^{
+            STAssertTrue([law isBrokenBySubject:@"Barfoo"], @"");
+        });
+        
+        it(@"explains that 'Barfoo' is not equal to 'Foobar'.", ^{
+            STAssertEqualObjects([law explanationForSubject:@"Barfoo"], @"Expected 'Barfoo' to be equal to 'Foobar'.", nil);
+        });
     });
     
     it(@"is not broken by 'Foobar'", ^{
@@ -57,8 +69,14 @@ when(@"Equating to 20", ^{
         law = [[PSTEqualityLaw alloc] initWithObject:@20];
     });
     
-    it(@"is broken by @21", ^{
-        STAssertTrue([law isBrokenBySubject:@21], @"");
+    when(@"subject is 21", ^{
+        it(@"is broken", ^{
+            STAssertTrue([law isBrokenBySubject:@21], @"");
+        });
+        
+        it(@"explains that 21 is not equal to 20", ^{
+            STAssertEqualObjects([law explanationForSubject:@21], @"Expected '21' to be equal to '20'.", nil);
+        });
     });
     
     it(@"is not broken by @20", ^{
