@@ -29,7 +29,9 @@
 {
     NSMutableArray *broken = [[NSMutableArray alloc] init];
     for (id<PSTLaw> law in [self laws]) {
-        [broken addObject:law];
+        if ([law isBrokenBySubject:subject]) {
+            [broken addObject:law];
+        }
     }
     return [broken copy];
 }

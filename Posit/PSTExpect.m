@@ -33,7 +33,7 @@ PSTPreface *PSTExpect(id subject, NSString *filename, NSNumber *lineNumber)
 {
     PSTLegislation *legislation = [[PSTLegislation alloc] init];
     PSTPunishment *punishment = [[PSTPunishment alloc] initWithFilename:filename lineNumber:lineNumber];
-    PSTTrial *trial = [[PSTTrial alloc] initWithSubject:@10 legislation:legislation punishment:punishment];
+    PSTTrial *trial = [[PSTTrial alloc] initWithSubject:subject legislation:legislation punishment:punishment];
     PSTResolution *resolution = [[PSTResolution alloc] initWithTrial:trial];
     PSTLawFactory *toFactory = [[PSTLawFactory alloc] init];
     PSTLawFactory *notToFactory = [[PSTLawFactory alloc] init]; // inverted
