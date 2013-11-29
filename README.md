@@ -3,6 +3,11 @@ Posit
 
 An Objective-C expectation framework.
 
+Warning
+---
+
+0.0.2 is an experimental version, and this library is not ready for production use.
+
 Matchers
 ========
 
